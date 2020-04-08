@@ -1,6 +1,6 @@
-# Log into Conduktor
+# Sign in to Conduktor
 
-In order for us to verify the license you have purchased, we require you to log into Conduktor. For this, we are using Auth0 for user management. 
+In order for us to verify the license you have purchased, we require you to sign in to Conduktor. For this, we are using Auth0 for user management. 
 
 {% hint style="info" %}
 Do you have an internet proxy? Check out the [internet proxy section](internet-proxy.md)
@@ -10,7 +10,7 @@ Do you have an internet proxy? Check out the [internet proxy section](internet-p
 
 Upon starting Conduktor, you will have to first sign-up & login
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 This will open a web browser window to allow you to log-in 
 
@@ -26,23 +26,25 @@ This is the **easiest way to get started with Conduktor**. We will retrieve your
 
 You must create a username and a password with the following constraints:
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 After being signed-up correctly, you will have to verify your email before using Conduktor:
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 Check your spam folder if you can't find anything from us
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 After verifying your email, you can **refresh** Conduktor
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 And you're all set!
 
 ## Login issues?
 
-Please read the [common issues section](login-troubleshooting.md). 
+Please read the following page:
+
+{% page-ref page="login-troubleshooting.md" %}
 

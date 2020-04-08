@@ -10,12 +10,12 @@
   * [Linux](conduktor-installation/install/linux.md)
 * [Updating Conduktor](conduktor-installation/update.md)
 
-## Log into Conduktor <a id="log-in"></a>
+## Conduktor Sign in <a id="sign-in-section"></a>
 
-* [Log into Conduktor](log-in/log-in-main.md)
-* [Using an internet proxy](log-in/internet-proxy.md)
-* [Licenses & Activations](log-in/licenses-and-activations.md)
-* [Login Troubleshooting & FAQ](log-in/login-troubleshooting.md)
+* [Sign in to Conduktor](sign-in-section/sign-in.md)
+* [Using an internet proxy](sign-in-section/internet-proxy.md)
+* [Licenses & Activations](sign-in-section/licenses-and-activations.md)
+* [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting.md)
 
 ## Kafka Cluster Connection
 

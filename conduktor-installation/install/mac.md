@@ -10,15 +10,15 @@ The installer is an easy step by step installer that will install Conduktor in y
 
 Conduktor requires about 300MB of space on your hard drive. 
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 You may be prompted to entire your admin credentials so that Conduktor can be installed
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 Conduktor is then installed ! 
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 Next step is to log into Conduktor
 
