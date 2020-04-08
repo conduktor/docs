@@ -10,7 +10,7 @@ Conduktor is a native Desktop application and we provide easy-to-use installers 
 
 Please follow the relevant guides:
 
-{% page-ref page="mac-os-x.md" %}
+{% page-ref page="mac.md" %}
 
 {% page-ref page="windows.md" %}
 

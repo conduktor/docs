@@ -2,7 +2,7 @@
 
 ## I have an internet proxy, how do I configure it?
 
-See the [Using an Internet Proxy](using-an-internet-proxy.md) page
+See the [Using an Internet Proxy](internet-proxy.md) page
 
 ## Will Conduktor work offline?
 
