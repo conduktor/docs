@@ -1,7 +1,11 @@
-# Conduktor documentation!
+---
+description: Welcome to our documentation website. We hope you enjoy it!
+---
+
+# Conduktor Documentation
 
 {% hint style="info" %}
-We hope you enjoy this documentation. If anything is missing or wrong, or for any feedback, please [contact us](https://www.conduktor.io/contact)
+If anything is missing or wrong, or for any feedback, please [contact us](https://www.conduktor.io/contact)
 {% endhint %}
 
 ## Navigating the documentation

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Conduktor documentation!](README.md)
+* [Conduktor Documentation](README.md)
 
 ## Installing Conduktor <a id="conduktor-installation"></a>
 
