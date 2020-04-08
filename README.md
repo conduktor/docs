@@ -1,6 +1,2 @@
----
-description: Hello.
----
-
-# Conduktor for Apache Kafka
+# Initial page
 
