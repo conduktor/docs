@@ -1,2 +1,0 @@
-# Using an internet proxy
-

@@ -2,7 +2,7 @@
 description: Here are the common setup issues
 ---
 
-# Common Issues
+# Installation Troubleshooting
 
 ## Can I become who I want to be?
 

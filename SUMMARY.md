@@ -10,14 +10,14 @@
   * [Windows](conduktor-installation/install-mac/windows.md)
   * [Linux](conduktor-installation/install-mac/linux.md)
 * [Updating Conduktor](conduktor-installation/updating-conduktor.md)
-* [Common Issues](conduktor-installation/common-issues.md)
+* [Installation Troubleshooting](conduktor-installation/installation-troubleshooting.md)
 
-## Logging into Conduktor <a id="logging-into-conduktor-1"></a>
+## Log into Conduktor <a id="log-in"></a>
 
-* [Logging into Conduktor](logging-into-conduktor-1/logging-into-conduktor.md)
-* [Using an internet proxy](logging-into-conduktor-1/using-an-internet-proxy.md)
-* [Common Issues](logging-into-conduktor-1/common-issues.md)
-* [Untitled](untitled.md)
+* [Log into Conduktor](log-in/logging-into-conduktor.md)
+* [Using an internet proxy](log-in/using-an-internet-proxy.md)
+* [Licenses & Activations](log-in/licenses-and-activations.md)
+* [Login Troubleshooting & FAQ](log-in/login-troubleshooting.md)
 
 ## Kafka Cluster Setup
 
