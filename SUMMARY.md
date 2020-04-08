@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
-* [Test](test.md)
+* [Conduktor documentation!](README.md)
 
 ## Installing Conduktor <a id="conduktor-installation"></a>
 
@@ -18,9 +17,9 @@
 * [Licenses & Activations](log-in/licenses-and-activations.md)
 * [Login Troubleshooting & FAQ](log-in/login-troubleshooting.md)
 
-## Kafka Cluster Setup
+## Kafka Cluster Connection
 
-* [Setting up a connection to Kafka](kafka-cluster-setup/setting-up-a-connection-to-kafka.md)
-* [Connecting to a Secure Kafka](kafka-cluster-setup/connecting-to-a-secure-kafka.md)
-* [Impossible connection setups](kafka-cluster-setup/untitled.md)
+* [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka.md)
+* [Connecting to a Secure Kafka](kafka-cluster-connection/connecting-to-a-secure-kafka.md)
+* [Impossible connection setups](kafka-cluster-connection/untitled.md)
 
