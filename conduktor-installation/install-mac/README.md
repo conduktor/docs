@@ -1,25 +1,18 @@
 # Installing Conduktor
 
-## Getting Super Powers
+## Download Conduktor
 
-Becoming a super hero is a fairly straight forward process:
+Please download the latest version of Conduktor [from this page](https://www.conduktor.io/download)
 
-```
-$ give me super-powers
-```
+## Installation Guide
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+Conduktor is a native Desktop application and we provide easy-to-use installers to allow you to seamless install your application for Mac, Windows and Linux.
 
-Once you're strong enough, save the world:
+Please follow the relevant guides:
 
-{% code title="hello.sh" %}
-```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-{% endcode %}
+{% page-ref page="mac-os-x.md" %}
 
+{% page-ref page="windows.md" %}
 
+{% page-ref page="linux.md" %}
 

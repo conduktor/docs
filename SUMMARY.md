@@ -10,7 +10,6 @@
   * [Windows](conduktor-installation/install-mac/windows.md)
   * [Linux](conduktor-installation/install-mac/linux.md)
 * [Updating Conduktor](conduktor-installation/updating-conduktor.md)
-* [Installation Troubleshooting](conduktor-installation/installation-troubleshooting.md)
 
 ## Log into Conduktor <a id="log-in"></a>
 
@@ -21,5 +20,7 @@
 
 ## Kafka Cluster Setup
 
-* [Untitled](kafka-cluster-setup/untitled.md)
+* [Setting up a connection to Kafka](kafka-cluster-setup/setting-up-a-connection-to-kafka.md)
+* [Connecting to a Secure Kafka](kafka-cluster-setup/connecting-to-a-secure-kafka.md)
+* [Impossible connection setups](kafka-cluster-setup/untitled.md)
 
