@@ -30,7 +30,7 @@ Part of understanding why your CLI \(and therefore Conduktor\) can't connect to 
 
 This setup does not work:
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 Because Conduktor or the Kafka CLI cannot leverage a tunneling connection to connect to your Kafka brokers
 
@@ -44,7 +44,7 @@ Because even though your Kafka brokers are accessible through a public IP, upon 
 
 If you're using a VPN, this would work:
 
-![Using a VPN makes your local computer part of the private network](../.gitbook/assets/image%20%2824%29.png)
+![Using a VPN makes your local computer part of the private network](../.gitbook/assets/image%20%2835%29.png)
 
 
 

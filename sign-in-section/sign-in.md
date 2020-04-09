@@ -10,7 +10,7 @@ Do you have an internet proxy? Check out the [internet proxy section](internet-p
 
 Upon starting Conduktor, you will have to first sign-up & login
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2832%29.png)
 
 This will open a web browser window to allow you to log-in 
 
@@ -26,7 +26,7 @@ This is the **easiest way to get started with Conduktor**. We will retrieve your
 
 You must create a username and a password with the following constraints:
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 After being signed-up correctly, you will have to verify your email before using Conduktor:
 
@@ -34,11 +34,11 @@ After being signed-up correctly, you will have to verify your email before using
 
 Check your spam folder if you can't find anything from us
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 After verifying your email, you can **refresh** Conduktor
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 And you're all set!
 

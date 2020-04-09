@@ -10,11 +10,11 @@ description: >-
 
 To add a cluster, please click on the "Add new cluster" button
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 This will open up a list of configurations you can set for Conduktor
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 ### Kafka Cluster
 
@@ -32,7 +32,7 @@ You can use the two buttons to test the Kafka and Zookeeper connectivity to ensu
 
 In case you are using the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/index.html) and usually Avro data, you should use this tab to setup the connection details to your registry. These detail are necessary to activate the "Schema Registry" tab in Conduktor, as well as consume and produce data in Avro format. 
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 * **URL:** HTTP or HTTPS endpoint of your schema registry. 
 * **Security:** Choose the security type \(None, Basic Auth, Bearer Token\)
@@ -48,7 +48,7 @@ In case of issues connecting to an HTTPS Schema Registry, or if you're using a s
 
 Here you can add a list of Kafka Connect clusters that are linked to this Kafka cluster. 
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 Each Kafka Connect cluster will have
 
@@ -62,7 +62,7 @@ You can also test the connectivity to your Connect clusters from there.
 
 Enabling metrics allows Conduktor to get real-time features, statistics, monitoring over your cluster, as well as the rolling restart feature. 
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2837%29.png)
 
 We current support Jolokia and JMX to extract metrics. 
 
@@ -81,7 +81,7 @@ The SSH configuration is quite powerful and should only be allowed to be set-up 
 
 The SSH configuration enables Conduktor to directly access your brokers machines, enabling features like the rolling restart feature. 
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
 Please provide the port, user, authentication method \(password or SSH key pair\) and test the SSH configuration. 
 
@@ -97,11 +97,11 @@ Conduktor has utilities to test the connectivity to your Kafka clusters. In case
 
 Conduktor allows you to manage and save the configuration and connection details to multiple Kafka clusters for easy and quick connections. The clusters you have used last will appear at the top of your cluster list. 
 
-![the left-hand side contains the list of your clusters](../.gitbook/assets/image%20%286%29.png)
+![the left-hand side contains the list of your clusters](../.gitbook/assets/image%20%289%29.png)
 
 To edit the configuration of a cluster, hover your mouse over a cluster, and the "config button" will appear. 
 
-![the config button appears next to the cluster name](../.gitbook/assets/image%20%2812%29.png)
+![the config button appears next to the cluster name](../.gitbook/assets/image%20%2817%29.png)
 
 {% hint style="info" %}
 The ability to export, backup and share Kafka cluster configurations is an upcoming feature of the Enterprise License.  

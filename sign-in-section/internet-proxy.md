@@ -6,7 +6,7 @@ In case you have an internet proxy \(usually if you are part of a corporate with
 
 the proxy configuration can be found in the bottom right corner of the start screen of Conduktor. 
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 From there, you can set the proxy and enter:
 

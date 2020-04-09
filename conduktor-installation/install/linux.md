@@ -1,26 +1,60 @@
 # Linux
 
-## General Steps TODO
+## General Steps 
 
-We have prepared an `.pkg` file for Mac OS X, example: `Conduktor-2.0.13.pkg` 
+Conduktor supports Linux, but Linux is a very wide ecosystem, and it is hard for us to support all Linux distributions. We're doing our best to improve and package Conduktor for Linux, don't hesitate to contact us in case of bugs. 
 
-The installer is an easy step by step installer that will install Conduktor in your `Applications` folder
+We have prepared three distributions for Conduktor
 
-![](../../.gitbook/assets/screen-shot-2020-04-08-at-18.52.43.png)
+## Debian
 
-Conduktor requires about 300MB of space on your hard drive. 
+You can use a `.deb` file to install Conduktor on your Debian. This is the distribution you would be looking at if you're using **Ubuntu**.
 
-![](../../.gitbook/assets/image%20%289%29.png)
+In this example we are using Ubuntu and therefore the`.deb` file, example: `Conduktor-2.0.13.deb` 
+
+You can easily install Conduktor using the following command
+
+```text
+sudo apt install ./Conduktor-2.0.13.deb
+```
 
 You may be prompted to entire your admin credentials so that Conduktor can be installed
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
-Conduktor is then installed ! 
+Conduktor is then installed in
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+```text
+$ ll /opt/conduktor/
+total 20
+drwxr-xr-x 5 root root 4096 Apr  9 13:11 .
+/drwxr-xr-x 3 root root 4096 Apr  9 13:11 ../
+drwxr-xr-x 2 root root 4096 Apr  9 13:11 bin/
+drwxr-xr-x 4 root root 4096 Apr  9 13:11 lib/
+drwxr-xr-x 3 root root 4096 Apr  9 13:11 share/
+```
 
-Next step is to log into Conduktor
+**To start Conduktor, you should be able to find it in your Ubuntu applications**
+
+![](../../.gitbook/assets/image%20%2823%29.png)
+
+Alternatively, you can run:
+
+```text
+/opt/conduktor/bin/Conduktor
+```
+
+## RPM
+
+You can use a `.rpm` file to install Conduktor on your RPM based system. This includes Red Hat Linux, CentOS, Fedora, OpenSUSE.
+
+## Zip distro 
+
+This is not the recommended way to install Conduktor, but if you have a JRE 11+ installed on your system, you can try to use the `.zip` distribution of Conduktor. Overall, we cannot guarantee this method will work but we offer it to you as an alternative to the `.deb` and `.rpm` bundles.
+
+## **Signing in**
+
+The next step is to sign in to Conduktor. See this section here
 
 
 
