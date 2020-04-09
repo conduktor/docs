@@ -1,6 +1,6 @@
 # Linux
 
-## General Steps
+## General Steps TODO
 
 We have prepared an `.pkg` file for Mac OS X, example: `Conduktor-2.0.13.pkg` 
 
