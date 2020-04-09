@@ -12,5 +12,7 @@ If anything is missing or wrong, or for any feedback, please [contact us](https:
 
 ## Navigating the documentation
 
+## Learning Kafka
 
+If you are new to Kafka and you are looking at Conduktor to make using Apache Kafka a bit easier, we would recommend taking the time to [learn Kafka using an online course.](https://links.datacumulus.com/apache-kafka-coupon) Kafka is a beast to understand, and investing some time in using it properly will be highly valuable in your journey with Conduktor. Happy learning!
 
