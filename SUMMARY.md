@@ -21,5 +21,6 @@
 
 * [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka.md)
 * [Connecting to a Secure Kafka](kafka-cluster-connection/connecting-to-a-secure-kafka.md)
+* [Connecting to Kafka running under Docker](kafka-cluster-connection/connecting-to-kafka-running-under-docker.md)
 * [Impossible connection setups](kafka-cluster-connection/impossible-connection-setups.md)
 
