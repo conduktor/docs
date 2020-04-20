@@ -1,5 +1,9 @@
 # Windows
 
+{% hint style="info" %}
+We are in the process of acquiring a signing device for Windows applications. In the meantime, you will be prompted with the security warning before installing Conduktor, that you can safely ignore. 
+{% endhint %}
+
 ## General Steps
 
 We have prepared an `.msi` file for Mac OS X, example: `Conduktor-2.0.13.msi` 
