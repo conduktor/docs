@@ -1,5 +1,13 @@
 # Updating Conduktor
 
+## Note on upgrade from Conduktor 1.X =&gt; 2.0
+
+{% hint style="danger" %}
+To upgrade from Conduktor 1.X to Conduktor 2.0, **please first uninstall Conduktor 1 and then install Conduktor 2.0**. Your configs are preserved
+{% endhint %}
+
+## Updating Conduktor 2.X
+
 Conduktor is versioned and we allow you to stay on the version that you desire, or you can decide to upgrade Conduktor when necessary.
 
 Upon starting Conduktor, we will be checking for a new version. If there is one, you should see in the UI something like
