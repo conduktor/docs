@@ -26,9 +26,9 @@ If this commands work \(or a similar one to connect to your cluster\), then you 
 
 Part of understanding why your CLI \(and therefore Conduktor\) can't connect to your Kafka Cluster is due to your knowledge of how Kafka listeners work. As such, **we heavily recommend for you to read** [**this blog**](https://rmoff.net/2018/08/02/kafka-listeners-explained/) **to learn about Kafka listeners.**
 
-## Connecting to Kafka behind a bastion
+## Connecting to Kafka behind a bastion / SSH hops
 
-This setup does not work:
+Connecting to Kafka through SSH with Conduktor is impossible, due to how the Kafka Clients work. No client can currently do this setup:
 
 ![](../.gitbook/assets/image%20%288%29.png)
 

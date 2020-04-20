@@ -73,7 +73,7 @@ We current support Jolokia and JMX to extract metrics.
 Please contact us in case you need other metrics mechanisms. 
 {% endhint %}
 
-### SSH
+### SSH \(note: not a connection setting\)
 
 {% hint style="warning" %}
 The SSH configuration is quite powerful and should only be allowed to be set-up for your Kafka administrators. Average Kafka users should not need to fill up the details of that tab. 
