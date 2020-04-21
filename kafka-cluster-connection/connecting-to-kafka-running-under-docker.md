@@ -12,13 +12,43 @@ Read more about Kafka Listeners here:
 
 ## Kafka on Docker on Localhost
 
+### Method 1 \(recommended\)
+
 To run Kafka on Docker on Localhost properly, we recommend you use this project:
 
 {% embed url="https://github.com/simplesteph/kafka-stack-docker-compose" %}
 
 The README should tell you how to get started.
 
-Then, you can connect to Kafka on localhost using Conduktor!
+Example
 
+```text
+docker-compose -f zk-single-kafka-single.yml up
+```
 
+Then, you can connect to Kafka on `127.0.0.1:9092` using Conduktor!
+
+### Method 2
+
+We can leverage this project from lenses.io 
+
+{% embed url="https://github.com/lensesio/fast-data-dev" %}
+
+Please read the README file to see how to launch this properly. 
+
+**For example, on Mac OS X or Windows 10 running Docker**
+
+```text
+docker run -d -p 2181:2181 -p 3030:3030 -p 8081-8083:8081-8083  -p 9581-9585:9581-9585 -p 9092:9092 -e ADV_HOST=127.0.0.1  -e RUNNING_SAMPLEDATA=1 lensesio/fast-data-dev
+```
+
+Conduktor can then connect to `127.0.0.1:9092` 
+
+**If on Docker Toolbox:**
+
+```text
+docker run -d -p 2181:2181 -p 3030:3030 -p 8081-8083:8081-8083  -p 9581-9585:9581-9585 -p 9092:9092 -e ADV_HOST=192.168.99.100  -e RUNNING_SAMPLEDATA=1 lensesio/fast-data-dev
+```
+
+Conduktor can then connect to `192.189.99.100:9092` 
 
