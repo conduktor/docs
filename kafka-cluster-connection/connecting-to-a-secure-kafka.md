@@ -7,6 +7,10 @@ description: >-
 
 # Connecting to a Secure Kafka
 
+## YouTube video walkthrough
+
+{% embed url="https://youtu.be/\_NQmMUQL07Y" %}
+
 ## General Idea
 
 Conduktor leverages the default Apache Kafka Java Clients, and therefore we use the same [configuration properties](https://kafka.apache.org/documentation/#consumerconfigs). **If you are trying to connect to a secure Kafka cluster using Conduktor, please first try to use the CLI.** If you don't know how, please contact your administrator. 
