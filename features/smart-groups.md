@@ -11,9 +11,9 @@ description: >-
 This is an advanced feature due to the usage of regular expressions. This provides a poor readability and non-technical people should be assisted in order to use it.
 {% endhint %}
 
-## Simplify topics name
+## Simplify topics or subjects name
 
-Let's say we have many topics with a complex naming convention.
+Let's say we have many topics \(or subjects\) with a complex naming convention.
 
 The feature is accessible through the visibility button on topics or on schema registry \(disabled by default\):
 
