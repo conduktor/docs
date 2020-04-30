@@ -24,3 +24,7 @@
 * [Connecting to Kafka running under Docker](kafka-cluster-connection/connecting-to-kafka-running-under-docker.md)
 * [Impossible connection setups](kafka-cluster-connection/impossible-connection-setups.md)
 
+## Features
+
+* [Smart Groups](features/smart-groups.md)
+
