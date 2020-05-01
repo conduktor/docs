@@ -27,4 +27,5 @@
 ## Features
 
 * [Smart Groups](features/smart-groups.md)
+* [FAQ](faq.md)
 
