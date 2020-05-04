@@ -46,7 +46,7 @@ Unfortunately, despite everything we can find on the internet, and the community
 
 Nor `export GDK_SCALE=2`.
 
-If you know how to make this happen, or have some pointers, [feel free to contact us](https://www.conduktor.io/contact/).
-
-
+{% hint style="info" %}
+**Bounty:** If you know how to make this happen, or have some pointers, [feel free to contact us](https://www.conduktor.io/contact/). We'll offer you a Conduktor professional license. 
+{% endhint %}
 
