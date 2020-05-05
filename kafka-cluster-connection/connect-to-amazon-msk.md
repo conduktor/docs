@@ -1,6 +1,6 @@
 # Connect to Amazon MSK
 
-Conduktor running on your computer has no access by default on MKS. Still, it's possible to connect it to the cluster by using a specialized kafka proxy in-between.
+Conduktor, which is running on your computer, has no access by default on MKS. Still, it's possible to connect it to the cluster by using a specialized kafka proxy in-between.
 
 To make it work:
 
