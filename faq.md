@@ -33,6 +33,14 @@ To scale Conduktor, you can use GDK\_SCALE \(with a plain integer\), such as:
 $ GDK_SCALE=2 /opt/conduktor/bin/Conduktor
 ```
 
+Or you can also modify the shortcut directly
+
+```text
+$ sudo vim /usr/share/applications/conduktor-Conduktor.desktop
+...
+Exec=env GDK_SCALE=2 /opt/conduktor/bin/Conduktor
+```
+
 If it does not work, we are unfortunately limited by the underneath technologies Java and JavaFX. Although it's possible to add JVM options to Conduktor's JVM configuration to alter the behaviour of the JVM, but we never found a working solution.
 
 The following flags does not work:
