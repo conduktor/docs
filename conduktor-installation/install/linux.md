@@ -83,28 +83,28 @@ $ sudo dpkg -i Conduktor-2.1.1.deb
 
 ### **I have a HDPI monitor and Conduktor doesn't scale on Linux**
 
-We are unfortunately limited by the underneath technologies Java and JavaFX. It's possible to add JVM options to Conduktor's JVM configuration to alter the behaviour of the JVM:
+To scale Conduktor, you can use GDK\_SCALE \(with a plain integer\), such as:
 
 ```text
-/home/user/.config/conduktor/v1/app.properties
+$ GDK_SCALE=2 /opt/conduktor/bin/Conduktor
 ```
 
-Unfortunately, despite everything we can find on the internet, and the community help, nothing work:
+If it does not work, we are unfortunately limited by the underneath technologies Java and JavaFX. Although it's possible to add JVM options to Conduktor's JVM configuration to alter the behaviour of the JVM, but we never found a working solution.
+
+The following flags does not work:
 
 ```text
+# Config in: /home/user/.config/conduktor/v1/app.properties
+
 -Dsun.java2d.dpiaware=true
 -Dhidpi=true
 -Dsun.java2d.xrender=true
 -Dide.ui.scale=2.0
 -Dsun.java2d.uiScale.enabled=true
--Dsun.java2d.uiScale=2
+-Dsun.java2d.uiScale=2.
 ```
 
-Nor `export GDK_SCALE=2`.
-
-{% hint style="info" %}
-**Bounty:** If you know how to make this happen, or have some pointers, [feel free to contact us](https://www.conduktor.io/contact/). We'll offer you a Conduktor professional license. 
-{% endhint %}
+### 
 
 ### I can't find my issue here
 
