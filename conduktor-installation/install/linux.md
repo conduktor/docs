@@ -99,7 +99,7 @@ Exec=env GDK_SCALE=2 /opt/conduktor/bin/Conduktor
 
 If it does not work, we are unfortunately limited by the underneath technologies Java and JavaFX. Although it's possible to add JVM options to Conduktor's JVM configuration to alter the behaviour of the JVM, but we never found a working solution.
 
-The following flags does not work:
+Note that the following flags does not work:
 
 ```text
 # Config in: /home/user/.config/conduktor/v1/app.properties
@@ -112,7 +112,15 @@ The following flags does not work:
 -Dsun.java2d.uiScale=2.
 ```
 
-### 
+### Synaptic error message: root permissions
+
+It's possible to encounter this non-critical issue:
+
+`N: Download is performed unsandboxed as root as file '/home/user/Downloads/Conduktor-2.2.3.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)`
+
+The installation still went through, Conduktor is properly installed. This is a warning you can safely "ignore". You can refer to [https://askubuntu.com/questions/908800/what-does-this-synaptic-error-message-mean](https://askubuntu.com/questions/908800/what-does-this-synaptic-error-message-mean) to get more insights about it.
+
+
 
 ### I can't find my issue here
 
