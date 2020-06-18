@@ -120,6 +120,18 @@ Please make sure to put the **full paths** to your SASL key files in your proper
 Relative paths may not work for Conduktor. 
 {% endhint %}
 
+## Windows and paths
+
+If you're using Windows, you may have to use slash '/' instead of backslash '\' to make the connection work. Here is an example when configuring a kerberos connection:
+
+```text
+sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required
+   useKeyTab=true keyTab='c:/myfolder/keytab.ktf'
+   serviceName='kafka'
+   principal=’myid@DOMAIN.COM';
+ssl.truststore.location=C:/myfolder/trust.root.jks
+```
+
 ## Can you help us with security troubleshooting?
 
 Unfortunately, we cannot provide support to help you connect to your secure cluster besides what's included in the documentation. **Your Kafka administrator will have the answer to your problem**, please send them the link to this documentation page. Thank you!
