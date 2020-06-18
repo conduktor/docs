@@ -125,6 +125,9 @@ Relative paths may not work for Conduktor.
 If you're using Windows, you may have to use slash '/' instead of backslash '\' to make the connection work. Here is an example when configuring a kerberos connection:
 
 ```text
+sasl.mechanism=GSSAPI
+security.protocol=SASL_SSL
+sasl.kerberos.service.name=kafka
 sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required
    useKeyTab=true keyTab='c:/myfolder/keytab.ktf'
    serviceName='kafka'
