@@ -10,14 +10,14 @@ Conduktor does work offline after your first login. We require a re-login every 
 
 ## Oh no! Authentication has failed...
 
-When you login, you can stumbled upon this error in your browser. That means that something is preventing our authentication web server \(auth.conduktor.io\) to contact Conduktor Desktop on your computer \(therefore: outside of our control\) to finish the identification flow.
+When you login, you can stumbled upon this error in your browser. That means that something is either preventing Conduktor to contact our authentication server \(auth.conduktor.io\) or the other way around, something is preventing our authentication server to contact Conduktor Desktop on your computer \(outside of our control\) to finish the identification flow.
 
-This can be due to several reasons:
+This can happen due to many reasons. Here are a few:
 
 * Are you running Conduktor from your enterprise network?
-  * You may need to add a proxy: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
-  * You may need to add a certificate: see below
-* Sometimes, users have also a browser plugin that redirect http calls to httpS. The last step of our identification flow is a call to a local transient http server \(http://localhost:5xxx\), so if something forces a redirect from http to https, the flow will never complete.
+  * You may need to configure a proxy: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
+  * You may need to add a trusted certificate to Conduktor: see below
+* Browser plugins can redirect http calls to httpS. The last step of our identification flow is a call to a local transient http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
 
 ## My organization manage its own certificates / PKIX path building failed
 
