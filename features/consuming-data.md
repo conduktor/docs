@@ -58,11 +58,56 @@ When consuming multi-topics, you can see the topic name above the value:
 
 ## Pick your format wisely
 
+{% hint style="info" %}
+This is the first thing to setup when you're consuming a topic
+{% endhint %}
+
 Conduktor supports many formats when deserializing data and we keep adding some.
 
-We don't support Protobuf yet, but it's on our roadmap. If you have specific needs, don't hesitate to **contact us**.
+We don't support Protobuf yet, but it's on our roadmap. If you have this need or any other specific needs, don't hesitate to [contact us](https://www.conduktor.io/contact/).
 
 We support the most common formats, but also bytes, JSON, and multiple Avro flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro data **not** written using the Confluent Schema Registry. You can even provide your own Avro schema directly within Conduktor.
+
+There are 2 format to pick: the key format and the value format.
+
+* In most cases, the key is a string so nothing to worry about here.
+* the value is typically JSON or Avro
+  * it can be long, float or other primitives when working with Kafka Streams where you're doing aggregations for instance
+
+{% hint style="info" %}
+Conduktor automatically pick Avro when it detects a matching Confluent Schema Registry subject \(if configured\)
+{% endhint %}
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-16.06.03.png)
+
+{% hint style="warning" %}
+If you don't see "Avro \(Schema Registry\)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
+{% endhint %}
+
+If you try to consume Avro data without properly configuring it \(and because it was not auto-detected by Conduktor for some reasons\), you'll end up with garbage data like this:
+
+![Avro data seen as &quot;string&quot;](../.gitbook/assets/screenshot-2020-06-25-at-16.13.10.png)
+
+On the contrary, if you try to read non-Avro data using the Avro format, you'll end up with a list of errors \(Conduktor doesn't stop, in case it was test records for instance\):
+
+{% hint style="danger" %}
+ERR: Unknown magic byte!
+{% endhint %}
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-16.15.21.png)
+
+## Filtering & Projecting data
+
+Conduktor provides many ways when it comes to filtering data. This is an important use-case when using Conduktor:
+
+* you're looking for a needle in your topic
+* you'd like to trace the events of your entity "abc" 
+* you'd like to have in the same view how a specific field changed across time
+* ...
+
+
+
+
 
 
 
