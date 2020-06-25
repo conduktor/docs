@@ -115,9 +115,15 @@ For instance, if you have large messages in your topic, consider:
 * Reducing Max Poll Records
 * Raising Fetch Max Size and Partition Fetch Size
 
+### Consumer Offsets
 
+Conduktor is able to read the special internal topic of Kafka where all the consumer committed offsets are stored. Not everybody has access to this topic **\_\_consumer\_offsets**. If you have, you'll see that you won't be able to choose how to read this topic, because there is only one way:
 
+![](../.gitbook/assets/screenshot-2020-06-25-at-15.51.58.png)
 
+You will still be able to do classic operations like filtering, to look for your consumer group for instance. It's useful to track Kafka rebalancing, commits and so on.
+
+There are different type of key/value in this topic that we won't explain here. If you're interesting reading this topic, I'm sure you know what you're doing!
 
 
 
