@@ -7,8 +7,6 @@ description: >-
 
 # Consuming data
 
-## \(WIP\)
-
 ## How Conduktor consumes data
 
 Conduktor always renders data **chronologically**. 
