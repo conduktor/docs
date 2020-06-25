@@ -263,18 +263,31 @@ Not familiar with regexes? Let's present a few use-case to understand their powe
   * `[wz]` it's the "same" but for single characters only \('w' or 'z'\)
 
 {% hint style="danger" %}
-Beware of "special" characters like `"(" or "."`, they need to be "escaped". 
+Beware of "special" characters like `"(" "{" or "."`, they need to be "escaped". 
 
 If you want to match "1.2.2" or "1.2.3", use `"1\.2\.[23]"` and NOT `"1.2.[23]"` or you will match "**1**0**2**4**3**": "." means "any character"
 {% endhint %}
 
+{% hint style="info" %}
+You can use regex with a json-ish syntax if you want to match the json payload, and not use the Json Field filter.
+
+* `"state"\s:\s{\s"id"\s:\s".",\s"version"\s:\s*227`
+
+This is the "equivalent" of the json field filter: `.state.version = 227`
+{% endhint %}
+
 #### Filter: Json Field
 
+Regexes can be complicated \(look the above comment\). This is why we also offer a simpler way to work with JSON-ish payload: json field filter!
 
+* Define the property you want to filter is
+* Define the expected value you want
 
+Here, we want to see only the Avro records where `.state.version` equals to 227:
 
+![](../.gitbook/assets/screenshot-2020-06-25-at-18.51.37.png)
 
-
+Refer to [Projecting data](https://docs.conduktor.io/features/consuming-data#projecting-data) to know what's possible, it's the same syntax. 
 
 ## Monitoring the progress
 
