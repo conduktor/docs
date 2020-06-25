@@ -86,7 +86,7 @@ Conduktor automatically pick Avro when it detects a matching Confluent Schema Re
 If you don't see "Avro \(Schema Registry\)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
 {% endhint %}
 
-### Not following Confluent's Avro convention?
+### Avro without Confluent ?
 
 Most Kafka installations rely on the Confluent Schema Registry, that's the Avro \(Schema Registry\) format. When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself \(well, the id only, but that's enough\) if we follow the Confluent's convention.
 
@@ -167,13 +167,17 @@ Conduktor provides many ways when it comes to filtering data. This is an importa
 
 ## Monitoring the progress
 
-When you're looking for a needle in a large topics, you'd like to know where Conduktor is at, to know how much take will it take. When consuming, it's possible to display the progress related to all partitions.
+When you're looking for a needle in a large topics, you'd like to know where Conduktor is at, to know how much take will it take. When consuming, it's possible to display the progress related to all partitions by clicking on the "Show Partitions" button at the bottom.
 
+This will open a panel updated in real-time displaying the progress for all partitions \(and all topics, if several are consumed at once\):
 
+![](../.gitbook/assets/screenshot-2020-06-25-at-16.48.45.png)
 
-It's therefore possible to identify from here if a partition has issues \(no consuming or barely\)
+{% hint style="warning" %}
+It's possible to identify if a partition has issues if it's not moving on or barely \(probably that the leader broker of this partitions is in trouble\)
+{% endhint %}
 
-
+You know when a partition is totally consumed when it goes green. If some applications produces at the same-time, Conduktor automatically updates itself \(the end offsets\) and you may see partitions blinking between blue and green \(Conduktor consuming at the same rate than the producers\).
 
 ## Advanced
 
