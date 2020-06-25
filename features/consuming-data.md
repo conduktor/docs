@@ -152,9 +152,10 @@ ERR: Unknown magic byte!
 
 Conduktor provides many ways when it comes to filtering and projecting data. This is an important use-case when using Conduktor:
 
-* you're looking for a needle in your topic
-* you'd like to trace the events of your entity "abc" 
-* you'd like to have in the same view how a specific field changed across time
+* you're looking for a needle in your whole topic history
+* you'd like to trace the events of your entity "abc" from today only
+* you'd like to have in the same view how a _specific field_ changed across time
+* you're looking for what happened between 5.05pm and 5.10pm yesterday
 * ...
 
 ### Projecting data
@@ -201,6 +202,36 @@ If you're using Avro, it's also possible to provide a custom schema \(with less 
 {% endhint %}
 
 ### Filtering data
+
+It's possible to combine multiple filters on multiple dimensions: time, quantity, fields.
+
+#### Choose where to start from
+
+{% hint style="warning" %}
+By default, Conduktor uses "**now \(latest\)**": it means that only new incoming data will appear in Conduktor, not the past.
+{% endhint %}
+
+* time based: a hour, a date
+* offset based:
+  * **an existing consumer group**: useful to see why an application is failing there, like a deserialization error
+  * **latest minux X offsets**: just the latest data published, no matter when
+  * **an offset**: this will be the starting offset for all the partitions consumed. You generally use this and select only one partition \(see Advanced\).
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-17.34.02.png)
+
+#### Choose until when to consume
+
+Sometimes, you don't want to continuously consume incoming data and just want to consume a few messages and automatically stop.
+
+* **forever** is the default: never stop 
+* **number of messages**: when we just want to take a peek
+* **max size**: rare use-case, when the size matters
+* **timestamp**: consume data up until a particular date.
+  * also useful when combined to a start date
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-17.52.07.png)
+
+#### Choose which message to show
 
 
 
