@@ -231,9 +231,44 @@ Sometimes, you don't want to continuously consume incoming data and just want to
 
 ![](../.gitbook/assets/screenshot-2020-06-25-at-17.52.07.png)
 
-#### Choose which message to show
+#### Filter messages by their key/value/headers
 
+We offer many ways to select only the interesting key/value you're looking for.
 
+* **contains**: a simple string we're looking for \(fast\)
+* **equals**: the whole key or value must match, often used for keys \(where it's generally a simple id\)
+* **regex**: for more complex case when you know regexes 🤓. Can be quite slow when the payloads are large.
+* **json field**: it's the same format as in "Projecting data" \(above\), except the extracted value must match a value you'll expect
+
+Most works with key, value and headers.
+
+{% hint style="info" %}
+If you set several filters, it's treated like an "**AND**".  
+We **don't** support "OR" operand; we don't have any complex UI to tell "\(this or \(that and that\)\) or this"
+{% endhint %}
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-18.07.45.png)
+
+![The different filters options: contains, regex, json](../.gitbook/assets/screenshot-2020-06-25-at-18.18.03.png)
+
+#### Filter: Regex
+
+Not familiar with regexes? Let's present a few use-case to understand their power:
+
+* Looking for keys ending in `200` ? The default "contains" won't work, because it will match "200133" "343200343" and so on. With regex, it's possible:
+  * `200$`: means "ends with 200"
+  * `^200`: means "starts with 200"
+* Looking for "london" or "paris" at the same time?
+  * `london|paris`: this will match values containing either london or paris
+  * `[wz]` it's the "same" but for single characters only \('w' or 'z'\)
+
+{% hint style="danger" %}
+Beware of "special" characters like `"(" or "."`, they need to be "escaped". 
+
+If you want to match "1.2.2" or "1.2.3", use `"1\.2\.[23]"` and NOT `"1.2.[23]"` or you will match "**1**0**2**4**3**": "." means "any character"
+{% endhint %}
+
+#### Filter: Json Field
 
 
 
