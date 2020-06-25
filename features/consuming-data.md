@@ -11,11 +11,11 @@ description: >-
 
 ## How Conduktor consumes data
 
-Conduktor always renders data **chronologically**.
+Conduktor always renders data **chronologically**. 
 
-Kafka only provides ordering within a single partition, not across partitions. Because it does not make sense to consume data non-chronologically in Conduktor, we've added our own optimization to always render the data in a deterministic way \(chronologically\) while preserving memory and CPU.
+Kafka only provides ordering within a single partition, not across partitions. Because it does not make sense to consume data non-chronologically in Conduktor, we've added our own optimization to always render the data in a deterministic way \(chronologically\) while preserving memory and CPU. This also works for multi-topics consumption \(see below\).
 
-If you're using Kafka Transactions in your topic, note that by default, Conduktor consumes only committed data. You can change this by going to the Consumer Settings. 
+If you're using Kafka Transactions in your topic, note that by default, Conduktor consumes only committed data. You can change this by going to the Consumer Settings.
 
 ## Viewing data inside a topic
 
@@ -68,6 +68,8 @@ We don't support Protobuf yet, but it's on our roadmap. If you have this need or
 
 We support the most common formats, but also bytes, JSON, and multiple Avro flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro data **not** written using the Confluent Schema Registry. You can even provide your own Avro schema directly within Conduktor.
 
+### Key and Value
+
 There are 2 format to pick: the key format and the value format.
 
 * In most cases, the key is a string so nothing to worry about here.
@@ -83,6 +85,58 @@ Conduktor automatically pick Avro when it detects a matching Confluent Schema Re
 {% hint style="warning" %}
 If you don't see "Avro \(Schema Registry\)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
 {% endhint %}
+
+### Not following Confluent's Avro convention?
+
+Most Kafka installations rely on the Confluent Schema Registry, that's the Avro \(Schema Registry\) format. When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself \(well, the id only, but that's enough\) if we follow the Confluent's convention.
+
+But not everyone follows this convention! This means it's possible that the record does not contain the schema to read the data, and you need to help Conduktor. 
+
+You can help Conduktor in 3 ways:
+
+* Which subject to use \(if using Confluent Schema Registry\)
+* Which schemaId to use \(if using Confluent Schema Registry\)
+* Which schema to use \(no need to the registry\)
+
+![The special Avro format at the bottom of the list](../.gitbook/assets/screenshot-2020-06-25-at-16.31.52.png)
+
+For instance, I want to provide a custom Avro Schema to read my data:
+
+* I choose "Avro \(Custom Schema"\)
+* I paste my custom schema
+* I check "Confluent Encoding" because in my case, data are encoded using Confluent's convention
+  * In most cases, this will NOT be checked if we're using this feature
+* The data will be read using this schema!
+
+{% hint style="success" %}
+It can be used to "project" the data: read and display only a subset of fields
+{% endhint %}
+
+```javascript
+{
+  "type": "record",
+  "name": "myrecord",
+  "namespace": "com.company.events",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "default": "some default"
+    }
+  ]
+}
+
+```
+
+![Consuming my data using a custom Avro schema](../.gitbook/assets/screenshot-2020-06-25-at-16.34.44.png)
+
+
+
+### Possible errors
 
 If you try to consume Avro data without properly configuring it \(and because it was not auto-detected by Conduktor for some reasons\), you'll end up with garbage data like this:
 
