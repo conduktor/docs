@@ -150,12 +150,59 @@ ERR: Unknown magic byte!
 
 ## Filtering & Projecting data
 
-Conduktor provides many ways when it comes to filtering data. This is an important use-case when using Conduktor:
+Conduktor provides many ways when it comes to filtering and projecting data. This is an important use-case when using Conduktor:
 
 * you're looking for a needle in your topic
 * you'd like to trace the events of your entity "abc" 
 * you'd like to have in the same view how a specific field changed across time
 * ...
+
+### Projecting data
+
+You can choose to display only a subset of fields from a message. This works for JSON and Avro data \(because they are converted to JSON\). A section "Value projection" will appear where you can set a "jq" expression \([documentation](https://stedolan.github.io/jq/manual/v1.5/#.)\).
+
+For instance, here, we only care about `.state.version` in:
+
+```javascript
+{
+  "id" : "84504272-8473-48f6-8ad5-a7e836e58dc7",
+  "type" : "CustomerOrderItemAdded",
+  "delta" : {
+    "itemId" : "1abcdcc1-cc36-4ae4-a6eb-3582df6f8e65"
+  },
+  "state" : {
+    "id" : "570ccfea-6c8a-44a3-83a9-ab54797d104f",
+    "version" : 6, // we care only about this! <<<<<<<<<<
+    ...
+}
+```
+
+We setup this as our filter, and we'll only see the value of `version`:
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-17.05.50.png)
+
+Typical use-cases:
+
+* `.property.subprop.value` : just nested objects
+* `.items[].object`: access objects inside an array
+* `.items[].object.property`: access fields inside objects inside an array
+* `.items | length`: returns the length of an array
+* `.x.obj | keys` : list the keys "obj"
+* `contains({"state":{"version": 1}})`: "true" if the element with this value exists
+* ...
+* * There are many functions availables: [check the jq documentation](https://stedolan.github.io/jq/manual/v1.5/#.)
+
+If your jq filter is invalid, or only fails for some records, Conduktor will display the jq error in place of the value:
+
+![](../.gitbook/assets/screenshot-2020-06-25-at-17.25.48.png)
+
+{% hint style="info" %}
+If you're using Avro, it's also possible to provide a custom schema \(with less fields\) by using the format "Avro \(Custom Schema\)", see [Avro without Confluent?](https://docs.conduktor.io/features/consuming-data#avro-without-confluent)
+{% endhint %}
+
+### Filtering data
+
+
 
 
 
