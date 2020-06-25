@@ -27,6 +27,7 @@
 
 ## Features
 
+* [Consuming data](features/consuming-data.md)
 * [Smart Groups](features/smart-groups.md)
 
 ---
