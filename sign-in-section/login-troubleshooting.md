@@ -19,6 +19,7 @@ This can happen due to many reasons. Here are a few:
   * You may need to add a trusted certificate to Conduktor: see below
 * Browser plugins can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
 * The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts Let's Encrypt's CA, which is the one that emits the https certificate of our authentication server https://auth.conduktor.io so nothing specific to setup here.
+* Ensure you don't have an antivirus or a firewall blocking communications. You may have to add https://auth.conduktor.io to some allow-list or something.
 
 ## My organization manage its own certificates / PKIX path building failed
 
