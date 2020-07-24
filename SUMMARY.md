@@ -28,6 +28,7 @@
 ## Features
 
 * [Consuming data](features/consuming-data.md)
+* [Producing data](features/producing-data.md)
 * [Smart Groups](features/smart-groups.md)
 
 ---
