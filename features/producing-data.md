@@ -43,7 +43,7 @@ In this example, we are sending Apache Avro data corresponding to the schema of 
 
 Click "Send" \(top right\) as many times as you want to send the payload to Kafka.
 
-### Apache Avro complex types \(bytes, logical...\)
+### Apache Avro complex types \(bytes, logical types...\)
 
 Apache Avro has special types that does not exist in plain JSON, such as "bytes", and its "logical types" which are encoded using a more simple type underneath, but have a particular semantics that we care about \(decimal number, date, timestamp-micros etc.\)
 
