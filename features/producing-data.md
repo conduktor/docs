@@ -20,12 +20,12 @@ You'll have a new dialog on top of Conduktor you can freely move around:
 
 From here, you must at least select which topic to send some data to, set the format of the key and value, and provide their payload \(or empty to send a NULL\).
 
-Conduktor supports common format when producing:
+Conduktor supports common Kafka serializers to produce data:
 
 * basic types \(int, string, etc.\)
 * bytes as base64
 * JSON: it's a string but Conduktor validates that the payload is a proper JSON
-* Avro: define it using JSON and Conduktor converts it to Apache Avro binary data automatically
+* Avro: define the payload to send using JSON and Conduktor converts it to Apache Avro binary data automatically \(keep reading to understand how special Apache Avro types are handled\)
 
 ## Sending Apache Avro data
 
@@ -83,13 +83,25 @@ Here is the list of the Apache Avro types with logicalTypes and the special hand
 
 Conduktor has a notion of "template" to save & reuse what you're producing to your topic. It's useful when you don't want to retype everything each time, and to test the same thing across time.
 
-You can create as many template as you want, and duplicate them to easily create them from existing ones.
+You can create as many template as you want, and duplicate them to easily create them from existing ones. It's also possible to create a template from a consumed message!
 
 {% hint style="danger" %}
 Do not forget to click "SAVE" on the bottom right of the dialog to save your modification, otherwise you'll lose them.
 {% endhint %}
 
 ![a copy was created](../.gitbook/assets/screenshot-2020-07-24-at-11.40.05.png)
+
+### "Replay" a Consumed record
+
+When consuming records, it's possible to create a "Produce Template" from it. This is useful to grab the initial payload and send it again and again after.
+
+To do so, consume some data and open the details dialog, then click on the button "Copy To A Producer Template" 
+
+![](../.gitbook/assets/screenshot-2020-07-26-at-15.03.09.png)
+
+This will create a new template in your producer, with the same deserialized payload, that you can resend at will!
+
+![](../.gitbook/assets/screenshot-2020-07-26-at-15.03.29.png)
 
 ## Advanced Options
 
