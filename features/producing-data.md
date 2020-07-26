@@ -59,11 +59,20 @@ Here is the list of the Apache Avro types with logicalTypes and the special hand
 
 * `bytes`: when producing to a bytes field **WITHOUT** any logical type associated, it must be a base64 encoded string to avoid any weird/breaking/invisible characters that could cause parsing issues:
   * eg: `"name": "conduktor"` should be written `"name": "Y29uZHVrdG9y"`
+
+
+
 * `bytes` as a `decimal` logicalType: it can be encoded in JSON as a number or as a string. The scale of the Apache Avro schema must fit or Conduktor will try to round it.
-  * eg: `"value": 123.45` or `"value": "123.450"` if the logicalType has scale=3.
+  * eg: `"value": 123.45` or `"value": "123.450"` if the logicalType has scale=3 \(3 digits after "."\).
+
+
+
 * `int`: can be encoded with the "raw" int or a string
   * as `date`: can be encoded with a string: `"my_date": "2020-02-03"`
   * as `time-millis`: can be encoded with a string: `"my_time": "02:47:41"`
+
+
+
 * `long` : can be encoded with the "raw" long or a string
   * as `timestamp-millis` and `timestamp-micros`: can be encoded with a string ISO 8601 or human friendly date:
     * `"my_timestamp": "2020-07-26T01:03:29Z"`
