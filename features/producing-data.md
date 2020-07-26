@@ -43,6 +43,33 @@ In this example, we are sending Apache Avro data corresponding to the schema of 
 
 Click "Send" \(top right\) as many times as you want to send the payload to Kafka.
 
+### Apache Avro complex types \(bytes, logical...\)
+
+Apache Avro has special types that does not exist in plain JSON, such as "bytes", and its "logical types" which are encoded using a more simple type underneath, but have a particular semantics that we care about \(decimal number, date, timestamp-micros etc.\)
+
+Conduktor Desktop supports Apache Avro 1.9.0 specification: [https://avro.apache.org/docs/1.9.0/spec.html\#Logical+Types](https://avro.apache.org/docs/1.9.0/spec.html#Logical+Types)
+
+{% hint style="success" %}
+Conduktor Desktop is made for **humans**, therefore we handle human-friendly representations of such complex types when consuming and when producing data to Avro topics.
+{% endhint %}
+
+When producing data from Conduktor Desktop, the format must be in JSON. When sending the data, Conduktor translates the JSON payload to an Apache Avro format. Most types are simple and exist in JSON and Apache Avro \(like integers, strings\) but some needs a special handling by Conduktor to be "understood" and properly converted.
+
+Here is the list of the Apache Avro types with logicalTypes and the special handling by Conduktor:
+
+* `bytes`: when producing to a bytes field **WITHOUT** any logical type associated, it must be a base64 encoded string to avoid any weird/breaking/invisible characters that could cause parsing issues:
+  * eg: `"name": "conduktor"` should be written `"name": "Y29uZHVrdG9y"`
+* `bytes` as a `decimal` logicalType: it can be encoded in JSON as a number or as a string. The scale of the Apache Avro schema must fit or Conduktor will try to round it.
+  * eg: `"value": 123.45` or `"value": "123.450"` if the logicalType has scale=3.
+* `int`: can be encoded with the "raw" int or a string
+  * as `date`: can be encoded with a string: `"my_date": "2020-02-03"`
+  * as `time-millis`: can be encoded with a string: `"my_time": "02:47:41"`
+* `long` : can be encoded with the "raw" long or a string
+  * as `timestamp-millis` and `timestamp-micros`: can be encoded with a string ISO 8601 or human friendly date:
+    * `"my_timestamp": "2020-07-26T01:03:29Z"`
+    * `"my_timestamp": "2020-07-26 01:03:29"` \(the default when consuming\)
+  * as `time-micros`: can be encoded with a string: `"my_time": "02:47:41"`
+
 ## Templates
 
 Conduktor has a notion of "template" to save & reuse what you're producing to your topic. It's useful when you don't want to retype everything each time, and to test the same thing across time.
