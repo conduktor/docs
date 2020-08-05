@@ -4,7 +4,7 @@ description: >-
   define Kafka ACLs.
 ---
 
-# Kafka Access Control List \(ACLs\)
+# Access Control List \(ACLs\)
 
 ## List the ACLs
 
