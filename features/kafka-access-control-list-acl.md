@@ -1,3 +1,9 @@
+---
+description: >-
+  To secure your cluster, define who has access to what, you really need to
+  define Kafka ACLs.
+---
+
 # Kafka Access Control List \(ACLs\)
 
 ## List the ACLs
