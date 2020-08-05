@@ -8,7 +8,7 @@ description: A list of common question our community asks
 
 By default, due to Java "habits", and to avoid complicated issues and troubleshoots \(such as "Conduktor can't connect to.."\), Conduktor automatically set `-Djava.net.preferIPv4Stack=true` to automatically use the IPv4 stack \(which is still mostly used\) when starting up.
 
-If you have no problem with IPv6, if your infrastructure is up to date and servers bound to IPv6 address, then you will have troubles with this, and you'll need to disable this option.
+If you have no problem with IPv6, if your infrastructure is up to date and servers bound to IPv6 addresses, then you may run into troubles, and you'll need to disable this option.
 
 To do this, create the file `conduktor.vmoptions` in your Conduktor personal folder and disable the option:
 
@@ -17,7 +17,7 @@ To do this, create the file `conduktor.vmoptions` in your Conduktor personal fol
 * Linux: /home/&lt;user&gt;/.config/conduktor/conduktor.vmoptions \(or XDG Config path if set\)
 
 ```text
-# in conduktor.vmoptions
+# in conduktor.vmoptions, supports only -D* options
 
 -Djava.net.preferIPv4Stack=false
 ```
