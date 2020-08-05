@@ -30,7 +30,20 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ![](../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
 
-## 
+## I need to configure custom JVM options
+
+Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want, to set them when Conduktor starts:
+
+* MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
+* Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
+* Linux: /home/&lt;user&gt;/.config/conduktor/conduktor.vmoptions \(or XDG Config path if set\)
+
+Example:
+
+```text
+-Djava.net.preferIPv4Stack=false
+-Dhttp.proxyHost=1.2.3.4
+```
 
 ## My issue is not addressed here
 
