@@ -4,6 +4,24 @@ description: A list of common question our community asks
 
 # FAQ
 
+## I'm using IPv6 infrastructure
+
+By default, due to Java "habits", and to avoid complicated issues and troubleshoots \(such as "Conduktor can't connect to.."\), Conduktor automatically set `-Djava.net.preferIPv4Stack=true` to automatically use the IPv4 stack \(which is still mostly used\) when starting up.
+
+If you have no problem with IPv6, if your infrastructure is up to date and servers bound to IPv6 address, then you will have troubles with this, and you'll need to disable this option.
+
+To do this, create the file `conduktor.vmoptions` in your Conduktor personal folder and disable the option:
+
+* MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
+* Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
+* Linux: /home/&lt;user&gt;/.config/conduktor/conduktor.vmoptions \(or XDG Config path if set\)
+
+```text
+# in conduktor.vmoptions
+
+-Djava.net.preferIPv4Stack=false
+```
+
 ## Ubuntu Focal 20: missing libffi6 when installing .deb
 
 For Linux, Conduktor is packaged with libffi6. This library had seen its version bump to libffi7 in Ubuntu 20 Focal so you'll end up with this error:
