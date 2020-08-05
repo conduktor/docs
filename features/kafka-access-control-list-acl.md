@@ -1,4 +1,4 @@
-# Kafka Access Control List \(ACL\)
+# Kafka Access Control List \(ACLs\)
 
 ## List the ACLs
 
