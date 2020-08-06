@@ -6,7 +6,18 @@ See the [Using an Internet Proxy](internet-proxy.md) page
 
 ## Will Conduktor work offline?
 
-Conduktor does work offline after your first login. We require a re-login every week or so in order to refresh your token and verify your license validity. 
+Conduktor does work offline after your first login. We may require a re-login every week or so in order to refresh your token and verify your license validity. 
+
+We don't have any "offline license" available yet. Don't hesitate to contact us if your use-case needs this.
+
+## Oops!, something went wrong!
+
+When you login from Conduktor Desktop and get this error in the browser, instead of having the classic login screen, this may due to several reasons.
+
+* your browser is blocking cookies: our identity provider, Auth0, needs its cookies 🍪. You may try to open the same link \(it will be something like [https://auth.conduktor.io/u/login?state=xxx](https://auth.conduktor.io/u/login?state=xxx)\) in a private tab \(where behavior can be different and cookies allowed temporary\)
+* ensure you don't have some funny extension in your browser that could alter the url for some reasons
+* you hit the "back button" in your browser and tried to come back. Please relogin properly from Conduktor.
+* if nothing works, try to restart Conduktor Desktop and login \(to start fresh\)
 
 ## Oh no! Authentication has failed...
 
