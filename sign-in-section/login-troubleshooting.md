@@ -56,6 +56,12 @@ Example:
 -Dhttp.proxyHost=1.2.3.4
 ```
 
+## I have paid for a license but Conduktor tells me I'm in "free" mode!
+
+Don't worry, we didn't forget your license. Conduktor's licenses are \_personal\_ and limited to one user/machine by default. We have to be sure that you don't share your account credentials with your whole team or your whole company, that would not be fair to us 😢 \(and could be considered as a license violation\).
+
+We don't want to lock you out from Conduktor if you do this "by accident" or if you've changed your machine, therefore we simply fallback to the free mode of Conduktor \(all features, but only with a local broker\). But feel free to [contact us](mailto:support@conduktor.io) asap to resolve your case and remove your old machine identifications for instance.
+
 ## My issue is not addressed here
 
 Please [send us an email](mailto:support@conduktor.io?subject=Login%20Troubleshooting?body=Please%20include%20as%20much%20information%20as%20possible,%20as%20well%20as%20screenshots,%20or%20even%20better,%20videos)
