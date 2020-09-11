@@ -41,9 +41,25 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ![](../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
 
+### Kafka Connect
+
+If you have this error "PIKIX path building failed" when connecting to your Kafka Connect cluster, you may have to define the truststore in your Kafka Connect Configuration \(we may provide a simple fallback later on the Conduktor custom truststore if it's defined\).
+
+Here is a command line to convert your company CA certificate "mycompany.crt" to a useful keystore "mycompany.jks" \(with password "changeit"\) you can use as truststore:
+
+```text
+keytool -import -v -trustcacerts -alias mycompany -file mycompany.crt -keystore mycompany.jks -keypass changeit -storepass changeit
+```
+
+You can then use the generated .jks in your configuration:
+
+![](../.gitbook/assets/screenshot-2020-08-20-at-11.34.28.png)
+
+
+
 ## I need to configure custom JVM options
 
-Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want, to set them when Conduktor starts:
+Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want \(only -D, no -XX\), to set them when Conduktor starts \(only on startup, it's not taken into account after\):
 
 * MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
 * Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
@@ -54,6 +70,7 @@ Example:
 ```text
 -Djava.net.preferIPv4Stack=false
 -Dhttp.proxyHost=1.2.3.4
+-Djava.security.auth.login.config=/tmp/kafka_jaas.conf
 ```
 
 ## I / my company paid for a license but Conduktor tells me I'm in "free" mode!

@@ -10,7 +10,7 @@ By default, due to Java "habits", and to avoid complicated issues and troublesho
 
 If you have no problem with IPv6, if your infrastructure is up to date and servers bound to IPv6 addresses, then you may run into troubles, and you'll need to disable this option.
 
-To do this, create the file `conduktor.vmoptions` in your Conduktor personal folder and disable the option:
+To do this, create the file `conduktor.vmoptions` in your Conduktor personal folder and disable the option \(restart Conduktor to be taken into account\):
 
 * MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
 * Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
