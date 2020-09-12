@@ -31,6 +31,7 @@
 * [Producing data](features/producing-data.md)
 * [Smart Groups](features/smart-groups.md)
 * [Access Control List \(ACLs\)](features/kafka-access-control-list-acl.md)
+* [ksqlDB](features/ksqldb.md)
 
 ---
 
