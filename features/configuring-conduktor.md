@@ -11,6 +11,8 @@ Also, _unfortunately_, sometimes the clusters are just too big for Conduktor to 
 It's also there to configure:
 
 * the Kafka clients used across Conduktor \(administration, consumer, producer...\)
+  * Increase the timeouts if your cluster or connection is slow \(default is 30s\)
+  * Does that ring a bell? _org.apache.kafka.common.errors.TimeoutException: Failed to update metadata after 30000 ms._
 * a few Kafka Streams options
 
 Go Options &gt; Settings:
