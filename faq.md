@@ -4,6 +4,14 @@ description: A list of common question our community asks
 
 # FAQ
 
+## Convert a certificate to a Java Trust Store
+
+In the Java world \(hence in Conduktor\), we work with the "Java KeyStore .jks" format instead of the common PEM format \(.pem, .crt, ..\). Hopefully, here is a command line to convert a certificate `mycompany.crt` to a useful keystore `mycompany.jks`  \(with password "changeit"\) to be used as truststore:
+
+```text
+keytool -import -v -trustcacerts -alias mycompany -file mycompany.crt -keystore mycompany.jks -keypass changeit -storepass changeit
+```
+
 ## I'm using IPv6 infrastructure
 
 By default, due to Java "habits", and to avoid complicated issues and troubleshoots \(such as "Conduktor can't connect to.."\), Conduktor automatically set `-Djava.net.preferIPv4Stack=true` to automatically use the IPv4 stack \(which is still mostly used\) when starting up.

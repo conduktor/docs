@@ -2,9 +2,13 @@
 description: Streaming everything with ease!
 ---
 
-# ksqlDB
+# ksqlDB: Streaming with SQL
 
-## Compatibility with Conduktor
+{% hint style="info" %}
+Work In Progress
+{% endhint %}
+
+## Compatibility with Conduktor \(40400\)
 
 Conduktor only fully support ksqlDB from version 0.10.x. Most things works with older versions except the ksqlDB queries \(you may end up with errors like _KsqlClientException: Received 404 response from server: HTTP 404 Not Found. Error code: 40400_\)
 

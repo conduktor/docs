@@ -43,7 +43,7 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ### Kafka Connect
 
-If you have this error "PIKIX path building failed" when connecting to your Kafka Connect cluster, you may have to define the truststore in your Kafka Connect Configuration \(we may provide a simple fallback later on the Conduktor custom truststore if it's defined\).
+If you have this error "PKIX path building failed" when connecting to your Kafka Connect cluster, you may have to define the truststore in your Kafka Connect Configuration \(we may provide a simple fallback later on the Conduktor custom truststore if it's defined\).
 
 Here is a command line to convert your company CA certificate "mycompany.crt" to a useful keystore "mycompany.jks" \(with password "changeit"\) you can use as truststore:
 

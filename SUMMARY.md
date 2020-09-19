@@ -27,11 +27,18 @@
 
 ## Features
 
+* [Brokers Management](features/brokers-management.md)
+* [Topics Management](features/topics-management/README.md)
+  * [Smart Groups](features/topics-management/smart-groups.md)
 * [Consuming data](features/consuming-data.md)
 * [Producing data](features/producing-data.md)
-* [Smart Groups](features/smart-groups.md)
-* [Access Control List \(ACLs\)](features/kafka-access-control-list-acl.md)
-* [ksqlDB](features/ksqldb.md)
+* [Kafka Streams](features/kafka-streams.md)
+* [ksqlDB: Streaming with SQL](features/ksqldb.md)
+* [Schema Registry Management](features/schema-registry-management/README.md)
+  * [Access Control List \(ACLs\)](features/schema-registry-management/kafka-access-control-list-acl.md)
+* [Kafka Connect](features/kafka-connect/README.md)
+  * [Features](features/kafka-connect/features.md)
+  * [Security](features/kafka-connect/security.md)
 
 ---
 
