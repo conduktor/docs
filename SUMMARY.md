@@ -43,4 +43,5 @@
 ---
 
 * [FAQ](faq.md)
+* [Configuring Conduktor](configuring-conduktor.md)
 
