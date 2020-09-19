@@ -36,3 +36,19 @@ Please [contact us](https://www.conduktor.io/contact) for inquiries on the Enter
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
+## I / my company paid for a license but Conduktor tells me I'm in "free" mode!
+
+Two situations may arise:
+
+* You have a classic fixed license \(personal or via your company\):
+
+Don't worry, we didn't forget your license. Conduktor's licenses are **personal** and limited to one user/machine by default. We have to be sure that you don't share your account credentials with your whole team or your whole company, that would not be fair to us 😢 \(and could be considered as a license violation\).
+
+We don't want to lock you out from Conduktor if you do this "by accident" or if you've changed your machine, therefore we simply fallback you to the free mode of Conduktor \(all features are still available, but only with a local broker\). According to which version of Conduktor you're using, you may also see clearly **"Too many activations"** on the login screen.
+
+Feel free to [contact us](mailto:support@conduktor.io) asap to resolve your case and remove your old machine identifications for instance.
+
+* Your company has **floating** licenses:
+
+Your company bought a certain number of monthly licenses \(seats\). If the current month is fully taken by your coworkers, you'll end up in the free mode for the month and you'll see **"No seats available"** on your login screen. Contact your technical administrator, your company may have to update its subscription to add more seats.
+
