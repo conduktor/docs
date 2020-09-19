@@ -30,7 +30,7 @@ Part of understanding why your CLI \(and therefore Conduktor\) can't connect to 
 
 Connecting to Kafka through SSH with Conduktor is impossible, due to how the Kafka Clients work. No client can currently do this setup:
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 Because Conduktor or the Kafka CLI cannot leverage a tunneling connection to connect to your Kafka brokers
 
@@ -38,13 +38,13 @@ Because Conduktor or the Kafka CLI cannot leverage a tunneling connection to con
 
 This setup does not work:
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%283%29.png)
 
 Because even though your Kafka brokers are accessible through a public IP, upon connecting Conduktor \(and the Kafka Clients\) will be forced to use the private IP of Apache Kafka. This is a limitation of Apache Kafka due to [how the listeners work.](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
 If you're using a VPN, this would work:
 
-![Using a VPN makes your local computer part of the private network](../.gitbook/assets/image%20%2835%29.png)
+![Using a VPN makes your local computer part of the private network](../../.gitbook/assets/image%20%2835%29.png)
 
 
 

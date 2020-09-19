@@ -1,3 +1,9 @@
+---
+description: >-
+  This is the SAME process as Installing Conduktor, just download and Next >
+  Next > Next.
+---
+
 # Updating Conduktor
 
 ## Note on upgrade from Conduktor 1.X =&gt; 2.0

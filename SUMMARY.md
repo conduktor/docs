@@ -1,14 +1,11 @@
 # Table of contents
 
 * [Conduktor Documentation](README.md)
-
-## Installing Conduktor <a id="conduktor-installation"></a>
-
-* [Installing Conduktor](conduktor-installation/install/README.md)
-  * [Mac OS X](conduktor-installation/install/mac.md)
-  * [Windows](conduktor-installation/install/windows.md)
-  * [Linux](conduktor-installation/install/linux.md)
-* [Updating Conduktor](conduktor-installation/update.md)
+* [Installing Conduktor](install/README.md)
+  * [Mac OS X](install/mac.md)
+  * [Windows](install/windows.md)
+  * [Linux](install/linux.md)
+  * [Updating Conduktor](install/update.md)
 
 ## Conduktor Sign in <a id="sign-in-section"></a>
 
@@ -19,11 +16,11 @@
 
 ## Kafka Cluster Connection
 
-* [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka.md)
-* [Connecting to a Secure Kafka](kafka-cluster-connection/connecting-to-a-secure-kafka.md)
-* [Connect to Amazon MSK](kafka-cluster-connection/connect-to-amazon-msk.md)
-* [Connecting to Kafka running under Docker](kafka-cluster-connection/connecting-to-kafka-running-under-docker.md)
-* [Impossible connection setups](kafka-cluster-connection/impossible-connection-setups.md)
+* [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka/README.md)
+  * [Impossible connection setups](kafka-cluster-connection/setting-up-a-connection-to-kafka/impossible-connection-setups.md)
+  * [Connecting to Kafka running under Docker](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-under-docker.md)
+  * [Connect to Amazon MSK](kafka-cluster-connection/setting-up-a-connection-to-kafka/connect-to-amazon-msk.md)
+  * [Connecting to a Secure Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-a-secure-kafka.md)
 
 ## Features
 
@@ -44,7 +41,7 @@
   * [Security](features/kafka-connect/security.md)
 * [Configuring Conduktor](features/configuring-conduktor.md)
 
----
+## Miscellaneous <a id="misc"></a>
 
-* [FAQ](faq.md)
+* [Frequently Asked Questions](misc/faq.md)
 

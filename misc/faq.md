@@ -2,7 +2,7 @@
 description: A list of common question our community asks
 ---
 
-# FAQ
+# Frequently Asked Questions
 
 ## Convert a certificate to a Java Trust Store
 
