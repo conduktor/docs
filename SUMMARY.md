@@ -24,24 +24,26 @@
 
 ## Features
 
-* [Brokers Management](features/brokers-management.md)
-* [Topics Management](features/topics-management/README.md)
-  * [Smart Groups](features/topics-management/smart-groups.md)
 * [Consuming data](features/consuming-data/README.md)
   * [Pick your format wisely](features/consuming-data/pick-your-format-wisely.md)
   * [Filtering & Projecting data](features/consuming-data/filtering-and-projecting-data.md)
   * [Advanced Consumer](features/consuming-data/advanced-consumer.md)
 * [Producing data](features/producing-data.md)
-* [Kafka Streams](features/kafka-streams.md)
-* [ksqlDB: Streaming with SQL](features/ksqldb.md)
-* [Schema Registry Management](features/schema-registry-management/README.md)
-  * [Access Control List \(ACLs\)](features/schema-registry-management/kafka-access-control-list-acl.md)
+* [Brokers Management](features/brokers-management.md)
+* [Topics Management](features/topics-management/README.md)
+  * [How to](features/topics-management/how-to.md)
+  * [Smart Groups](features/topics-management/smart-groups.md)
+* [Consumer Groups Management](features/consumer-groups-management.md)
+* [Schema Registry](features/schema-registry-management.md)
 * [Kafka Connect](features/kafka-connect/README.md)
   * [Features](features/kafka-connect/features.md)
   * [Security](features/kafka-connect/security.md)
-* [Configuring Conduktor](features/configuring-conduktor.md)
+* [Kafka Streams](features/kafka-streams.md)
+* [ksqlDB: Streaming with SQL](features/ksqldb.md)
+* [Kafka Security \(ACLs\)](features/kafka-access-control-list-acl.md)
 
 ## Miscellaneous <a id="misc"></a>
 
+* [Configuring Conduktor](misc/configuring-conduktor.md)
 * [Frequently Asked Questions](misc/faq.md)
 

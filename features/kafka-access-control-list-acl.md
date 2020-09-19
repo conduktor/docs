@@ -4,7 +4,7 @@ description: >-
   define Kafka ACLs.
 ---
 
-# Access Control List \(ACLs\)
+# Kafka Security \(ACLs\)
 
 ## List the ACLs
 
@@ -20,7 +20,7 @@ Conduktor "Security" tab lets you see the current ACLs of your Kafka cluster, an
 
 ![](../.gitbook/assets/screenshot-2020-08-05-at-18.52.52.png)
 
-## Create new ACLs
+## How to create new ACLs
 
 Kafka's ACLs are quite "atomic", there are many ACLs possible. Generally, you must combine them to be able to provide a producer / a consumer / a kafka streams application, enough ACLs to make it work properly.
 
