@@ -15,17 +15,17 @@ It's also there to configure:
 
 Go Options &gt; Settings:
 
-![](.gitbook/assets/screenshot-2020-09-19-at-17.13.15.png)
+![](../.gitbook/assets/screenshot-2020-09-19-at-17.13.15.png)
 
 We can decide which columns to hide or show. When columns are hidden, processing is not done \(like with "Show Last Write" which can be quite expensive if you have many topics, it's a good idea to hide it\).
 
-![](.gitbook/assets/screenshot-2020-09-19-at-17.11.18.png)
+![](../.gitbook/assets/screenshot-2020-09-19-at-17.11.18.png)
 
 ## JVM \(Advanced\)
 
 It's possible to grab some stats about the JVM \(read-only!\):
 
-![](.gitbook/assets/screenshot-2020-09-19-at-17.20.48.png)
+![](../.gitbook/assets/screenshot-2020-09-19-at-17.20.48.png)
 
 It's mostly for advanced users who understand what's going on.
 

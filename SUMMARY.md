@@ -39,9 +39,9 @@
 * [Kafka Connect](features/kafka-connect/README.md)
   * [Features](features/kafka-connect/features.md)
   * [Security](features/kafka-connect/security.md)
+* [Configuring Conduktor](features/configuring-conduktor.md)
 
 ---
 
 * [FAQ](faq.md)
-* [Configuring Conduktor](configuring-conduktor.md)
 
