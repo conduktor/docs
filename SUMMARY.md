@@ -31,6 +31,7 @@
 * [Producing data](features/producing-data.md)
 * [Brokers Management](features/brokers-management.md)
 * [Topics Management](features/topics-management/README.md)
+  * [Topic Details](features/topics-management/topic-details.md)
   * [How to](features/topics-management/how-to.md)
   * [Smart Groups](features/topics-management/smart-groups.md)
 * [Consumer Groups Management](features/consumer-groups-management.md)
