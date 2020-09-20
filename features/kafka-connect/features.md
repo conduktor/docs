@@ -42,7 +42,7 @@ A connector and its tasks can have different states:
 
 ![](../../.gitbook/assets/screenshot-2020-09-19-at-16.42.47.png)
 
-## Reset Source Offsets
+## Reset Connector Source Offsets
 
 Kafka Connect stores connectors state inside Kafka itself.
 
