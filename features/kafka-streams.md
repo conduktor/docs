@@ -1,3 +1,10 @@
+---
+description: >-
+  Conduktor allows you to monitor your Kafka Streams applications and do the
+  links with the existing topics, consumer groups etc. that the Kafka Streams
+  application is using.
+---
+
 # Kafka Streams
 
 {% hint style="info" %}
