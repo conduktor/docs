@@ -4,9 +4,9 @@ description: >-
   something without having to write a complete application.
 ---
 
-# Producing data
+# How to Produce data?
 
-## How to produce data
+## The Producer Dialog
 
 Click on the Producer button in the top bar to open the Producer dialog:
 

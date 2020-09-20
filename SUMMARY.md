@@ -24,11 +24,11 @@
 
 ## Features
 
-* [Consuming data](features/consuming-data/README.md)
+* [How to Consume data?](features/consuming-data/README.md)
   * [Pick your format wisely](features/consuming-data/pick-your-format-wisely.md)
   * [Filtering & Projecting data](features/consuming-data/filtering-and-projecting-data.md)
   * [Advanced Consumer](features/consuming-data/advanced-consumer.md)
-* [Producing data](features/producing-data.md)
+* [How to Produce data?](features/producing-data.md)
 * [Brokers Management](features/brokers-management.md)
 * [Topics Management](features/topics-management/README.md)
   * [Topic Details](features/topics-management/topic-details.md)

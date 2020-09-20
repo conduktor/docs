@@ -5,11 +5,13 @@ description: >-
   recent values, ... many things are possible.
 ---
 
-# Consuming data
+# How to Consume data?
 
-## How Conduktor consumes data
+## _How_ Conduktor consumes data
 
-Conduktor always renders data **chronologically**. 
+{% hint style="success" %}
+Conduktor always displays data **chronologically**. 
+{% endhint %}
 
 Kafka only provides ordering within a single partition, not across partitions. Because it does not make sense to consume data non-chronologically in Conduktor, we've added our own optimization to always render the data in a deterministic way \(chronologically\) while preserving memory and CPU. This also works for multi-topics consumption \(see below\).
 
