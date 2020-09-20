@@ -1,3 +1,9 @@
+---
+description: >-
+  Topics are just "virtual containers" in Kafka. The real deal is the partitions
+  that compose a topic. They are the unit of parallelism, the unit of work.
+---
+
 # Topic Details
 
 ## Information Panel
