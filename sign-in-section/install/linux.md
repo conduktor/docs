@@ -20,7 +20,7 @@ sudo apt install ./Conduktor-2.0.13.deb
 
 You may be prompted to entire your admin credentials so that Conduktor can be installed
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 Conduktor is then installed in
 
@@ -36,7 +36,7 @@ drwxr-xr-x 2 root root 4096 Apr  9 13:11 bin/
 
 **To start Conduktor, you should be able to find it in your Ubuntu applications**
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 Alternatively, you can run:
 

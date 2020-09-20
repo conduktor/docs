@@ -3,7 +3,7 @@
 In order for us to verify the license you have purchased, we require you to sign in to Conduktor. For this, we are using Auth0 for user management. 
 
 {% hint style="info" %}
-Do you have an internet proxy? Check out the [internet proxy section](internet-proxy.md)
+Do you have an internet proxy? Check out the [internet proxy section](login-troubleshooting/internet-proxy.md)
 {% endhint %}
 
 ## Login flow
@@ -46,5 +46,5 @@ And you're all set!
 
 Please read the following page:
 
-{% page-ref page="login-troubleshooting.md" %}
+{% page-ref page="login-troubleshooting/" %}
 

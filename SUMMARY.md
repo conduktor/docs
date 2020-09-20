@@ -1,18 +1,18 @@
 # Table of contents
 
 * [Conduktor Documentation](README.md)
-* [Installing Conduktor](install/README.md)
-  * [Mac OS X](install/mac.md)
-  * [Windows](install/windows.md)
-  * [Linux](install/linux.md)
-  * [Updating Conduktor](install/update.md)
 
-## Conduktor Sign in <a id="sign-in-section"></a>
+## Conduktor First Steps <a id="sign-in-section"></a>
 
+* [Installing Conduktor](sign-in-section/install/README.md)
+  * [Mac OS X](sign-in-section/install/mac.md)
+  * [Windows](sign-in-section/install/windows.md)
+  * [Linux](sign-in-section/install/linux.md)
+  * [Updating Conduktor](sign-in-section/install/update.md)
 * [Sign in to Conduktor](sign-in-section/sign-in.md)
-* [Using an internet proxy](sign-in-section/internet-proxy.md)
 * [Licenses & Activations](sign-in-section/licenses-and-activations.md)
-* [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting.md)
+* [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting/README.md)
+  * [Using an internet proxy](sign-in-section/login-troubleshooting/internet-proxy.md)
 
 ## Kafka Cluster Connection
 

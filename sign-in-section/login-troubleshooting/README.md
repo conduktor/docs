@@ -39,7 +39,7 @@ If your organization has its own self-signed CA and certificates, you can add tr
 * Conduktor will create its own internal truststore when starting up
 * You need to restart Conduktor after adding/removing certificates in order for them to be taken into account
 
-![](../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
+![](../../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
 
 ## I need to configure custom JVM options
 

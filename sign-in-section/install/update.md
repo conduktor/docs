@@ -22,13 +22,13 @@ Upon starting Conduktor, we will be checking for a new version. If there is one,
 2.0.8 ---> 2.0.13
 ```
 
-![the update screen](../.gitbook/assets/screen-shot-2020-04-08-at-10.13.02.png)
+![the update screen](../../.gitbook/assets/screen-shot-2020-04-08-at-10.13.02.png)
 
 
 
 Conduktor will be checking for updates, and display a changelog:
 
-![](../.gitbook/assets/screen-shot-2020-04-08-at-10.14.57.png)
+![](../../.gitbook/assets/screen-shot-2020-04-08-at-10.14.57.png)
 
 Upon clicking the **Download Latest** button, you will automatically download the latest version for your appropriate OS. 
 
