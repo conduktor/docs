@@ -11,12 +11,18 @@ description: >-
 Work In Progress
 {% endhint %}
 
-## Import Topology
+## How to import a Topology inside Conduktor, and why?
 
-* Specify the application.id of your application
+Kafka Streams applications are outside of the scope of Kafka itself, they can be running anywhere. They generally work with many topics \(in/out/internal/intermediates\) and can be reset when you want to start it fresh again.
+
+Conduktor can help you monitoring these applications, and the topics being used. 
+
+To do so, go to the Kafka Streams menu and click on `IMPORT TOPOLOGY,` then:
+
+* Specify the `application.id` of your application
 * Specify the topology
-  * Static: paste your topology directly inside Conduktor
-  * by URL: paste the endpoint of your application exposing its topology.
+  * **Static**: paste your topology directly inside Conduktor
+  * **by URL**: paste the endpoint of your application exposing its topology.
     * Conduktor will automatically fetch it regularly, adapt the metrics accordingly, and warn you if it's down
 
 Here is an example importing a Kafka Streams application using the application.id `myapplicationid` and exposing a endpoint `/topology`:
