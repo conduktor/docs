@@ -26,11 +26,15 @@ When you login, you can stumbled upon this error in your browser. That means tha
 This can happen due to many reasons. Here are a few:
 
 * Are you running Conduktor from your enterprise network?
-  * You may need to configure a proxy: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
-  * You may need to add a trusted certificate to Conduktor: see below
-* Browser plugins can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
-* The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts Let's Encrypt's CA, which is the one that emits the https certificate of our authentication server https://auth.conduktor.io so nothing specific to setup here.
-* Ensure you don't have an antivirus or a firewall blocking communications. You may have to add https://auth.conduktor.io to some allow-list or something.
+  * You may need to configure a **proxy**: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
+  * You may need to add a **trusted certificate** to Conduktor: see below
+* **Browser plugins** can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
+* If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor \(if you VPN adds its own security layer with a self-signed certificate..\)
+* Ensure you don't have an **antivirus** or a **firewall** blocking communications. You may have to add `https://auth.conduktor.io` to some allow-list or something.
+
+{% hint style="info" %}
+The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts **Let's Encrypt**'s CA, which is the one that emits the https certificate of our authentication server `https://auth.conduktor.io` so nothing specific to setup here.
+{% endhint %}
 
 ## My organization manage its own certificates / PKIX path building failed
 
