@@ -64,7 +64,7 @@ The next step is to sign in to Conduktor. See this section here
 
 Elementary OS has some troubles rendering JavaFX. You'll need to add an option to use an "older" version of its UI toolkit engine GTK.
 
-* In `/opt/conduktor/lib/app/Conduktor.cfg`, add -Djdk.gtk.version=2. Note that this changes will be LOST when upgrading Conduktor. 
+* In `/opt/conduktor/lib/app/Conduktor.cfg`, add -Djdk.gtk.version=2. Note that this change will be **LOST** when upgrading Conduktor \(and needs to be added again\). 
 
 ```text
 [JavaOptions]
