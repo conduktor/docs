@@ -49,7 +49,7 @@ By default, Conduktor is limited to 2GB of memory heap. It's possible to increas
 
 * MacOS: `/Applications/Conduktor.app/Contents/app/Conduktor.cfg`
 * Windows
-* Linux
+* Linux: `/opt/conduktor/lib/app/Conduktor.cfg`
 
 {% hint style="danger" %}
 We do **NOT** recommend to alter this file, **all changes will be lost** when upgrading Conduktor
@@ -74,9 +74,9 @@ It's possible to customize the -D\* without losing them when upgrading.
 
 Instead of playing with `Conduktor.cfg`, create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want \(**only -D, no -XX**\), to set them when Conduktor starts \(only on startup, it's not taken into account after\):
 
-* MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
-* Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
-* Linux: /home/&lt;user&gt;/.config/conduktor/conduktor.vmoptions \(or XDG Config path if set\)
+* MacOS: `/Users/<user>/Library/Application Support/conduktor/conduktor.vmoptions`
+* Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\conduktor.vmoptions`
+* Linux: `/home/<user>/.config/conduktor/conduktor.vmoptions` \(or XDG Config path if set\)
 
 Example:
 
