@@ -36,7 +36,17 @@ Please [contact us](https://www.conduktor.io/contact) for inquiries on the Enter
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
-## I / my company paid for a license but Conduktor tells me I'm in "free" mode!
+## Enterprise Floating License
+
+![](../.gitbook/assets/screenshot-2020-10-14-at-09.10.34.png)
+
+With Enterprises, it's also possible to have a _pool_ of dynamic licenses \(seats\) every month. There are automatically claimed for the current month when a user from your domain logs in. It's particularly useful when you don't exactly know who many users will need Conduktor, or when your workforce is changing. 
+
+{% hint style="warning" %}
+On a specific month, if you have **more users logging in than your number of seats**, then they will **fallback** upon the "free" mode, because no more seats are available, they must wait for the next month \(or your company must resize its pool, contact our support to do that\).
+{% endhint %}
+
+## I have a license but I'm in "free" mode, why?
 
 Two situations may arise:
 
@@ -49,6 +59,8 @@ We don't want to lock you out from Conduktor if you do this "by accident" or if 
 Feel free to [contact us](mailto:support@conduktor.io) asap to resolve your case and remove your old machine identifications for instance.
 
 * Your company has **floating** licenses:
+
+![all the monthly seats of my company are already claimed for the current month](../.gitbook/assets/screenshot-2020-10-14-at-09.08.55.png)
 
 Your company bought a certain number of monthly licenses \(seats\). If the current month is fully taken by your coworkers, you'll end up in the free mode for the month and you'll see **"No seats available"** on your login screen. Contact your technical administrator, your company may have to update its subscription to add more seats.
 
