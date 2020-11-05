@@ -37,9 +37,9 @@ Conduktor offers two perspectives for this.
 
 ### A view per partition
 
-![](../../.gitbook/assets/screenshot-2020-09-19-at-22.25.57.png)
+![A normal situation, everything&apos;s good](../../.gitbook/assets/screenshot-2020-09-19-at-22.25.57.png)
 
-
+![When something is wrong! Here, the partition 0 has no leader](../../.gitbook/assets/screenshot-2020-11-05-at-09.13.02.png)
 
 * **partition** number: 0 to N
 * **leader**: this is a [broker.id](https://kafka.apache.org/documentation/#broker.id) of the leader. It can be any integer \(0 to [reserved.broker.max.id](https://kafka.apache.org/documentation/#reserved.broker.max.id) typically 1000\). It can also be `MISSING!` if Kafka doesn't find any leader for this partition. It generally means a broker is offline and that no replicas were up to date \(or the topic was not replicated enough..\) 😱
