@@ -6,13 +6,9 @@ Conduktor supports Linux, but Linux is a very wide ecosystem, and it is hard for
 
 We have prepared three distributions for Conduktor
 
-## Debian
+## Ubuntu/Debian
 
-You can use a `.deb` file to install Conduktor on your Debian. This is the distribution you would be looking at if you're using **Ubuntu**.
-
-In this example we are using Ubuntu and therefore the`.deb` file, example: `Conduktor-2.0.13.deb` 
-
-You can easily install Conduktor using the following command
+You can use a `.deb` file to install Conduktor on your Ubuntu/Debian. Download the .deb from our download page, then you can install Conduktor using the following command:
 
 ```text
 sudo apt install ./Conduktor-2.0.13.deb
@@ -22,7 +18,7 @@ You may be prompted to entire your admin credentials so that Conduktor can be in
 
 ![](../../.gitbook/assets/image%20%2827%29.png)
 
-Conduktor is then installed in
+Conduktor is then installed in /opt/conduktor
 
 ```text
 $ ll /opt/conduktor/
@@ -44,13 +40,34 @@ Alternatively, you can run:
 /opt/conduktor/bin/Conduktor
 ```
 
+### Error: missing libffi6 when installing .deb
+
+For Linux, Conduktor is packaged with libffi6. This library had seen its version bump to libffi7 in Ubuntu 20 Focal so you'll end up with this error:
+
+```text
+$ sudo dpkg -i Conduktor-2.1.1.deb 
+...
+dpkg: dependency problems prevent configuration of conduktor:
+ conduktor depends on libffi6; however:
+  Package libffi6 is not installed.
+```
+
+It's possible to install the previous version using coming from Ubuntu 19.10 \(Eoan Ermine\): download it here [https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6\_3.2.1-9\_amd64.deb.html](https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6_3.2.1-9_amd64.deb.html)
+
+```text
+$ curl -LO http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-9_amd64.deb
+$ sudo dpkg -i libffi6_3.2.1-9_amd64.deb 
+$ sudo dpkg -i Conduktor-2.1.1.deb 
+... OK!
+```
+
 ## RPM
 
 You can use a `.rpm` file to install Conduktor on your RPM based system. This includes Red Hat Linux, CentOS, Fedora, OpenSUSE.
 
 ## Zip distro 
 
-This is not the recommended way to install Conduktor, but if you have a JRE 11+ installed on your system, you can try to use the `.zip` distribution of Conduktor. Overall, we cannot guarantee this method will work but we offer it to you as an alternative to the `.deb` and `.rpm` bundles.
+This is not the recommended way to install Conduktor, but if you have a JRE 11+ installed on your system, you can use the `.zip` distribution of Conduktor. Overall, we cannot guarantee this method will work but we offer it to you as an alternative to the `.deb` and `.rpm` bundles.
 
 ## **Signing in**
 
