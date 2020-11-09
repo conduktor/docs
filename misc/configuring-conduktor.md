@@ -86,3 +86,30 @@ Example:
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
 ```
 
+## Logs
+
+### Kafka logging
+
+Conduktor logs all Kafka client warnings and errors to a file, directly accessible from the Conduktor interface.
+
+* Go to the Cluster Configuration screen
+* Test Kafka Connectivity
+* Click on "Logs"
+
+A popup will open with the logs and the path to the kafka.log file:
+
+![](../.gitbook/assets/screenshot-2020-11-09-at-10.35.07.png)
+
+### Conduktor logging
+
+Starting Conduktor 2.7.0, we log everything into a `conduktor.log` file. This may help to troubleshoot odd behaviour, connection issues and so on.
+
+* Windows: `C:\Users\<User>\AppData\Local\Temp\conduktor.log`
+* Linux: `/tmp/conduktor.log`
+* macOS: `/var/folders/wy/xxx/T/conduktor.log`
+  * the path is random. The best way to find it is to look for the kafka.log path \(above\). conduktor.log sits at the same place
+
+{% hint style="success" %}
+On Linux and macOS, you can directly start Conduktor from the console to display the logs on stdout. \(this does not work on Windows, except using alternative unix-ish shells like gitbash\)
+{% endhint %}
+
