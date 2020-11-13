@@ -46,10 +46,22 @@ A connector and its tasks can have different states:
 
 Kafka Connect stores connectors state inside Kafka itself.
 
-Sometimes \(mostly when testing\), you want to reset a connector to start from "scratch", as it was the first time ever you've started it. Unfortunately, removing a Connector does not delete its state from Kafka. You can either:
+Sometimes \(mostly when testing\), you want to reset a connector to start from "scratch", as it was the first time ever you've started it. Unfortunately, **removing a Connector does not delete its state from Kafka**. You can either:
 
 * change the Connector name: Kafka Connect won't find any existing state obviously
 * reset the source offsets: using Conduktor!
+
+Conduktor will look for the partition containing the latest occurence of your connector configuration, to know "where" to reset it.
+
+Here is an example:
+
+* my connector name: "my-connector" which is already stopped \(ie: removed\)
+* my Kafka Connect offsets topic: "docker-connect-offsets"
+* Click Lookup and let Conduktor find the partition and latest value
+* Select the key and "RESET SOURCE OFFSETS"
+* Restart your Connector \(re-create it\), it will start from scratch
+
+![](../../.gitbook/assets/screenshot-2020-11-12-at-17.32.42.png)
 
 ## Create Connectors
 
