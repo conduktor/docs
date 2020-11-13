@@ -31,6 +31,10 @@ We provide 2 views when consuming data: simple list and a tabular view. It's pos
 
 You can double-click on a record to open a new dialog with all its info, its schema if it's Avro and so on. You can also open several of them at once to compare records.
 
+{% hint style="success" %}
+Pick "JSON" as your Value deserializer to see the **formatted** **JSON** in the details dialog. If you pick just "string", it won't be formatted otherwise.
+{% endhint %}
+
 ![The payload of a record](../../.gitbook/assets/screenshot-2020-06-25-at-15.15.11.png)
 
 From here, you can:
