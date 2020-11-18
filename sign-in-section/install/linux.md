@@ -101,7 +101,7 @@ dpkg: dependency problems prevent configuration of conduktor:
   Package libffi6 is not installed.
 ```
 
-It's possible to install the previous version using coming from Ubuntu 19.10 \(Eoan Ermine\): download it here [https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6\_3.2.1-9\_amd64.deb.html](https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6_3.2.1-9_amd64.deb.html)
+It's possible to install the previous version using coming from Ubuntu 19.10 \(Eoan Ermine\): download it here [http://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6\_3.2.1-8\_amd64.deb](http://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb)
 
 ```text
 $ curl -LO http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-9_amd64.deb
