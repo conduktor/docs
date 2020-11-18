@@ -30,6 +30,7 @@ This can happen due to many reasons. Here are a few:
   * You may need to add a **trusted certificate** to Conduktor: see below
 * **Browser plugins** can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
 * If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor \(if you VPN adds its own security layer with a self-signed certificate..\)
+  * Using **ZScaler** ? Download the ZScaler certificate and import it into Conduktor
 * Ensure you don't have an **antivirus** or a **firewall** blocking communications. You may have to add `https://auth.conduktor.io` to some allow-list or something.
 
 {% hint style="info" %}
