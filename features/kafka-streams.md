@@ -39,6 +39,19 @@ If the application is down, the topology disappears and it becomes redish, time 
 
 
 
+## How do I retrieve my Topology description?
+
+You need access to your `Topology` object in your Java/Scala/Kotlin code.
+
+For instance, when your program starts, you can simply emit the Topology on stdout to copy/paste it:
+
+```java
+Topology topology = builder.build();
+System.out.println(topology.describe());
+```
+
+If your Kafka Streams application also exposes some HTTP routes, you can add a new route `"/topology"` that returns the result of `topology.describe()` , that you can use in Conduktor.
+
 ## How to reset a Kafka Streams Application?
 
 Conduktor can help you in two ways:
