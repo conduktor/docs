@@ -62,6 +62,14 @@ Example:
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
 ```
 
+## Failed to launch JVM
+
+On Windows, it's possible to get this error "Failed to launch JVM" in certain rare cases.
+
+Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
+
+Some softwares add them for their own need, but this is taken into account by all the Java program running on your system. This may be dangerous and causes issues \(like here\).
+
 ## My issue is not addressed here
 
 Please [send us an email](mailto:support@conduktor.io?subject=Login%20Troubleshooting?body=Please%20include%20as%20much%20information%20as%20possible,%20as%20well%20as%20screenshots,%20or%20even%20better,%20videos)
