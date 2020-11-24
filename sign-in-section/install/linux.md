@@ -6,12 +6,16 @@ Conduktor supports Linux, but Linux is a very wide ecosystem, and it is hard for
 
 We have prepared three distributions for Conduktor
 
-## Ubuntu/Debian
+## How to install Conduktor on Ubuntu/Debian
+
+{% hint style="warning" %}
+For Ubuntu 16 or 20, read the warnings below.
+{% endhint %}
 
 You can use a `.deb` file to install Conduktor on your Ubuntu/Debian. Download the .deb from our download page, then you can install Conduktor using the following command:
 
 ```text
-sudo apt install ./Conduktor-2.0.13.deb
+sudo apt install ./Conduktor-2.7.0.deb
 ```
 
 You may be prompted to entire your admin credentials so that Conduktor can be installed
@@ -40,30 +44,46 @@ Alternatively, you can run:
 /opt/conduktor/bin/Conduktor
 ```
 
-### Error: missing libffi6 when installing .deb
+### Error: ubuntu 16 unsupported
+
+Ubuntu 16.04 is slowly reaching its end-of-life  and some packages do not exist there. You may end up with these errors:
+
+```text
+cannot install latest on ubuntu 16.04
+conduktor depends on libglx0; however:
+Package libglx0 is not installed.
+conduktor depends on libpng16-16; however:
+Package libpng16-16 is not installed.
+```
+
+### Error: ubuntu 20: missing libffi6 when installing .deb
 
 For Linux, Conduktor is packaged with libffi6. This library had seen its version bump to libffi7 in Ubuntu 20 Focal so you'll end up with this error:
 
 ```text
-$ sudo dpkg -i Conduktor-2.1.1.deb 
+$ sudo dpkg -i Conduktor-2.7.0.deb 
 ...
 dpkg: dependency problems prevent configuration of conduktor:
  conduktor depends on libffi6; however:
   Package libffi6 is not installed.
 ```
 
-It's possible to install the previous version using coming from Ubuntu 19.10 \(Eoan Ermine\): download it here [https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6\_3.2.1-9\_amd64.deb.html](https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6_3.2.1-9_amd64.deb.html)
+Hopefully, it's possible to install the previous version libffi6: [https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6\_3.2.1-9\_amd64.deb.html](https://ubuntu.pkgs.org/19.10/ubuntu-main-amd64/libffi6_3.2.1-9_amd64.deb.html)
 
 ```text
 $ curl -LO http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-9_amd64.deb
 $ sudo dpkg -i libffi6_3.2.1-9_amd64.deb 
-$ sudo dpkg -i Conduktor-2.1.1.deb 
+$ sudo dpkg -i Conduktor-2.7.0.deb 
 ... OK!
 ```
 
 ## RPM
 
 You can use a `.rpm` file to install Conduktor on your RPM based system. This includes Red Hat Linux, CentOS, Fedora, OpenSUSE.
+
+```text
+$ rpm -i Conduktor-2.7.0.rpm
+```
 
 ## Zip distro 
 
