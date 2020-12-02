@@ -135,6 +135,23 @@ sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required
 ssl.truststore.location=C:/myfolder/trust.root.jks
 ```
 
+#### ERR: Illegal char &lt;:&gt;
+
+If you stumbled upon this error, it means you used the "\" character in the paths \(the error shows "/" but it's wrong\) :
+
+```text
+Illegal char <:> at index 2: ‪C:/myfolder/key.root.jks
+```
+
+#### ERR: No Such File
+
+If you see this error, and you are sure the path is right, try to remove the whole line and retype it yourself. You may have inserted invisible characters during copy/paste like from a Unix system \(\r\).
+
+```text
+Failed to load SSL keystore keystore.jks‪ of type JKS
+Caused by: java.nio.file.NoSuchFileException: c:/myfolder/keystore.jks‪
+```
+
 ## Can you help us with security troubleshooting?
 
 Unfortunately, we cannot provide support to help you connect to your secure cluster besides what's included in the documentation. **Your Kafka administrator will have the answer to your problem**, please send them the link to this documentation page. Thank you!
