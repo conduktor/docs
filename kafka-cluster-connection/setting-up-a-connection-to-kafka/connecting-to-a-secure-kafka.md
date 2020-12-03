@@ -120,6 +120,30 @@ Please make sure to put the **full paths** to your SASL key files in your proper
 Relative paths may not work for Conduktor. 
 {% endhint %}
 
+### Example using Kerberos
+
+Another example using Kerberos and a keytab:
+
+* a JAAS file \(would need -Djava.security.auth.login.config=/path/to/jaas.conf\)
+
+```text
+KafkaClient {
+  com.sun.security.auth.module.Krb5LoginModule required
+  useKeyTab=true
+  keyTab="/etc/security/keytabs/alice.keytab"
+  principal="alice@EXAMPLE.COM";
+};
+```
+
+* The same, but using `sasl.jaas.config`:
+
+```text
+sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule 
+        required useKeyTab=true 
+        keyTab="/etc/security/keytabs/alice.keytab"
+        principal="alice@EXAMPLE.COM";
+```
+
 ## Windows and paths
 
 If you're using Windows, you may have to use slash '/' instead of backslash '\' to make the connection work. Here is an example when configuring a kerberos connection:
