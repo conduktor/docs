@@ -30,6 +30,14 @@ To do this, create the file `conduktor.vmoptions` in your Conduktor personal fol
 -Djava.net.preferIPv4Stack=false
 ```
 
+Sometimes, it seems it is not enough. Another solution is to remove the original flag in the original configuration: be aware that this modification will be LOST each time you will upgrade Conduktor.
+
+Remove `-Djava.net.preferIPv4Stack=true` in the source configuration file of Conduktor:
+
+* MacOS: /Applications/Conduktor.app/Contents/app/Conduktor.cfg
+* Linux: /opt/conduktor/lib/app/Conduktor.cfg
+* Windows:
+
 ## Ubuntu Focal 20: missing libffi6 when installing .deb
 
 For Linux, Conduktor is packaged with libffi6. This library had seen its version bump to libffi7 in Ubuntu 20 Focal so you'll end up with this error:
