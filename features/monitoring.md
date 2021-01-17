@@ -52,9 +52,27 @@ Therefore, your computer must be able to connect to this address:port for Conduk
 
 For now, Conduktor barely used the power of the metrics. We're working to expose common metrics to monitor as graphs and notify you if sometimes looks wrong.
 
-WIP
+* **Version**: without metrics, Conduktor can only apply some heuristics to determine the version of the brokers. With metrics, we can know exactly which one it is!
+  * It's important to be sure that all your version are up-to-date and similar
 
+![](../.gitbook/assets/screenshot-2021-01-18-at-00.08.51.png)
 
+* **Topic throughput**: we display the throughput \(in/out\). Useful to know the activity of a topic. Does it have many consumers, or many producers, or none?
+
+![](../.gitbook/assets/screenshot-2021-01-18-at-00.13.05.png)
+
+* **Rolling Restart**
+  * This is an ops oriented feature, only available when you host your own Kafka and when Conduktor can ssh into the machines.
+  * The metrics are necessary to monitor the Under Replicated Partitions
+
+![](../.gitbook/assets/screenshot-2021-01-18-at-00.15.37.png)
+
+## More to come
+
+* Add Prometheus support
+* A Monitoring dashboard with graphs to monitor well-known metrics
+* Alert you within Conduktor in case of metrics issue detection
+* Integrate the topic metrics into other screens
 
 
 
