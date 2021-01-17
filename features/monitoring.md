@@ -6,9 +6,11 @@ description: >-
 
 # Monitoring
 
-Currently, Conduktor has a very light integration with metrics system. We only manage the Kafka brokers when they expose their metrics using JMX or Jolokia \(JMX over HTTP\). 
+Currently, Conduktor provides only a few features from the metrics system. We only handle the metrics when the Kafka brokers expose their metrics using JMX or Jolokia \(JMX over HTTP\). 
 
 ## Configuration
+
+In your Cluster Configuration, you can enable either JMX or Jolokia access for Conduktor to access the metrics.
 
 ### JMX
 
@@ -69,6 +71,7 @@ For now, Conduktor barely used the power of the metrics. We're working to expose
 
 ## More to come
 
+* JMX over SSL
 * Add Prometheus support
 * A Monitoring dashboard with graphs to monitor well-known metrics
 * Alert you within Conduktor in case of metrics issue detection
