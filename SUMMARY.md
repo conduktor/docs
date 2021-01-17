@@ -44,6 +44,7 @@
 * [Kafka Streams](features/kafka-streams.md)
 * [ksqlDB: Streaming with SQL](features/ksqldb.md)
 * [Kafka Security \(ACLs\)](features/kafka-access-control-list-acl.md)
+* [Monitoring](features/monitoring.md)
 
 ## Miscellaneous <a id="misc"></a>
 
