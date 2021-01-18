@@ -37,6 +37,10 @@ This can happen due to many reasons. Here are a few:
 The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts **Let's Encrypt**'s CA, which is the one that emits the https certificate of our authentication server `https://auth.conduktor.io` so nothing specific to setup here.
 {% endhint %}
 
+## Other misc error
+
+* **Unexpected end of file from server**: something on your network prevents Conduktor to request our identity provider, auth0, to fetch identity info.
+
 ## My organization manage its own certificates / PKIX path building failed
 
 If your organization has its own self-signed CA and certificates, you can add trusted certificates within Conduktor from the welcome screen.
