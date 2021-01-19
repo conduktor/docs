@@ -89,6 +89,16 @@ sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule require
    password="secret";
 ```
 
+### SCRAM configuration
+
+Use this configuration in Conduktor:
+
+```text
+security.protocol=SASL_SSL
+sasl.mechanism=SCRAM-SHA-512
+sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="yyy" password="xxx";
+```
+
 ### 🚨 About JAAS files
 
 If you see a JAAS file being passed as a Java option to your Kafka clients using
