@@ -15,7 +15,7 @@ For Ubuntu 16 or 20, read the warnings below.
 You can use a `.deb` file to install Conduktor on your Ubuntu/Debian. Download the .deb from our download page, then you can install Conduktor using the following command:
 
 ```text
-sudo apt install ./Conduktor-2.7.0.deb
+sudo dpkg -i ./Conduktor-2.7.0.deb
 ```
 
 You may be prompted to entire your admin credentials so that Conduktor can be installed
