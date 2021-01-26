@@ -18,6 +18,8 @@ When you login from Conduktor Desktop and get this error in the browser, instead
 * ensure you don't have some funny extension in your browser that could alter the url for some reasons
 * you hit the "back button" in your browser and tried to come back. Please relogin properly from Conduktor.
 * if nothing works, try to restart Conduktor Desktop and login \(to start fresh\)
+* Connection Refused: no further information
+  * The browser tries to contact our software Conduktor on localhost:8085 to provide the authentication information, and it fails to do so. You probably have a networking tool on your system preventing this connection.
 
 ## Oh no! Authentication has failed...
 
