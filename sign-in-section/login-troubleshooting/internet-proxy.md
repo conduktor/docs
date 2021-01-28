@@ -1,14 +1,16 @@
 # Using an internet proxy
 
-In case you have an internet proxy \(usually if you are part of a corporate with network security controls\), then you need to set-up Conduktor to be able to work with this proxy, otherwise the login won't work.
+In case you have an internet proxy \(usually if you are part of a corporate with network security controls\), then you may need to set-up Conduktor to be able to work with this proxy, otherwise the login won't work.
 
-![](../../.gitbook/assets/screen-shot-2020-04-08-at-11.54.15.png)
+By default Conduktor will automatically detect and use your system proxies.
 
-the proxy configuration can be found in the bottom right corner of the start screen of Conduktor. 
+![](../../.gitbook/assets/conduktor-275-home-select-network.png)
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+The proxy configuration can be found in the bottom right corner of the start screen of Conduktor. 
 
-From there, you can set the proxy and enter:
+![](../../.gitbook/assets/network-275-whitebg2.png)
+
+From there, you can set the proxy manually and enter:
 
 * hostname
 * port
