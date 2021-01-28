@@ -16,6 +16,7 @@
 
 ## Kafka Cluster Connection
 
+* [Import/Export configurations](kafka-cluster-connection/import-export-configurations.md)
 * [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka/README.md)
   * [Impossible connection setups](kafka-cluster-connection/setting-up-a-connection-to-kafka/impossible-connection-setups.md)
   * [Connecting to Kafka running under Docker](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-under-docker.md)
