@@ -1,10 +1,21 @@
+---
+description: >-
+  Consumer Groups are one of the most powerful concept in Apache Kafka. It is
+  used to track the position of each consumer. In case it goes offline, it can
+  resume from its last position.
+---
+
 # Consumer Groups Management
 
-{% hint style="info" %}
-Work In Progress
-{% endhint %}
+Conduktor does NOT create any Consumer Group, it does not need too. Therefore, it's totally transparent for your Kafka cluster: Conduktor won't leave any traces and will not create anything here, you're safe.
 
+## How can I create a Consumer Group?
 
+_TLDR: you can't._
+
+Conduktor does not create any Consumer Group and there is currently no possibility to create them here, because it makes little sense. The Consumer Group should be created by your applications, to be used by themselves. Why would you create a Consumer Group in Conduktor itself? 
+
+If you have a valid use-case, feel free to contact us.
 
 ## How to delete a Consumer Group?
 
@@ -37,4 +48,29 @@ Work In Progress
 * Don't forget to restart your application! 💪
 
 ![](../.gitbook/assets/screenshot-2020-09-20-at-12.06.59.png)
+
+## How can I track the lag of my Consumer Group and my topics?
+
+### Getting the lag for a Consumer Group
+
+The global view of the Consumers shows the overall lag of your consumer groups. It is the sum of the lag for all topic-partitions the consumer group is subscribing to. When it's empty, it means there is no lag, and it's a good news!
+
+* **The overall lag** is the sum of the **differences** between the latest offsets committed by the consuming applications for all their partitions, and the current end offset of all the partition where records are being written to.
+* **Members**: how many instances of your applications are using this consumer group
+* **Partitions / Topics**: how many partitions your consumer group is keeping track of
+
+![](../.gitbook/assets/screenshot-2021-01-29-at-19.23.34.png)
+
+
+
+### Getting the lag per partition
+
+You can also see the details per partitions in the details. Note that a consumer group can subscribe to multiple topics, like we can see below.
+
+* **"?" means indeterminate**.
+  * The Consumer Group has not committed yet any offset for this partition. This can happen when you don't have any record in this specific partition for instance \(or if you have a bug in your consuming application!\).
+  * The Current Offset of first three partitions below are also "?" because no commit were made yet, hence the lag is indeterminate.
+* The lag is the **difference** between the latest offset committed by the consuming applications for the partition, and its current end offset where records are being written to.
+
+![](../.gitbook/assets/consumer-group-question-mark.jpg)
 
