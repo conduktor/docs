@@ -69,6 +69,7 @@ You can also see the details per partitions in the details. Note that a consumer
 
 * **"?" means indeterminate**.
   * The Consumer Group has not committed yet any offset for this partition. This can happen when you don't have any record in this specific partition for instance \(or if you have a bug in your consuming application!\).
+  * Sometimes, it can happen when Conduktor has troubles to simply get the offsets because the Kafka cluster is slow to respond, therefore Conduktor timeouts after a while \(30 seconds by default\).
   * The Current Offset of first three partitions below are also "?" because no commit were made yet, hence the lag is indeterminate.
 * The lag is the **difference** between the latest offset committed by the consuming applications for the partition, and its current end offset where records are being written to.
 
