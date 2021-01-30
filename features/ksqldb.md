@@ -8,7 +8,7 @@ Conduktor only fully supports ksqlDB from v0.10.x and was tested until v0.14. Do
 
 ## How to start with Confluent Cloud?
 
-You need to generate an API key and secret to act as username and password. This can be done using Confluent Cloud CLI tool: `ccloud`. Install it using the official documentation: [https://docs.confluent.io/ccloud-cli/current/install.html](https://docs.confluent.io/ccloud-cli/current/install.html)
+You need to generate an API key and secret to act as username and password specific for ksqlDB. Do not use the Kafka credentials you should already got, this won't work. This can be done using Confluent Cloud CLI tool: `ccloud`. Install it using the official documentation: [https://docs.confluent.io/ccloud-cli/current/install.html](https://docs.confluent.io/ccloud-cli/current/install.html)
 
 * Login and select your environment if you have several of them:
 
