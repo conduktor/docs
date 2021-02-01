@@ -38,7 +38,7 @@
 * [Consumer Groups Management](features/consumer-groups-management.md)
 * [Schema Registry](features/schema-registry-management/README.md)
   * [Avro Tools](features/schema-registry-management/avro-tools.md)
-  * [Schema Compatibilities](features/schema-registry-management/schema-compatibilities.md)
+  * [Subjects & Schema Compatibilities](features/schema-registry-management/schema-compatibilities.md)
 * [Kafka Connect](features/kafka-connect/README.md)
   * [Features](features/kafka-connect/features.md)
   * [Security](features/kafka-connect/security.md)
