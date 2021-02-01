@@ -14,9 +14,9 @@ keytool -import -v -trustcacerts -alias mycompany -file mycompany.crt -keystore 
 
 ## Setup the Keystore in Conduktor
 
-Conduktor supports explicit truststore/keystore for some of our HTTPS integrations: Kafka Connect, ksqlDB, but we are currently missing it on our Schema Registry integration for instance.
+Conduktor supports explicit truststore/keystore for some of our HTTPS integrations: Kafka Connect, ksqlDB. Kafka & Schema Registry also support truststore/keystore through their additional properties. 
 
-What you can do is to configure your keystore globally on Conduktor:
+In case we're missing an integration, it can be useful to setup it globally on Conduktor itself \(it does not mean it is inherited by the specific connection that already manage a specific keystore configuration\):
 
 ```text
 -Djavax.net.ssl.keyStore=/home/xxx/my.client.keystore.jks
