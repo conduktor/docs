@@ -12,6 +12,19 @@ In the Java world \(hence in Conduktor\), we work with the "Java KeyStore .jks" 
 keytool -import -v -trustcacerts -alias mycompany -file mycompany.crt -keystore mycompany.jks -keypass changeit -storepass changeit
 ```
 
+## Setup the Keystore in Conduktor
+
+Conduktor supports explicit truststore/keystore for some of our HTTPS integrations: Kafka Connect, ksqlDB, but we are currently missing it on our Schema Registry integration for instance.
+
+What you can do is to configure your keystore globally on Conduktor:
+
+```text
+-Djavax.net.ssl.keyStore=/home/xxx/my.client.keystore.jks
+-Djavax.net.ssl.keyStorePassword=<password>
+```
+
+See [https://docs.conduktor.io/misc/configuring-conduktor\#custom-environment-variables](https://docs.conduktor.io/misc/configuring-conduktor#custom-environment-variables) to see where.
+
 ## I'm using IPv6 infrastructure
 
 By default, due to Java "habits", and to avoid complicated issues and troubleshoots \(such as "Conduktor can't connect to.."\), Conduktor automatically set `-Djava.net.preferIPv4Stack=true` to automatically use the IPv4 stack \(which is still mostly used\) when starting up.
