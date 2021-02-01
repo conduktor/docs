@@ -17,19 +17,25 @@ Long story short, there are 7 modes of compatibility handled by the Schema Regis
 
 * **Full + Transitive**: The safest, recommended.
   * Add/Delete optional fields only. 
-    * You can **ONLY** add optional fields \(basically, all your fields are optional!\): the consumer must explicitly handle the case each field is not present
-* **Backward + Transitive**: Delete fields or Add optional fields only.
-  * Upgrade Consumers first.
+  * You can **ONLY** add optional fields \(basically, all your fields are optional!\): the consumer must explicitly handle the case each field is not present
+  * _You can upgrade the Consumers or Producers like you want, no worries._
+* **Backward + Transitive**
+  * Delete fields or Add optional fields only.
+  * _Upgrade Consumers first \(in case a mandatory field was deleted\)._
 * **Forward + Transitive**:
   * Add fields or Delete optional fields only.
-  * Upgrade Producers first.
+  * _Upgrade Producers first \(produce new mandatory fields before consumers\)_
 * **Full**:  Almost the safest.
   * Add/Delete optional fields only.
-* **Backward**: Delete fields or Add optional fields only.
-  * Upgrade Consumers first.
+  * You can **ONLY** add optional fields \(basically, all your fields are optional!\): the consumer must explicitly handle the case each field is not present
+  * _You can upgrade the Consumers or Producers like you want, no worries._
+* **Backward**
+  * Delete fields or Add optional fields only.
+  * _Upgrade Consumers first \(in case a mandatory field was deleted\)._
   * Check compatibility _only_ with the previous version
-* **Forward**: Add fields or Delete optional fields only.
-  * Upgrade Producers first.
+* **Forward**
+  * Add fields or Delete optional fields only.
+  * _Upgrade Producers first \(produce new mandatory fields before consumers\)._
   * Check compatibility _only_ with the previous version
 * **None**: Be careful.
   * No compatibility checking. You can push incompatible schemas as you want.
