@@ -44,6 +44,7 @@
   * [Security](features/kafka-connect/security.md)
 * [Kafka Streams](features/kafka-streams.md)
 * [ksqlDB: Streaming with SQL](features/ksqldb/README.md)
+  * [Connect Conduktor to ksqlDB clusters](features/ksqldb/connect-conduktor-to-ksqldb-clusters.md)
   * [How to start with Confluent Cloud ksqlDB?](features/ksqldb/how-to-start-with-confluent-cloud-ksqldb.md)
   * [ksqlDB FAQ](features/ksqldb/ksqldb-faq.md)
 * [Kafka Security \(ACLs\)](features/kafka-access-control-list-acl.md)
