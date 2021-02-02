@@ -62,7 +62,9 @@ You can connect to multiple ksqlDB clusters in Conduktor, each has its own confi
 * Each service has its own custom types and functions
   * New ksqlDB functions can be added to your clusters by deploying a package \(.jar\)
 
-![](../../.gitbook/assets/screenshot-2021-02-02-at-22.26.06.png)
+![The configuration of your ksqlDB service](../../.gitbook/assets/screenshot-2021-02-02-at-22.26.06.png)
+
+![The functions available on your ksqlDB service](../../.gitbook/assets/screenshot-2021-02-02-at-22.26.11.png)
 
 
 
