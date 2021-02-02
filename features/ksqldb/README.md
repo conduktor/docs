@@ -8,6 +8,8 @@ Conduktor only fully supports ksqlDB from v0.10.x and was tested until v0.14. Do
 
 ## Follow the guide!
 
+{% page-ref page="connect-conduktor-to-ksqldb-clusters.md" %}
+
 {% page-ref page="how-to-start-with-confluent-cloud-ksqldb.md" %}
 
 {% page-ref page="what-to-do-with-ksqldb.md" %}
