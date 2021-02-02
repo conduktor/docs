@@ -31,6 +31,7 @@ Conduktor shows most useful informations:
 * **Streams**: real-time streaming!
 * **Tables**: when you GROUP BY a stream, it gives you a TABLE for instance \(aggregation by key for instance\)
 * **Queries**: the running queries on your cluster. 
+* **Services**: you can connect to multiple ksqlDB clusters in Conduktor, each has its own configurations, custom types etc. ksqlDB distinguishes its clusters by the "Service" name.
 * **Types**: you can create type alias instead of always relying on the raw types \(such as `address<string, string>`, you can now use the `address` type in your streams and tables\)
 
 ![](../../.gitbook/assets/screenshot-2021-02-02-at-22.18.12.png)
@@ -52,7 +53,16 @@ Also, Conduktor will be redish in case of record errors:
 
 ![](../../.gitbook/assets/screenshot-2021-02-02-at-22.16.11.png)
 
+## Services
 
+You can connect to multiple ksqlDB clusters in Conduktor, each has its own configurations, custom types etc. ksqlDB distinguishes its clusters by the "Service" name.
+
+* The default service name is generally "default\_"
+* You can see all the configuration of your service, if the properties have their default value or not
+* Each service has its own custom types and functions
+  * New ksqlDB functions can be added to your clusters by deploying a package \(.jar\)
+
+![](../../.gitbook/assets/screenshot-2021-02-02-at-22.26.06.png)
 
 
 
