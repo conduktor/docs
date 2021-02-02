@@ -4,6 +4,12 @@ description: Some issues and questions you may have using ksqlDB in Conduktor
 
 # ksqlDB FAQ
 
+## Not a query error?
+
+Conduktor only supports streams queries in its editor \(CREATE STREAM, CREATE TABLE etc.\). You cannot use the metadata queries such as "SHOW STREAMS", it's not made for this.
+
+Conduktor already handles all the metadata stuff on its own and displays them properly in its interface.
+
 ## Compatibility with Conduktor \(40400\)
 
 Conduktor only fully support ksqlDB from version 0.10.x. Most things works with older versions except the ksqlDB queries \(you may end up with errors like _KsqlClientException: Received 404 response from server: HTTP 404 Not Found. Error code: 40400_\)
