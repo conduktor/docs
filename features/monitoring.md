@@ -20,7 +20,7 @@ JMX is a common protocol used in Java applications to expose metrics. Apache Kaf
 JMX is not an HTTP protocol, it cannot be accessed through an Internet browser
 {% endhint %}
 
-![](../.gitbook/assets/screenshot-2021-01-17-at-21.48.27.png)
+![](../.gitbook/assets/2021-02-03-14-04-03-metrics.png)
 
 With this configuration, Conduktor will regularly fetch the JMX endpoints:
 
@@ -29,6 +29,38 @@ With this configuration, Conduktor will regularly fetch the JMX endpoints:
 The &lt;broker advertised listeners&gt; are **NOT** the bootstrap address you have configured in Conduktor to connect to your Kafka cluster. These things are entirely different, this is a specificity of how Kafka works. Please refer to [understanding-kafka-listeners](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka/impossible-connection-setups#understanding-kafka-listeners) if you have no idea what we are talking about.
 
 Therefore, your computer must be able to connect to this address:port for Conduktor to fetch the metrics.
+
+Conduktor also supports connecting to JMX endpoints and registries through both one and two-way SSL. 
+
+![](../.gitbook/assets/2021-02-03-14-47-56-metrics-ssl.png)
+
+To enable JMX over SSL, specify the following JVM arguments when starting the brokers : 
+
+```text
+-Dcom.sun.management.jmxremote.registry.ssl=true \
+-Djavax.net.ssl.keyStore=/path/to/keystore.jks \
+-Djavax.net.ssl.keyStorePassword=keystore_password \
+-Djavax.net.ssl.trustStore=/path/to/truststore.jks \
+-Djavax.net.ssl.trustStorePassword=truststore_password 
+```
+
+and add in Conduktor the client truststore containing the server key certificate.
+
+To enable mutual TLS \(recommended\), add the following JVM argument :
+
+```text
+-Dcom.sun.management.jmxremote.ssl.need.client.auth=true
+```
+
+and add in Conduktor the client keystore, containing the certificate that must be trusted by the server.
+
+To enable the secured RMI registry, make sure the brokers are started with the following JVM argument :
+
+```text
+-Dcom.sun.management.jmxremote.registry.ssl=true
+```
+
+and check the "Secured RMI Registry" checkbox in Conduktor
 
 ### Jolokia
 
@@ -71,7 +103,6 @@ For now, Conduktor barely used the power of the metrics. We're working to expose
 
 ## More to come
 
-* JMX over SSL
 * Add Prometheus support
 * A Monitoring dashboard with graphs to monitor well-known metrics
 * Alert you within Conduktor in case of metrics issue detection
