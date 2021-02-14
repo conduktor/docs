@@ -8,7 +8,7 @@ You can find a list of all the licenses on the pricing page at [https://www.cond
 
 Upon starting Conduktor, you will be on the free plan. 
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
 The free plan allows you to use Conduktor and all its features with at most one broker. 
 
@@ -16,7 +16,7 @@ The free plan allows you to use Conduktor and all its features with at most one 
 
 When you first register to Conduktor with a new email address, we will automatically start activating a 14-days free tier for you of the full Professional license. This will allow you to try out all features of Conduktor and see if the product is the right now for you and your team
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 ## Developer / Professional License
 
@@ -24,7 +24,7 @@ When you purchase a license through our [pricing page](https://www.conduktor.io/
 
 After upgrading to a new license, please log-out & then log-in to Conduktor. 
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ## Enterprise License
 
@@ -34,11 +34,11 @@ After upgrading to a new license, please log-out & then log-in to Conduktor.
 
 Please [contact us](https://www.conduktor.io/contact) for inquiries on the Enterprise license.
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 ## Enterprise Floating License
 
-![](../.gitbook/assets/screenshot-2020-10-14-at-09.10.34.png)
+![](../../.gitbook/assets/screenshot-2020-10-14-at-09.10.34.png)
 
 With Enterprises, it's also possible to have a _pool_ of dynamic licenses \(seats\) every month. There are automatically claimed for the current month when a user from your domain logs in. It's particularly useful when you don't exactly know who many users will need Conduktor, or when your workforce is changing. 
 
@@ -60,7 +60,7 @@ Feel free to [contact us](mailto:support@conduktor.io) asap to resolve your case
 
 * Your company has **floating** licenses:
 
-![all the monthly seats of my company are already claimed for the current month](../.gitbook/assets/screenshot-2020-10-14-at-09.08.55.png)
+![all the monthly seats of my company are already claimed for the current month](../../.gitbook/assets/screenshot-2020-10-14-at-09.08.55.png)
 
 Your company bought a certain number of monthly licenses \(seats\). If the current month is fully taken by your coworkers, you'll end up in the free mode for the month and you'll see **"No seats available"** on your login screen. Contact your technical administrator, your company may have to update its subscription to add more seats.
 

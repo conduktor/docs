@@ -10,7 +10,8 @@
   * [Linux](sign-in-section/install/linux.md)
   * [Updating Conduktor](sign-in-section/install/update.md)
 * [Sign in to Conduktor](sign-in-section/sign-in.md)
-* [Licenses & Activations](sign-in-section/licenses-and-activations.md)
+* [Licenses & Activations](sign-in-section/licenses-and-activations/README.md)
+  * [Offline Licenses](sign-in-section/licenses-and-activations/offline-licenses.md)
 * [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting/README.md)
   * [Using an internet proxy](sign-in-section/login-troubleshooting/internet-proxy.md)
 
