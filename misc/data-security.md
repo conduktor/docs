@@ -48,7 +48,17 @@ This will help us determining some screens are super used or not used at all.
 
 ![Check the option on our welcome screen to help us :\)](../.gitbook/assets/screenshot-2021-02-15-at-10.59.49.png)
 
+## Login / Licenses
 
+To use Conduktor, login is mandatory. This allows us to know our users and control if they have a license or not \(to provide access to more features etc.\).
+
+### Security
+
+To ensure a maximum security and availability of the login system, we use auth0 to manage our userbase which is fully certified, highly secured, and highly available. \([https://auth0.com/security](https://auth0.com/security)\)
+
+### Identification Flow
+
+Conduktor contacts auth0 when the user logins \(on [https://auth.conduktor.io/](https://auth.conduktor.io/)\). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine. 
 
 
 
