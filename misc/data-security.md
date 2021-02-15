@@ -61,7 +61,7 @@ When the option "Analytics/Reports" is checked on our welcome screen, we will se
 
 Listening to our users is super important. We provide many spots in our interface, for the users  to contact us in case of questions/issues/feature requests.
 
-This send us directly an email to support@conduktor.io where we continue the conversation in a classical manner. Details are kept purely private in the email conversation, and not sent anywhere.
+This sends us directly an email to support@conduktor.io where we continue the conversation in a classical manner. Details are kept purely private in the email conversation, and not sent anywhere.
 
 ## Login / Licenses
 
