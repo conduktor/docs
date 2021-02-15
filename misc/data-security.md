@@ -18,7 +18,7 @@ The data only transits between your Conduktor Desktop and your Apache Kafka clus
 
 ### Data Flow
 
-Your data stays exclusively on your enterprise network. It flows only between Conduktor and your brokers & applications.
+Your data stays exclusively in your enterprise network. It flows only between Conduktor and your brokers & applications.
 
 ![](../.gitbook/assets/screenshot-2021-02-15-at-11.41.49.png)
 
