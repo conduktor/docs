@@ -40,13 +40,16 @@ As any software, Conduktor generates logs to help debugging or understanding wha
 * Linux: `/tmp/conduktor.log`
 * macOS: `/var/folders/wy/xxx/T/conduktor.log`
 
-## Analytics
-
-When the option "Analytics/Reports" is checked on our welcome screen, we will send some signals to Google Analytics \(totally anonymous\) about which dialog is opened, which button was clicked etc.
-
-This will help us determining some screens are super used or not used at all.
+## Analytics / Error reporting
 
 ![Check the option on our welcome screen to help us :\)](../.gitbook/assets/screenshot-2021-02-15-at-10.59.49.png)
+
+When the option "Analytics/Reports" is checked on our welcome screen, we will send some signals to:
+
+* Google Analytics \(totally anonymized\): about which dialog is opened, which button was clicked etc. This will help us determining some screens are super used or not used at all.
+* Sentry: only in case of errors, we send the error to Sentry to provide us visibility, if a feature is broken.
+
+
 
 ## Login / Licenses
 
