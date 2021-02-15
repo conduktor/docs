@@ -24,7 +24,7 @@ Your Conduktor configuration is stored in a fixed place on your computer:
 * Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\`
 * Linux: `/home/<user>/.config/conduktor/` \(or XDG Config path if set\)
 
-### Where are the logs?
+## Where are the logs?
 
 As any software, Conduktor generates logs to help debugging or understanding what's going on. URLs, usernames could be found in \(and if present, passwords are always masked\).
 
