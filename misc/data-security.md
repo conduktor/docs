@@ -58,7 +58,9 @@ To ensure a maximum security and availability of the login system, we use auth0 
 
 ### Identification Flow
 
-Conduktor contacts auth0 when the user logins \(on [https://auth.conduktor.io/](https://auth.conduktor.io/)\). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine. 
+Conduktor contacts auth0 when the user logins \(on [https://auth.conduktor.io/](https://auth.conduktor.io/)\). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine.
+
+![](../.gitbook/assets/screenshot-2021-02-15-at-11.26.03.png)
 
 
 
