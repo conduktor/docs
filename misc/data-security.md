@@ -6,11 +6,25 @@ description: >-
 
 # Data Security
 
-## Where are my data and configurations stored?
+## How are my data and configurations used?
 
-Conduktor Desktop, installed on your computer, stores its configuration on your computer. It is not stored nor send anywhere else.
+### Configuration: on your computer only
+
+Conduktor Desktop, installed on your computer, stores its configuration on your computer. It is not stored nor send anywhere else. It may contain some username & password used in Conduktor Desktop to connect to the different technologies: Apache Kafka, Schema Registry etc.
+
+### Data: not sent anywhere
 
 The data only transits between your Conduktor Desktop and your Apache Kafka clusters and ecosystem \(Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...\). They are not send anywhere else.
+
+## Where is my configuration?
+
+Your Conduktor configuration is stored in a fixed place on your computer:
+
+* MacOS: `/Users/<user>/Library/Application Support/conduktor/`
+* Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\`
+* Linux: `/home/<user>/.config/conduktor/` \(or XDG Config path if set\)
+
+
 
 
 
