@@ -10,7 +10,7 @@ description: >-
 
 ### Configuration: on your computer only
 
-Conduktor Desktop, installed on your computer, stores its configuration on your computer. It is not stored nor send anywhere else. It may contain some username & password used in Conduktor Desktop to connect to the different technologies: Apache Kafka, Schema Registry etc.
+Conduktor Desktop, installed on your computer, stores its configuration on your computer. It is not stored nor sent anywhere else. It may contains some username & password used in Conduktor Desktop to connect to the different technologies: Apache Kafka, Schema Registry etc.
 
 ### Data: not sent anywhere
 
