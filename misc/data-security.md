@@ -49,7 +49,13 @@ When the option "Analytics/Reports" is checked on our welcome screen, we will se
 * Google Analytics \(totally anonymized\): about which dialog is opened, which button was clicked etc. This will help us determining some screens are super used or not used at all.
 * Sentry: only in case of errors, we send the error to Sentry to provide us visibility, if a feature is broken.
 
+## Support: Ask us Anything!
 
+![We are here to help us!](../.gitbook/assets/screenshot-2021-02-15-at-11.30.03.png)
+
+Listening to our users is super important. We provide many spots in our interface, for the users  to contact us in case of questions/issues/feature requests.
+
+This send us directly an email to support@conduktor.io where we continue the conversation in a classical manner. Details are kept purely private in the email conversation, and not sent anywhere.
 
 ## Login / Licenses
 
