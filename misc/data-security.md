@@ -1,7 +1,7 @@
 ---
 description: >-
   One thing to be clear: we do not send your data anywhere! Everything stays
-  between your computer and your clusters and applications.
+  between your computer and your Apache Kafka clusters / applications.
 ---
 
 # Data Security
