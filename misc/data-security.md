@@ -14,7 +14,7 @@ Conduktor Desktop, installed on your computer, stores its configuration on your 
 
 ### Data: not sent anywhere
 
-The data only transits between your Conduktor Desktop and your Apache Kafka clusters and ecosystem \(Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...\). They are not send anywhere else.
+The data only transits between your Conduktor Desktop, on your machine, and your Apache Kafka clusters and ecosystem \(Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...\). They are not send anywhere else.
 
 ### Data Flow
 
