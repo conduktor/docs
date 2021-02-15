@@ -16,6 +16,12 @@ Conduktor Desktop, installed on your computer, stores its configuration on your 
 
 The data only transits between your Conduktor Desktop and your Apache Kafka clusters and ecosystem \(Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...\). They are not send anywhere else.
 
+### Data Flow
+
+Data transits only on your enterprise network because Conduktor instances and your brokers & applications.
+
+![](../.gitbook/assets/screenshot-2021-02-15-at-11.41.49.png)
+
 ## Where is Conduktor installed?
 
 We provide installers for all the systems to install Conduktor on default paths. Nothing custom is stored here, the configuration is stored in your personal folder only.
