@@ -56,5 +56,6 @@
 ## Miscellaneous <a id="misc"></a>
 
 * [Configuring Conduktor](misc/configuring-conduktor.md)
+* [Data Security](misc/data-security.md)
 * [Frequently Asked Questions](misc/faq.md)
 
