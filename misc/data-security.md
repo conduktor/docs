@@ -1,7 +1,7 @@
 ---
 description: >-
-  One thing to be clear: we do not send your data anywhere! All stays between
-  your computer and your clusters and applications.
+  One thing to be clear: we do not send your data anywhere! Everything stays
+  between your computer and your clusters and applications.
 ---
 
 # Data Security
