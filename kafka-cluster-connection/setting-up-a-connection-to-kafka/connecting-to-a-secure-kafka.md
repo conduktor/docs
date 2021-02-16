@@ -84,9 +84,7 @@ Here's a minimal configuration for SASL\_PLAINTEXT:
 ```text
 security.protocol=SASL_PLAINTEXT
 sasl.mechanism=GSSAPI
-sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required \
-   username="my-user" \
-   password="secret";
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="my-user" password="secret";
 ```
 
 ### SCRAM configuration
