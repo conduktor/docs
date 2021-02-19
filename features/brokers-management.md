@@ -14,9 +14,7 @@ You can modify non read-only configurations dynamically in the Broker details vi
 
 Readonly properties have a lock icon, and sensitive properties \(value hidden\) have a crossed-out eye icon.
 
-{% hint style="warning" %}
 
-{% endhint %}
 
 ![](../.gitbook/assets/broker-details.png)
 
