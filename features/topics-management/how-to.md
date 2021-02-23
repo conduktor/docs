@@ -45,11 +45,26 @@ The opened dialog allows you to check the reassignment status and update the thr
 
 ## How to remove data from a Topic?
 
+Conduktor can empty a topic, or a specific partition:
 
+* a whole topic: "Empty Topic..."
 
+![Empty a topic](../../.gitbook/assets/screenshot-2021-02-23-at-18.30.22.png)
 
+* a specific partition: the Delete icon on the right
 
+![](../../.gitbook/assets/screenshot-2021-02-23-at-18.31.05.png)
 
+### Errors
 
+You can only delete topic which have the "delete" policy.
 
+If your topic only has the "compact" policy, this may not work: 
+
+```text
+Error emptying topics
+
+org.apache.kafka.common.errors.PolicyViolationException:
+Request parameters do not satisfy the configured policy.
+```
 
