@@ -6,11 +6,11 @@ description: 'For companies without internet access, offline license is the way 
 
 Conduktor relies on Auth0 to manage user authentication securely and also check our licenses. Therefore, it is not possible to use Conduktor if you don't have an online access. This is why we developed an offline mode.
 
-## Process
+## Process to login offline
 
 To work in offline mode, there is a few steps to be followed by the user and the manager.
 
-### User: Enable offline Login
+### 1. User: Enable offline Login
 
 To avoid using auth0, Conduktor can identify you using a "offline token" instead. Doing such, no contact to the outside world is necessary, and you can work offline, with your clusters still accessible on your network.
 
@@ -20,7 +20,7 @@ To get this "offline token", you need to enable the Offline mode into Conduktor 
 
 By doing so, the "LOGIN / SIGNUP" button now reads "OFFLINE LOGIN".
 
-### User: Click on Offline Login
+### 2. User: Click on Offline Login and generate a Code
 
 This is open a dialog where you have to enter your email address, then click on "Generate Code".
 
@@ -28,15 +28,22 @@ This will generate a code **specific for your account and your machine**, that y
 
 ![](../../.gitbook/assets/screenshot-2021-03-03-at-22.21.34.png)
 
-### Manager: convert your code to an "offline token"
+### 3. Manager: Create an Offline License from the Code
 
 Using our portal \(through an online access\), the manager of your team / company will be able to create an "offline token" for Conduktor, from a code.
 
 A token is specific PER USER. All users will have a different token.
 
-### User: insert its own "offline token" into Conduktor
+* Step 1: the manager enters the code of the user, this will generate a license with a token
+* Step 2: the manager copies the token of the license and give it back to the user
 
-In the Step 2, you just paste it, then click on Login:
+![Step 1: create an offline license from the user code](../../.gitbook/assets/screenshot-2021-03-04-at-22.46.48.png)
+
+![Step 2: copy the offline token and sent it to the user](../../.gitbook/assets/screenshot-2021-03-04-at-22.53.48.png)
+
+### 4. User: Paste its personal "offline token" into Conduktor
+
+Paste the token your manager sent you in the Step 2 / 2, then click on Login:
 
 ![](../../.gitbook/assets/screenshot-2021-03-03-at-22.39.40.png)
 
