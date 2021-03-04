@@ -6,6 +6,10 @@ description: 'For companies without online access, offline licenses are the way 
 
 Conduktor relies on [Auth0](../../misc/data-security.md) to manage user authentication securely and check our software licenses. Therefore, it is not _normally_ possible to use Conduktor if you don't have an online access. This was limitating for secured enterprises where online is just not possible \(insurance, banking institutions etc.\). This is why we developed an offline mode.
 
+{% hint style="success" %}
+Make sure to purchase the **Offline** **option** with your subscription to use this feature.
+{% endhint %}
+
 ## Process to login offline
 
 To work in offline mode, there is a few steps to be followed by the user and the manager.
