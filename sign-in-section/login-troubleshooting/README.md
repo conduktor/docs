@@ -2,7 +2,7 @@
 
 ## I have an internet proxy, how do I configure it?
 
-See the [Using an Internet Proxy](internet-proxy.md) page
+By default, Conduktor detects the system proxy and use it. If for some reasons, you need to configure another proxy, see the [Using an Internet Proxy](internet-proxy.md).
 
 ## Will Conduktor work offline?
 
