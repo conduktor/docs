@@ -6,9 +6,7 @@ See the [Using an Internet Proxy](internet-proxy.md) page
 
 ## Will Conduktor work offline?
 
-Conduktor does work offline after your first login. We may require a re-login every week or so in order to refresh your token and verify your license validity. 
-
-We don't have any "offline license" available yet. Don't hesitate to contact us if your use-case needs this.
+Conduktor use Auth0 to register/login our users, and validate their license if any. Therefore, an online access is mandatory. For organizations with restricted Internet access, we now offer [offline licenses](../licenses-and-activations/offline-licenses.md) to bypass this requirement.
 
 ## Oops!, something went wrong!
 
