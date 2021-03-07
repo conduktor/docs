@@ -4,47 +4,39 @@
 
 You can find a list of all the licenses on the pricing page at [https://www.conduktor.io/pricing](https://www.conduktor.io/pricing)
 
-## Free Users
-
-Upon starting Conduktor, you will be on the free plan. 
-
-![](../../.gitbook/assets/image%20%2834%29.png)
-
-The free plan allows you to use Conduktor and all its features with at most one broker. 
-
-## 14 Days Free Trial
+## On registering: 14 days to try Conduktor with all features
 
 When you first register to Conduktor with a new email address, we will automatically start activating a 14-days free tier for you of the full Professional license. This will allow you to try out all features of Conduktor and see if the product is the right now for you and your team
 
 ![](../../.gitbook/assets/image%20%2829%29.png)
 
-## Developer / Professional License
+## Free Plan
 
-When you purchase a license through our [pricing page](https://www.conduktor.io/pricing), you will be registering an email address and that email address will be the one you will have to use with Conduktor when you log in. 
+After the trial period, your account will fallback to the free plan where you can stil use Conduktor for local development \(with one broker only\). All features are still available except this one broker requirement.
 
-After upgrading to a new license, please log-out & then log-in to Conduktor. 
+![](../../.gitbook/assets/image%20%2834%29.png)
+
+## Developer / Professional Plan
+
+When you purchase a license through our [pricing page](https://www.conduktor.io/pricing), you will purchase using your email address.
+
+* If you buy only one license, then your email address will be the one you will have to use with Conduktor when you log in. You will have access to [our portal](https://account.conduktor.io/) to manage your subscription and see your license auto-assigned to yourself.
+* If you buy more than one license, then you'll be able to assign your licenses to whoever you want using [our portal](https://account.conduktor.io/).
 
 ![](../../.gitbook/assets/image%20%2819%29.png)
 
-## Enterprise License
+## Enterprise Plan
 
-With an enterprise license, you will have the possibility of giving us a list of email address to activate for Conduktor, or link a whole domain name `*@mycompany.com` with a dynamic list of users.
+On Enterprise Plan, you will have the possibility to add addons to your subscription \(by asking us\), and will have access to [our portal](https://account.conduktor.io/) to manage your licenses.
 
-After upgrading to a new license, please log-out & then log-in to Conduktor. 
+* [Offline access](offline-licenses.md)
+* Licenses Reassignment
+* Unlimited machines: Conduktor limits machine usage to 1 per account
+* Licenses Auto-Assignment: link your subscription to one or multiple domains to automatically grant a license to the users from these domains: `*@mycompany.com` This is useful for large subscriptions where you don't want to manual assign/reassign licenses and let the system in "auto-mode".
 
 Please [contact us](https://www.conduktor.io/contact) for inquiries on the Enterprise license.
 
 ![](../../.gitbook/assets/image%20%2814%29.png)
-
-## Enterprise Floating License
-
-![](../../.gitbook/assets/screenshot-2020-10-14-at-09.10.34.png)
-
-With Enterprises, it's also possible to have a _pool_ of dynamic licenses \(seats\) every month. There are automatically claimed for the current month when a user from your domain logs in. It's particularly useful when you don't exactly know who many users will need Conduktor, or when your workforce is changing. 
-
-{% hint style="warning" %}
-On a specific month, if you have **more users logging in than your number of seats**, then they will **fallback** upon the "free" mode, because no more seats are available, they must wait for the next month \(or your company must resize its pool, contact our support to do that\).
-{% endhint %}
 
 ## I have a license but I'm in "free" mode, why?
 
@@ -58,9 +50,9 @@ We don't want to lock you out from Conduktor if you do this "by accident" or if 
 
 Feel free to [contact us](mailto:support@conduktor.io) asap to resolve your case and remove your old machine identifications for instance.
 
-* Your company has **floating** licenses:
+* Your company has auto-assigning licenses:
 
 ![all the monthly seats of my company are already claimed for the current month](../../.gitbook/assets/screenshot-2020-10-14-at-09.08.55.png)
 
-Your company bought a certain number of monthly licenses \(seats\). If the current month is fully taken by your coworkers, you'll end up in the free mode for the month and you'll see **"No seats available"** on your login screen. Contact your technical administrator, your company may have to update its subscription to add more seats.
+Your company bought a certain number of licenses, and no more seats are available for you. Contact your Conduktor administrator: your company may have to update its subscription to add more licenses.
 
