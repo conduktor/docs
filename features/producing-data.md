@@ -150,9 +150,15 @@ On the producer view, after selecting a topic, the "PRODUCE FROM CSV" button \(b
 
 ![](../.gitbook/assets/produce-csv-button.png)
 
-It will open a dialog that explains the accepted formats accepted by Conduktor.
+It will open a dialog that explains the accepted formats accepted by Conduktor : 
 
-Bear in mind that the options of the underlying Producer Template will be applied \(excepted the generation options\).
+* two columns with no headers \(the first being the key, the second being the value\)
+* a single column with no header \(value only, keys will be set to null\)
+* X columns with headers, containing at least a column with the "key" header and a column with the "value" header, in any order. Extra columns will be ignored
+
+Concerning Avro Records, we expect the JSON-ish representation \(not bytes\)
+
+Bear in mind that the options and serializers of the underlying Producer Template will be applied \(excepted the generation options\).
 
 Choose a CSV file and click on Import to start producing to the topic.
 
