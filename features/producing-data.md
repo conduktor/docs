@@ -103,6 +103,59 @@ This will create a new template in your producer, with the same deserialized pay
 
 ![](../.gitbook/assets/screenshot-2020-07-26-at-15.03.29.png)
 
+## Random data generation
+
+Conduktor supports generating random data for all supported by the producer, excepted JSON for now.
+
+Simply check  "Generate random data" next to the key or value Serializer type to enable generation and display the available options.
+
+![](../.gitbook/assets/generation-s1.png)
+
+You can constraint the range on numeric data types, the length on string and bytes, and the charset on string.
+
+### Generating Avro Records
+
+We support generating Avro records out of the box, including complex types. Simply check the "Generate random data" checkbox, pick a strategy and subject and start generating data on the fly ! 
+
+![](../.gitbook/assets/generation-avro.png)
+
+If you want to customize individual field generation, we support annotation-based configuration inspired by [Confluent's Avro Data Generator library](https://github.com/confluentinc/avro-random-generator), using an `arg.properties` ****field containing properties mirroring the generation options for basic serialization types of our Producer.
+
+![](../.gitbook/assets/avro-extension-json.png)
+
+The following field type / properties combinations are supported : 
+
+* `string` : 
+  * `min` : the min length of the string \(integer, positive\)
+  * `max` : the max length of the string \(integer, positive\)
+  * `charset` : one of  `unicode` , `alpha_num` , `ascii`
+* `int` , `long` , `float` , `double` , `timestamp-millis` , `timestamp-micro` 
+  * `min` : min value \(can be negative\)
+  * `max` : max value \(can be negative\)
+* `time-millis` , `time-micros`
+  * `min` : min value \(integer, positive, lower than 24 hours\)
+  * `max` : max value \(integer, positive, lower than 24 hours\)
+* `date` : number of days since 1970-01-01
+  * `min` : min value \(integer\)
+  * `max` : max value \(integer\)
+* `bytes` ,  `array`
+  * `min` : the min length of the array \(integer, positive\)
+  * `max` : the max length of the array \(integer, positive\)
+* `boolean` 
+  * `odds` : the odds of this boolean to be true
+
+## Producing data from CSV
+
+On the producer view, after selecting a topic, the "PRODUCE FROM CSV" button \(bottom right\) gets enabled.
+
+![](../.gitbook/assets/produce-csv-button.png)
+
+It will open a dialog that explains the accepted formats accepted by Conduktor.
+
+Bear in mind that the options of the underlying Producer Template will be applied \(excepted the generation options\).
+
+Choose a CSV file and click on Import to start producing to the topic.
+
 ## Advanced Options
 
 For advanced usages, it's possible to alter more how the data are sent to Kafka. For instance, if you want to specifically target a partition, it's possible by forcing the partition in the options:
@@ -116,7 +169,7 @@ For advanced usages, it's possible to alter more how the data are sent to Kafka.
 
 ## Roadmap
 
-We're planning to add more options to our producer: macros, random data, sending batches \(instead of single record\). Don't hesitate to contact us if you need such features: support@conduktor.io.
+We're planning to add more options to our producer: macros, sending batches \(instead of single record\). Don't hesitate to contact us if you need such features: support@conduktor.io.
 
 
 
