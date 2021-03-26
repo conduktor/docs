@@ -105,7 +105,7 @@ This will create a new template in your producer, with the same deserialized pay
 
 ## Random data generation
 
-Conduktor supports generating random data for all supported by the producer, excepted JSON for now.
+Conduktor allows generating random data for all data types supported by the producer, excepted JSON for now.
 
 Simply check  "Generate random data" next to the key or value Serializer type to enable generation and display the available options.
 
@@ -115,7 +115,7 @@ You can constraint the range on numeric data types, the length on string and byt
 
 ### Generating Avro Records
 
-We support generating Avro records out of the box, including complex types. Simply check the "Generate random data" checkbox, pick a strategy and subject and start generating data on the fly ! 
+We allow generating Avro records out of the box, including most complex types. Simply check the "Generate random data" checkbox, pick a strategy and subject and start generating data on the fly ! 
 
 ![](../.gitbook/assets/generation-avro.png)
 
@@ -123,7 +123,7 @@ If you want to customize individual field generation, we support annotation-base
 
 ![](../.gitbook/assets/avro-extension-json.png)
 
-The following field type / properties combinations are supported : 
+The following field type / properties combinations are available : 
 
 * `string` : 
   * `min` : the min length of the string \(integer, positive\)
@@ -150,7 +150,7 @@ On the producer view, after selecting a topic, the "PRODUCE FROM CSV" button \(b
 
 ![](../.gitbook/assets/produce-csv-button.png)
 
-It will open a dialog that explains the accepted formats accepted by Conduktor : 
+It will open a dialog that explains the different formats accepted by Conduktor : 
 
 * two columns with no headers \(the first being the key, the second being the value\)
 * a single column with no header \(value only, keys will be set to null\)
