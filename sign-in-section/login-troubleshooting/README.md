@@ -33,6 +33,7 @@ This can happen due to many reasons. Here are a few:
 * If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor \(if you VPN adds its own security layer with a self-signed certificate..\)
   * Using **ZScaler** ? Download the ZScaler certificate and import it into Conduktor
 * Ensure you don't have an **antivirus** or a **firewall** blocking communications. You may have to add `https://auth.conduktor.io` to some allow-list or something.
+* By default, Conduktor uses your system proxy. This can causes some troubles such as: `Unable to tunnel through proxy. Proxy returns` Go to the settings, setup your proxy manually instead of the system proxy and and add an exception for `*.conduktor.io`
 
 {% hint style="info" %}
 The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts **Let's Encrypt**'s CA, which is the one that emits the https certificate of our authentication server `https://auth.conduktor.io` so nothing specific to setup here.
