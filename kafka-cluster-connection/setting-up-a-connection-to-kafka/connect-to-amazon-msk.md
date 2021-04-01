@@ -11,7 +11,7 @@ $ sudo docker run --net host \
     -e KAFKAPROXY_HOSTNAME=localhost\
     -e KAFKAPROXY_BASE_PORT=4000 \
     -e KAFKAPROXY_BOOTSTRAP_SERVERS=MYBROKER1:9092,broker2:9092,broker3:9092 \
-    dajudge/kafkaproxy:0.0.5
+    dajudge/kafkaproxy:0.0.13
 
 ```
 
