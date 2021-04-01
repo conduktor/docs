@@ -146,6 +146,7 @@ KafkaClient {
 * The same, but using `sasl.jaas.config`:
 
 ```text
+sasl.kerberos.service.name=kafka
 sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule 
         required useKeyTab=true 
         keyTab="/etc/security/keytabs/alice.keytab"
