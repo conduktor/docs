@@ -7,9 +7,11 @@ description: >-
 
 # Kafka Streams
 
-{% hint style="info" %}
-Work In Progress
-{% endhint %}
+## Where to start with Kafka Streams?
+
+We're providing an example you can try and fork: [https://github.com/conduktor/kafka-streams-wordcount-topology](https://github.com/conduktor/kafka-streams-wordcount-topology)
+
+It will start a typical Kafka Streams application and expose an HTTP API to be connected to Conduktor \(optional\). This way, you can monitor your application state, topics, statestores etc.
 
 ## How to import a Topology inside Conduktor, and why?
 
