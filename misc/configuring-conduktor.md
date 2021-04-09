@@ -92,6 +92,7 @@ Right now, Conduktor does not offer an interface to do this. But it's possible, 
 
 * Copy your .jar to Conduktor installation folder
 * Add your .jar path to `Conduktor.cfg` \(_app.classpath_\) to take it into account
+* ⚠️ Be aware that you will **LOSE** these modifications when upgrading Conduktor \(we update the configuration file so your modifications are overriden\)
 
 {% hint style="info" %}
 Installation folder:
