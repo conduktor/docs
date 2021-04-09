@@ -86,6 +86,21 @@ Example:
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
 ```
 
+## Custom .jars
+
+Right now, Conduktor does not offer an interface to do this. But it's possible, by doing a few manual things! Let's say you want to configure your Kafka connection with a custom configuration such as `sasl.login.callback.handler.class`.
+
+* Copy your .jar to Conduktor installation folder
+* Add your .jar path to `Conduktor.cfg` \(_app.classpath_\) to take it into account
+
+{% hint style="info" %}
+Installation folder:
+
+* macOS: `/Applications/Conduktor.app/Contents/app`
+* Linux: `/opt/conduktor/lib/app/`
+* Windows: 
+{% endhint %}
+
 ## Logs
 
 ### Kafka logging
