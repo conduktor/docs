@@ -77,16 +77,20 @@ You can also see the details per partitions in the details. Note that a consumer
 
 ## How to force a Member to leave a Consumer Group
 
-You can **not** force a consumer to leave a consumer group permanently. 
+You can **not** force a consumer to leave a consumer group _permanently_. 
 
-However, Conduktor allows you to remove members from a group, which will have for effect to trigger a group rebalance. This is helpful if a member is dead, but its partitions are not yet reallocated to another member. Active members will re-join the group automatically during the rebalance and the partitions will be reallocated to them..
+However, Conduktor allows you to remove members from a group, which will have for effect to trigger a group rebalance. This is helpful if a member is dead, but its partitions are not yet reallocated to another member. Active members will re-join the group automatically during the rebalance and the partitions will be reassigned.
 
 There are two ways to remove members from a consumer group:
 
 * Remove all members at once with the `Remove All Members And Rebalance` button.
 * Remove a selection of members : select the members and use the `ACTIONS` menu. This is only available for member of type static.
 
-This action is designed to be used with _static group membership,_ a Kafka feature which can purposely delay the rebalance operation after a member is stopped.
+{% hint style="success" %}
+Designed to be used with the **static group membership** feature_,_ an Apache Kafka Consumer feature. It delays rebalancing operations when a member is temporary gone \(pod restart, rolling upgrade..\) to prevent useless rebalancing.
+
+BUT now, the consumer group coordinator can take time to realize a static member is gone, so forcing a kick here will help trigger rebalancing as soon as possible, to reassign partitions to other members.
+{% endhint %}
 
 
 
