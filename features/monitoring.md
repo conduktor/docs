@@ -69,7 +69,7 @@ Jolokia is a technology to expose a HTTP server to access JMX metrics over a sim
 It's often started as a Java agent directly on the main Java program. When Jolokia starts, it starts an HTTP server on a configurable port \(default: 8778\).
 
 {% hint style="info" %}
-This is the power of Jolokia. Because it exposes the metrics through, they are accessible through an Internet browser
+This is the power of Jolokia. Because it exposes the metrics through HTTP, they are accessible through an Internet browser
 {% endhint %}
 
 ![](../.gitbook/assets/screenshot-2021-01-17-at-21.56.35.png)
