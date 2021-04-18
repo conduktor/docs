@@ -48,7 +48,7 @@ It's mostly for advanced users who understand what's going on.
 By default, Conduktor is limited to 2GB of memory heap. It's possible to increase this and alter any Java configuration by editing the configuration file yourself:
 
 * MacOS: `/Applications/Conduktor.app/Contents/app/Conduktor.cfg`
-* Windows
+* Windows: `C:\Program Files\Conduktor\app\Conduktor.cfg`
 * Linux: `/opt/conduktor/lib/app/Conduktor.cfg`
 
 {% hint style="danger" %}
@@ -99,7 +99,7 @@ Installation folder:
 
 * macOS: `/Applications/Conduktor.app/Contents/app`
 * Linux: `/opt/conduktor/lib/app/`
-* Windows: 
+* Windows: `C:\Program Files\Conduktor\app`
 {% endhint %}
 
 ## Logs
