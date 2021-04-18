@@ -47,9 +47,9 @@ Sometimes, it seems it is not enough. Another solution is to remove the original
 
 Remove `-Djava.net.preferIPv4Stack=true` in the source configuration file of Conduktor:
 
-* MacOS: /Applications/Conduktor.app/Contents/app/Conduktor.cfg
-* Linux: /opt/conduktor/lib/app/Conduktor.cfg
-* Windows:
+* MacOS: `/Applications/Conduktor.app/Contents/app/Conduktor.cfg`
+* Linux: `/opt/conduktor/lib/app/Conduktor.cfg`
+* Windows: `C:\Program Files\Conduktor\app\Conduktor.cfg`
 
 ## Ubuntu Focal 20: missing libffi6 when installing .deb
 
