@@ -1,5 +1,13 @@
 # Connect to Amazon MSK
 
+## What is MSK?
+
+Amazon MSK is a self-managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. 
+
+It lacks several important Apache Kafka features like Kafka Connect, Kafka Streams, ksqlDB, and is not cloud-native \(serverless, like S3 or Kinesis\) but is just a provisioned infrastructure
+
+## Conduktor & MSK
+
 Conduktor, which is running on your computer, has no access by default to MSK. Still, it's possible to connect it to the cluster by using a specialized kafka proxy in-between.
 
 To make it work:
