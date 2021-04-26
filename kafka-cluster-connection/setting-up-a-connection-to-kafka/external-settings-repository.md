@@ -1,6 +1,0 @@
-# External Settings Repository
-
-## GitHub
-
-
-
