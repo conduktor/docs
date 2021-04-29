@@ -79,6 +79,45 @@ Here is the list of the Apache Avro types with logicalTypes and the special hand
     * `"my_timestamp": "2020-07-26 01:03:29"` \(the default when consuming\)
   * as `time-micros`: can be encoded with a string: `"my_time": "02:47:41"`
 
+### Apache Avro Unions
+
+To produce Apache Avro data from JSON, Avro has a specific JSON encoding \([https://avro.apache.org/docs/current/spec.html\#json\_encoding](https://avro.apache.org/docs/current/spec.html#json_encoding)\). Unfortunately, when it comes to unions, it's a bit verbose to deal with.
+
+Conduktor helps here by allowing simple JSON conversion. Sometimes, it's not enough, when you have a union with many complex rypes. You may need to specify which type to use explicitely:
+
+* Apache Avro union with multiple types:
+
+```javascript
+{
+    "name" : "myGreatUnion",
+    "type" : [ // 4 types possible
+      "null",
+      "string",
+      {
+        "type" : "record",
+        "name" : "Price",
+        "fields" : [{
+          "name" : "salesPrice",
+          "type" : "double"
+        }]
+      }, {
+        "type" : "record",
+        "name" : "Discount",
+        "fields" : [{
+          "name" : "discount",
+          "type" : "double"
+        }]
+      }]
+}
+```
+
+* We can specify the exact type to use \(Price or Discount\) explicitely, using "namespace.Record":
+
+```javascript
+"myGreatUnion": { "namespace.Price": { "salesPrice": 12.00 } }
+"myGreatUnion": { "namespace.Discount": { "discount": 12.00 } }
+```
+
 ## Templates
 
 Conduktor has a notion of "template" to save & reuse what you're producing to your topic. It's useful when you don't want to retype everything each time, and to test the same thing across time.
