@@ -1,6 +1,6 @@
 # Import/Export configurations
 
-This feature is for **Enterprise** users where this is typically needed, to share your configuration with your team.
+This feature is for **Enterprise** users where this is typically needed, to share your configuration with your team. You can also use [Github](github-enterprise.md) to auto-synchronize your configuration with your team.
 
 ### Export a Cluster Configuration
 
