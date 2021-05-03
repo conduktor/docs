@@ -22,7 +22,8 @@
   * [Connecting to Kafka running under Docker](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-under-docker.md)
   * [Connect to Amazon MSK](kafka-cluster-connection/setting-up-a-connection-to-kafka/connect-to-amazon-msk.md)
   * [Connecting to a Secure Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-a-secure-kafka.md)
-* [Import/Export configurations](kafka-cluster-connection/import-export-configurations.md)
+* [Import/Export configurations](kafka-cluster-connection/import-export-configurations/README.md)
+  * [GitHub \(enterprise\)](kafka-cluster-connection/import-export-configurations/github-enterprise.md)
 
 ## Features
 
