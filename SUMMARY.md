@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Conduktor Documentation](README.md)
+* [Learn Apache Kafka with Conduktor](learn-apache-kafka-with-conduktor.md)
 
 ## Conduktor First Steps <a id="sign-in-section"></a>
 
