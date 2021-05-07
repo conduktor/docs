@@ -101,6 +101,22 @@ For now, Conduktor barely used the power of the metrics. We're working to expose
 
 ![](../.gitbook/assets/screenshot-2021-01-18-at-00.15.37.png)
 
+## Configuring Conduktor
+
+Conduktor has a few configurations related to Monitoring, accessible from Options &gt; Settings
+
+![](../.gitbook/assets/settings-menu.png)
+
+Then choose Monitoring on the left to display the Monitoring settings \(you must have enabled the metrics on your cluster to edit these settings\)
+
+![](../.gitbook/assets/monitoring-settings-small.png)
+
+The refresh interval defines the rate at which Conduktor retrieves data from your metric endpoint \(and therefore the speed at which it will display the latest metric values\).
+
+The datapoint time-to-live parameter determines how long Conduktor keeps the data retrieved from your metric endpoint. Conduktor stores the datapoints internally to feed the upcoming monitoring dashboard and issue detection features. 
+
+These settings are still experimental and the default may not be suitable for all systems. If you are experiencing unusually high resource consumption, increasing the refresh interval and decreasing the time-to-live can help.
+
 ## More to come
 
 * Add Prometheus support
