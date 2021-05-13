@@ -6,6 +6,8 @@ description: >-
 
 # How to Produce data?
 
+{% embed url="https://www.youtube.com/watch?v=mLpHyjv8Qok&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=10&ab\_channel=ConduktorConduktor" %}
+
 ## The Producer Dialog
 
 Click on the Producer button in the top bar to open the Producer dialog:

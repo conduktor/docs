@@ -6,6 +6,8 @@ description: >-
 
 # Kafka Security \(ACLs\)
 
+{% embed url="https://www.youtube.com/watch?v=gEyyr\_EKc5o&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=30&ab\_channel=ConduktorConduktor" %}
+
 ## List the ACLs
 
 Conduktor "Security" tab lets you see the current ACLs of your Kafka cluster, and provide different views:

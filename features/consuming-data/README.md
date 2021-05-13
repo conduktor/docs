@@ -7,6 +7,8 @@ description: >-
 
 # How to Consume data?
 
+{% embed url="https://www.youtube.com/watch?v=zB9tsZN8Fbs&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=12&ab\_channel=ConduktorConduktor" %}
+
 ## _How_ Conduktor consumes data
 
 {% hint style="success" %}

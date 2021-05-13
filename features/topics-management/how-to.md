@@ -1,5 +1,9 @@
 # How to
 
+## How Conduktor helps when Kafka is failing?
+
+{% embed url="https://www.youtube.com/watch?v=ZJTw2-GVr-4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=17&ab\_channel=ConduktorConduktor" %}
+
 ## How to consume data from a Topic?
 
 Several ways:

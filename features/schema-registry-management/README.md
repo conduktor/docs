@@ -7,6 +7,8 @@ description: >-
 
 # Schema Registry
 
+{% embed url="https://www.youtube.com/watch?v=qE\_rcDm2H3w&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=22&ab\_channel=ConduktorConduktor" %}
+
 ## Supported Formats
 
 Conduktor handles the whole set of format providing by the Schema Registry:

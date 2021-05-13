@@ -6,6 +6,10 @@ description: >-
 
 # Setting up a connection to Kafka
 
+
+
+{% embed url="https://www.youtube.com/watch?v=9a0Fl3tIpTc&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=6&ab\_channel=ConduktorConduktor" %}
+
 ## Adding a Cluster
 
 To add a cluster, please click on the "Add new cluster" button

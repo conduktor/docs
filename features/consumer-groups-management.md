@@ -7,6 +7,10 @@ description: >-
 
 # Consumer Groups Management
 
+{% embed url="https://www.youtube.com/watch?v=RCpjLuZyPq4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=14&ab\_channel=ConduktorConduktor" %}
+
+## Conduktor & Consumer Groups
+
 Conduktor does NOT create any Consumer Group, it does not need too. Therefore, it's totally transparent for your Kafka cluster: Conduktor won't leave any traces and will not create anything here, you're safe.
 
 ## How can I create a Consumer Group?

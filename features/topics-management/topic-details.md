@@ -61,6 +61,8 @@ Also, if some partitions are in trouble, you can go to this screen and see at a 
 
 ## How to update the configuration of a Topic?
 
+{% embed url="https://www.youtube.com/watch?v=r1FJVLEym-Y&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=32&ab\_channel=ConduktorConduktor" %}
+
 Go to the Configuration tab on the topic:
 
 ![](../../.gitbook/assets/screenshot-2020-09-20-at-21.57.51.png)

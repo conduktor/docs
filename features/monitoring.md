@@ -6,6 +6,8 @@ description: >-
 
 # Monitoring
 
+{% embed url="https://www.youtube.com/watch?v=Uuo-xyJup4M&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=31&ab\_channel=ConduktorConduktor" %}
+
 Currently, Conduktor provides only a few features from the metrics system. We only handle the metrics when the Kafka brokers expose their metrics using JMX or Jolokia \(JMX over HTTP\). 
 
 ## Configuration

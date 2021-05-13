@@ -1,16 +1,12 @@
 # Installing Conduktor
 
+{% embed url="https://www.youtube.com/watch?v=WhMPqUgYYCQ&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=5&ab\_channel=ConduktorConduktor" %}
+
 ## Download Conduktor
 
 Please download the latest version of Conduktor [from this page](https://www.conduktor.io/download)
 
 Please note that there is no Docker image of Conduktor: this is a Desktop Application, not a webapp.
-
-## Upgrade Notes from Conduktor 1.X to Conduktor 2.0
-
-{% hint style="danger" %}
-If you are upgrading from Conduktor 1.X to Conduktor 2.0, it is recommended to first uninstall Conduktor 1.X and then install Conduktor 2.0. Your settings will be preserved
-{% endhint %}
 
 ## Installation Guide
 

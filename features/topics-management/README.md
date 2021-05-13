@@ -1,8 +1,6 @@
 # Topics Management
 
-{% hint style="info" %}
-Work In Progress
-{% endhint %}
+{% embed url="https://www.youtube.com/watch?v=upRjuUs67S4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=8&ab\_channel=ConduktorConduktor" %}
 
 ## Columns Customization / Performances
 

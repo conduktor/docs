@@ -7,6 +7,8 @@ description: >-
 
 # Kafka Streams
 
+{% embed url="https://www.youtube.com/watch?v=VL67hAcc2Mw&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=26&ab\_channel=ConduktorConduktor" %}
+
 ## Where to start with Kafka Streams?
 
 We're providing an example you can try and fork: [https://github.com/conduktor/kafka-streams-wordcount-topology](https://github.com/conduktor/kafka-streams-wordcount-topology)

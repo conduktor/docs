@@ -10,6 +10,8 @@ Work In Progress
 
 ## Configuration
 
+{% embed url="https://www.youtube.com/watch?v=r1FJVLEym-Y&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=32&ab\_channel=ConduktorConduktor" %}
+
 You can modify non read-only configurations dynamically in the Broker details view. 
 
 Readonly properties have a lock icon, and sensitive properties \(value hidden\) have a crossed-out eye icon.
