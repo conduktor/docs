@@ -27,9 +27,9 @@ From the main topics view, click on the icon next to its name to take a peek at 
 
 We provide 2 views when consuming data: simple list and a tabular view. It's possible to switch back-and-forth by clicking on the "Tabular View" button below the list
 
-![Classic list, ordered by time \(recent on top\)](../../.gitbook/assets/screenshot-2020-06-25-at-15.04.41.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-15.04.41%20%281%29.png)
 
-![Tabular view, ordered by time, but possible to change column orders](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%281%29.png)
 
 You can double-click on a record to open a new dialog with all its info, its schema if it's Avro and so on. You can also open several of them at once to compare records.
 
@@ -70,7 +70,7 @@ When you're looking for a needle in a large topics, you'd like to know where Con
 
 This will open a panel updated in real-time displaying the progress for all partitions \(and all topics, if several are consumed at once\):
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.48.45.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-16.48.45%20%281%29.png)
 
 {% hint style="warning" %}
 It's possible to identify if a partition has issues if it's not moving on or barely \(probably that the leader broker of this partitions is in trouble\)
