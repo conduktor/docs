@@ -82,7 +82,7 @@ It can be used to "project" the data: read and display only a subset of fields
 
 ```
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44%20%281%29.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44%20%282%29.png)
 
 
 
