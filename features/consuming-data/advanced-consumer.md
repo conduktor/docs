@@ -30,7 +30,7 @@ By default, Conduktor is configured to work properly in the vast majority of use
 
 In the Advanced panel, click on Open Settings to get directly to the consumer settings: \(it's possible to get there by the main Settings button in Conduktor's main view\)
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-15.44.29.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%283%29.png)
 
 For instance, if you have large messages in your topic, consider:
 
