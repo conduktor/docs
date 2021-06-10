@@ -82,7 +82,7 @@ It can be used to "project" the data: read and display only a subset of fields
 
 ```
 
-![Consuming my data using a custom Avro schema](../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44%20%281%29.png)
 
 
 
@@ -90,7 +90,7 @@ It can be used to "project" the data: read and display only a subset of fields
 
 If you try to consume Avro data without properly configuring it \(and because it was not auto-detected by Conduktor for some reasons\), you'll end up with garbage data like this:
 
-![Avro data seen as &quot;string&quot;](../../.gitbook/assets/screenshot-2020-06-25-at-16.13.10.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-16.13.10%20%281%29.png)
 
 On the contrary, if you try to read non-Avro data using the Avro format, you'll end up with a list of errors \(Conduktor doesn't stop, in case it was test records for instance\):
 
@@ -98,7 +98,7 @@ On the contrary, if you try to read non-Avro data using the Avro format, you'll 
 ERR: Unknown magic byte!
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.15.21.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-16.15.21%20%281%29.png)
 
 
 
