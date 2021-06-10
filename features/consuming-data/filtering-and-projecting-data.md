@@ -17,7 +17,7 @@ For instance, here, we only care about `.state.version` in:
 ```javascript
 {
   "id" : "84504272-8473-48f6-8ad5-a7e836e58dc7",
-  "type" : "CustomerOrderItemAdded",
+  "type" : "ItemAdded",
   "delta" : {
     "itemId" : "1abcdcc1-cc36-4ae4-a6eb-3582df6f8e65"
   },
@@ -30,7 +30,7 @@ For instance, here, we only care about `.state.version` in:
 
 We setup this as our filter, and we'll only see the value of `version`:
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-17.05.50.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-17.05.50%20%281%29.png)
 
 Typical use-cases:
 
