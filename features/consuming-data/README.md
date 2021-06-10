@@ -29,7 +29,7 @@ We provide 2 views when consuming data: simple list and a tabular view. It's pos
 
 ![](../../.gitbook/assets/screenshot-2020-06-25-at-15.04.41%20%281%29.png)
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%281%29.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%282%29.png)
 
 You can double-click on a record to open a new dialog with all its info, its schema if it's Avro and so on. You can also open several of them at once to compare records.
 

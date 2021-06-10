@@ -10,7 +10,7 @@ description: >-
 
 When you go to the details of a topic, we present a summary with many of the most useful information we need to know regarding a topic health. \(it's all red-ish if something is wrong!\)
 
-![](../../.gitbook/assets/screenshot-2020-09-19-at-22.16.54.png)
+![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%281%29.png)
 
 * **Count** / **Overall**
   * **Count** is the sum \(end offsets - beginning offsets\) for all partitions \(the beginning offsets are moving forward due to limited topic retention time/size\).
