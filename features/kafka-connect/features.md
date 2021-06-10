@@ -12,7 +12,7 @@ There are many information when it comes to Connectors!
 
 Here is a typical example with 6 Kafka Connect instances for multiple environnements:
 
-![](../../.gitbook/assets/screenshot-2020-09-19-at-16.55.39.png)
+![](../../.gitbook/assets/screenshot-2020-09-19-at-16.55.39%20%281%29.png)
 
 ## Error Management
 
