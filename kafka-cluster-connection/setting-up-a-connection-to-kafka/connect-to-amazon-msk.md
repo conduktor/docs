@@ -35,6 +35,30 @@ $ ssh -i ~/.ssh/ec2-key.pem -N \
 
 * Connect Conduktor using localhost:4000
 
-  
+## Connect using AWS IAM
 
+Conduktor fully handles AWS IAM, you just have to setup your connection with your IAM access.
+
+Read our guest blog on AWS for more details: [https://aws.amazon.com/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/](https://aws.amazon.com/blogs/big-data/securing-apache-kafka-is-easy-and-familiar-with-iam-access-control-for-amazon-msk/)
+
+![](../../.gitbook/assets/bdb1447-access-control-msk-4.gif)
+
+### AWS MSK + IAM Architecture
+
+A small overview of "what's going on" when you use AWS MSK and configure IAM \(read the mentioned blog above for more details\):
+
+
+
+![](../../.gitbook/assets/image%20%2846%29.png)
+
+### Configuration Example
+
+Here is an example of configuration you can copy/paste. Just update the `awsProfileName` to yours:
+
+```text
+security.protocol=SASL_SSL
+sasl.mechanism=AWS_MSK_IAM
+sasl.jaas.config = software.amazon.msk.auth.iam.IAMLoginModule required awsProfileName="stephane-msk";
+sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler 
+```
 
