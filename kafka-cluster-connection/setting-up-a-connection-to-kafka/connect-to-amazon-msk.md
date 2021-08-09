@@ -35,6 +35,43 @@ $ ssh -i ~/.ssh/ec2-key.pem -N \
 
 * Connect Conduktor using localhost:4000
 
+### Alternative: Another Proxy
+
+{% hint style="danger" %}
+If you get some errors such as "Exception in upstream channel.: java.lang.IllegalArgumentException: Invalid version for API key METADATA: 11", your proxy may be incompatible with your version of Apache Kafka.
+{% endhint %}
+
+You can try running another proxy: [https://github.com/grepplabs/kafka-proxy](https://github.com/grepplabs/kafka-proxy) It's a bit more complicated to setup but is more configurable.
+
+* Run the proxy on an EC2 machine running in the MSK network:
+  * Map all your brokers
+
+```text
+docker run --rm --net host grepplabs/kafka-proxy:v0.2.9 \
+          server \
+        --bootstrap-server-mapping "b-1.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32500,127.0.0.1:32500" \
+        --bootstrap-server-mapping "b-2.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32501,127.0.0.1:32501" \
+        --bootstrap-server-mapping "b-3.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32502,127.0.0.1:32502" \
+        --bootstrap-server-mapping "b-4.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32503,126.0.0.1:32503" \
+        --dynamic-listeners-disable \
+        --debug-enable
+
+```
+
+* SSH forward locally to your EC2 machine:
+  * Forward all the ports
+
+```text
+ssh -i ~/.ssh/ec2-key.pem -N \
+     -L 32500:localhost:32500 \
+     -L 32501:localhost:32501 \
+     -L 32502:localhost:32502 \
+     -L 32503:localhost:32503 \
+     ec2-user@ec2-1-2-3-4.us-west-2.compute.amazonaws.com
+```
+
+* Connect your Conduktor to localhost:32500
+
 ## Connect using AWS IAM
 
 Conduktor fully handles AWS IAM, you just have to setup your connection with your IAM access.
