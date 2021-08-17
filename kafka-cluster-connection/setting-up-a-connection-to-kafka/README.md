@@ -18,7 +18,7 @@ To add a cluster, please click on the "Add new cluster" button
 
 This will open up a list of configurations you can set for Conduktor
 
-![](../../.gitbook/assets/image%20%2836%29.png)
+![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.29.18-pm.png)
 
 ### Kafka Cluster
 
@@ -36,7 +36,7 @@ You can use the two buttons to test the Kafka and Zookeeper connectivity to ensu
 
 In case you are using the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/index.html) and usually Avro data, you should use this tab to setup the connection details to your registry. These detail are necessary to activate the "Schema Registry" tab in Conduktor, as well as consume and produce data in Avro format. 
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.30.06-pm.png)
 
 * **URL:** HTTP or HTTPS endpoint of your schema registry. 
 * **Security:** Choose the security type \(None, Basic Auth, Bearer Token\)
@@ -52,7 +52,7 @@ In case of issues connecting to an HTTPS Schema Registry, or if you're using a s
 
 Here you can add a list of Kafka Connect clusters that are linked to this Kafka cluster. 
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.30.31-pm.png)
 
 Each Kafka Connect cluster will have
 
@@ -66,7 +66,7 @@ You can also test the connectivity to your Connect clusters from there.
 
 Enabling metrics allows Conduktor to get real-time features, statistics, monitoring over your cluster, as well as the rolling restart feature. 
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.31.50-pm.png)
 
 We current support Jolokia and JMX to extract metrics. 
 
@@ -85,9 +85,27 @@ The SSH configuration is quite powerful and should only be allowed to be set-up 
 
 The SSH configuration enables Conduktor to directly access your brokers machines, enabling features like the rolling restart feature. 
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.32.18-pm.png)
 
 Please provide the port, user, authentication method \(password or SSH key pair\) and test the SSH configuration. 
+
+### Plugins \(aka "custom jars"\)
+
+![Available since v2.17.0](../../.gitbook/assets/screen-shot-2021-08-17-at-5.33.05-pm.png)
+
+The Plugins configuration allows you to load your custom jars into Conduktor.  
+These customs jars are useful to extend the capabilities of our internal Kakfa clients.  
+  
+For example, if OAuth2 is used to authenticate connections to your Apache Kafka cluster, you'll have to configure your cluster with a property:
+
+`sasl.login.callback.handler.class=io.example.client.MyCustomLoginCallbackHandler`
+
+and then load your jar containing the `io.example.client.MyCustomLoginCallbackHandler` class to then be able to connect Conduktor to your Apache Kafka cluster.
+
+#### Current limitations of the "Plugins" feature
+
+* For now, a plugin can only be composed of one jar \(Coming soon\)
+* For now, custom serialisers/deserialisers are not guaranteed to work \(Coming soon\)
 
 ## Testing the Connection to a Cluster
 
