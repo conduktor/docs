@@ -64,5 +64,6 @@
 
 ## Portal
 
-* [Account Management](portal/account-management.md)
+* [Account Management](portal/account-management/README.md)
+  * [Managing Permissions / RBAC](portal/account-management/managing-permissions-rbac.md)
 
