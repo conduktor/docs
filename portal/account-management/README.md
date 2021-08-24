@@ -23,8 +23,7 @@ If you purchased a subscription, you are its BILLING USER. You are the **ADMIN**
 A Billing User can designate one or more License Managers to manage the license on its behalf. 
 
 * No access to the invoices, billing info etc.
-* You will also be able to **assign/unassign licenses** to your users 
-  * \(_please note that reassignment is only available for Enterprise subscriptions\)_ 
+* You will also be able to **assign/unassign licenses** to your users \(_please note that reassignment is only available for Enterprise subscriptions\)_ 
 
 It's useful for _team leaders_ for instance, who are not the ones purchasing the subscription \(eg: when going through _resellers_, _procurement_ etc.\)
 
