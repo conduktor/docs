@@ -7,60 +7,69 @@ description: >-
 # Managing Permissions / RBAC
 
 {% hint style="info" %}
-This feature is available to **Billing users** and **License Managers** only.
+This feature is available only for Enterprises.
 {% endhint %}
 
-You can have control of what features of Conduktor Desktop is available to users in your subscription. This control is on a **per-cluster** basis. For example, you can give a read-only access to your production clusters, while still allowing full access to you development clusters.
+To be in control of what features your users can use on your clusters when using Conduktor Desktop, considering limiting their permissions. This is available on your account at [https://account.conduktor.io](https://account.conduktor.io/).
 
-## Defining a Kafka Cluster 
+## Scope
 
-On the Account Management Portal, click on the **Manage** button under Subscription Details &gt; Cluster Permissions to get to the _Cluster Permission_ page :
+Today, you can control this on a **per-cluster** basis. We don't manage a full RBAC system and it's not yet possible to define permissions per-user \(to come\).
+
+## Example
+
+You want to ensure that all your users cannot write into your production clusters: you want to provide read-only access. You also want them to have all the permissions on your development clusters: this is the default \(when no restrictions are put in place\).
+
+## How to control the permissions of an Apache Kafka cluster?
+
+* On the Account Management Portal, click on the **Manage** button under Subscription Details &gt; Cluster Permissions to get to the _Cluster Permission_ page :
 
 ![](../../.gitbook/assets/image-2-.png)
 
-From the next page, you will be able to add a new cluster or change the permission of an existing cluster:
+* You will be able to declare your clusters or change the permission of an existing cluster:
 
 ![](../../.gitbook/assets/capture-decran-du-2021-08-26-15-54-47.png)
 
-Click C**reate** to add a new cluster, you will be asked with a Cluster ID, name and description. 
+* Click **Create** to declare a new cluster, you need to provide:
+  * the Cluster ID: provides by your Apache Kafka administrators / your Ops team / Also available within Conduktor in the "Brokers" view
+  * a short name
+  * a longer description. 
 
 ![](../../.gitbook/assets/capture-decran-du-2021-08-26-16-07-44.png)
 
-{% hint style="info" %}
-The Cluster ID is the important information that allows Conduktor Desktop to retrieve the permissions of the clusters.
-
-**You can find it in Conduktor Desktop in the Broker Tab**
+{% hint style="success" %}
+A cluster ID uniquely identifies your clusters. It is a unique identifier assigned automatically to an Apache Kafka cluster. 
 {% endhint %}
 
-![Where to find the cluster ID in Conduktor Desktop](../../.gitbook/assets/capture-decran-du-2021-08-26-17-05-01.png)
+## How to setup the permissions of a cluster?
 
-## Settings the permissions of a cluster
+Once you've added a cluster, you will be able to allow or deny access to specific features of Conduktor Desktop. Check the permissions you want to allow :
 
-Once you added a cluster, you will be able to allow or denying access to specific features of Conduktor Desktop. Check the permissions you want to allow :
+{% hint style="success" %}
+You can click _Read-only_ to set predefined permissions to prevent any modifications to your cluster by your users \(eg: disallowing producing to topics, broker config modifications, topic creation/deletion, altering schemas in schema registry, ...\)
+{% endhint %}
 
 ![](../../.gitbook/assets/capture-decran-du-2021-08-26-16-09-46.png)
 
-{% hint style="info" %}
-You can click _Read-only_ to get a preset of permissions which will prevent modifications to your cluster \(disallowing producing to topics, broker config modifications, topic creation/deletion, altering schemas in schema registry, ...\)
-{% endhint %}
+## How does this affect Conduktor Desktop?
 
-##  Effects of permissions on Conduktor Desktop
+When a permission is denied, the corresponding button or menu entry will not appear in Conduktor Desktop.
 
-If a permission is denied, the corresponding button or menu entry will not appear in Conduktor Desktop. For instance, you can only create consumers but not producers on this cluster:
+For instance, if we disabled "Produce Into Topics" on a cluster, users connected to this cluster won't be able to Produce any data \(no "Producer" button\):
 
-![Read-only permissions: Notice the lack of some buttons \(&#x2295;producer , import data, remove ...\)](../../.gitbook/assets/capture-decran-du-2021-08-26-17-43-22.png)
+![Notice the lack of some buttons \(&#x2295; producer , import data, ...\)](../../.gitbook/assets/capture-decran-du-2021-08-26-17-43-22.png)
 
 ![Same view with all permissions enabled](../../.gitbook/assets/capture-decran-du-2021-08-26-17-42-03.png)
 
 {% hint style="info" %}
-Removing the specific permission "_Allow Users to Connect_" will totally prevent the connection to the cluster.
+Removing the specific permission "_Allow Users to Connect_" will entirely prevent the connection to the cluster.
 {% endhint %}
 
 ## Additional Remarks
 
-* The restrictions only apply when using to Conduktor Desktop. It still possible to by-pass the limitation using \(for instance\) the classical Kafka clients.
+* This does not persist any ACLs into your Apache Kafka clusters, this controls only Conduktor
 * Refining permission on a per-user basis will be available in a future version of the product.
-* Clusters which are not referenced in the portal will get all permissions by default.
+* Clusters that are not declared in the portal get all permissions by default.
 
 
 
