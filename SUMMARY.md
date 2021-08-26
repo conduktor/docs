@@ -16,6 +16,11 @@
 * [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting/README.md)
   * [Using an internet proxy](sign-in-section/login-troubleshooting/internet-proxy.md)
 
+## Account Management <a id="portal"></a>
+
+* [Account Management](portal/account-management/README.md)
+  * [Managing Permissions / RBAC](portal/account-management/managing-permissions-rbac.md)
+
 ## Kafka Cluster Connection
 
 * [Setting up a connection to Kafka](kafka-cluster-connection/setting-up-a-connection-to-kafka/README.md)
@@ -61,9 +66,4 @@
 * [Configuring Conduktor](misc/configuring-conduktor.md)
 * [Data Security](misc/data-security.md)
 * [Frequently Asked Questions](misc/faq.md)
-
-## Portal
-
-* [Account Management](portal/account-management/README.md)
-  * [Managing Permissions / RBAC](portal/account-management/managing-permissions-rbac.md)
 
