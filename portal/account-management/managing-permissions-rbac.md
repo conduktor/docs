@@ -24,6 +24,8 @@ From the next page, you will be able to add a new cluster or change the permissi
 
 Click C**reate** to add a new cluster, you will be asked with a Cluster ID, name and description. 
 
+![](../../.gitbook/assets/capture-decran-du-2021-08-26-16-07-44.png)
+
 {% hint style="info" %}
 The Cluster ID is the important information that allows Conduktor Desktop to retrieve the permissions of the clusters.
 
@@ -46,7 +48,9 @@ You can click _Read-only_ to get a preset of permissions which will prevent modi
 
 If a permission is denied, the corresponding button or menu entry will not appear in Conduktor Desktop. For instance, you can only create consumers but not producers on this cluster:
 
-![No Producer Button on the top - No Producer tab on the left.](../../.gitbook/assets/capture-decran-du-2021-08-26-17-03-36.png)
+![Read-only permissions: Notice the lack of some buttons \(&#x2295;producer , import data, remove ...\)](../../.gitbook/assets/capture-decran-du-2021-08-26-17-43-22.png)
+
+![Same view with all permissions enabled](../../.gitbook/assets/capture-decran-du-2021-08-26-17-42-03.png)
 
 {% hint style="info" %}
 Removing the specific permission "_Allow Users to Connect_" will totally prevent the connection to the cluster.
