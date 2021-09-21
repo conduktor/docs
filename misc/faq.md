@@ -103,5 +103,19 @@ The following flags does not work:
 -Dsun.java2d.uiScale=2.
 ```
 
-### 
+## Conduktor flatpak image does not work in Wayland
+
+There is a known issue with conduktor flatpak image under Wayland:
+
+```text
+Exception in thread "main" java.lang.UnsupportedOperationException: Unable to open DISPLAY
+```
+
+As a workaround, Conduktor can be launched with this command:
+
+```text
+flatpak run --nosocket=fallback-x11 --socket=x11 io.conduktor.Conduktor
+```
+
+
 
