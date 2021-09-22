@@ -147,10 +147,7 @@ KafkaClient {
 
 ```text
 sasl.kerberos.service.name=kafka
-sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule 
-        required useKeyTab=true 
-        keyTab="/etc/security/keytabs/alice.keytab"
-        principal="alice@EXAMPLE.COM";
+sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true keyTab="/etc/security/keytabs/alice.keytab" principal="alice@EXAMPLE.COM";
 ```
 
 ## Windows and paths
@@ -161,10 +158,7 @@ If you're using Windows, you may have to use slash '/' instead of backslash '\' 
 sasl.mechanism=GSSAPI
 security.protocol=SASL_SSL
 sasl.kerberos.service.name=kafka
-sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required
-   useKeyTab=true keyTab='c:/myfolder/keytab.ktf'
-   serviceName='kafka'
-   principal=’myid@DOMAIN.COM';
+sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true keyTab='c:/myfolder/keytab.ktf' serviceName='kafka' principal=’myid@DOMAIN.COM';
 ssl.truststore.location=C:/myfolder/trust.root.jks
 ```
 
