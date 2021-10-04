@@ -6,6 +6,10 @@ Amazon MSK is a self-managed service that makes it easy to build and run applica
 
 It lacks several important Apache Kafka features like Kafka Connect, Kafka Streams, ksqlDB, and is not cloud-native \(serverless, like S3 or Kinesis\) but is just a provisioned infrastructure
 
+{% hint style="info" %}
+AWS MSK supports also Kafka Connect clusters. [Read more about it](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/).
+{% endhint %}
+
 ## Conduktor & MSK
 
 Conduktor, which is running on your computer, has no access by default to MSK. Still, it's possible to connect it to the cluster by using a specialized kafka proxy in-between.
@@ -98,4 +102,30 @@ sasl.mechanism=AWS_MSK_IAM
 sasl.jaas.config = software.amazon.msk.auth.iam.IAMLoginModule required awsProfileName="stephane-msk";
 sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler 
 ```
+
+## IAM Example
+
+A basic \(broad\) example of configuring IAM policy to access everything on MSK:
+
+```text
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "kafka-cluster:*",
+      "Resource": [
+        "arn:aws:kafka:us-east-1:111222333444:cluster/*/*",
+        "arn:aws:kafka:us-east-1:111222333444:group/*/*/*",
+        "arn:aws:kafka:us-east-1:111222333444:transactional-id/*/*/*",
+        "arn:aws:kafka:us-east-1:111222333444:topic/*/*/*"
+      ]
+    },
+    ...
+}
+```
+
+
+
+
 
