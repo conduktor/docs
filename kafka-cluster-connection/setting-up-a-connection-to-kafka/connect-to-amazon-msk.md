@@ -56,7 +56,7 @@ docker run --rm --net host grepplabs/kafka-proxy:latest \
         --bootstrap-server-mapping "b-1.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32500,127.0.0.1:32500" \
         --bootstrap-server-mapping "b-2.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32501,127.0.0.1:32501" \
         --bootstrap-server-mapping "b-3.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32502,127.0.0.1:32502" \
-        --bootstrap-server-mapping "b-4.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32503,126.0.0.1:32503" \
+        --bootstrap-server-mapping "b-4.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32503,127.0.0.1:32503" \
         --dynamic-listeners-disable \
         --debug-enable
 
