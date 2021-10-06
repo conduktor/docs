@@ -28,7 +28,9 @@ Just remember that Conduktor is running on **your** machine, running on **your**
 
 ## Understanding Kafka Listeners
 
-Part of understanding why your CLI \(and therefore Conduktor\) can't connect to your Kafka Cluster is due to your knowledge of how the Apache Kafka listeners work. As such, **we heavily recommend for you to read** [**this blog**](https://rmoff.net/2018/08/02/kafka-listeners-explained/) **to learn about Kafka listeners.**
+Part of understanding why your CLI \(and therefore Conduktor\) can't connect to your Kafka Cluster is due to your knowledge of how the Apache Kafka listeners work. As such, we **heavily** recommend for you to read [&gt;&gt; this blog &lt;&lt;](https://rmoff.net/2018/08/02/kafka-listeners-explained/) to learn about Kafka listeners.
+
+> Another longer blog can be found at: [https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 
 ![internal + external listeners configured](../../.gitbook/assets/image%20%2848%29.png)
 
