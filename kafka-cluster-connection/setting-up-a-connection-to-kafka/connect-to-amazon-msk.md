@@ -39,6 +39,10 @@ $ ssh -i ~/.ssh/ec2-key.pem -N \
 
 * Connect Conduktor using localhost:4000
 
+The networking layer looks like this \(not public\):
+
+![](../../.gitbook/assets/screenshot-2021-10-06-at-22.37.03.png)
+
 ### Alternative: Another Proxy
 
 {% hint style="danger" %}
