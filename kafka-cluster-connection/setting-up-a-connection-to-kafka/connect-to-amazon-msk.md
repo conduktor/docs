@@ -23,7 +23,7 @@ $ sudo docker run --net host \
     -e KAFKAPROXY_HOSTNAME=localhost\
     -e KAFKAPROXY_BASE_PORT=4000 \
     -e KAFKAPROXY_BOOTSTRAP_SERVERS=MYBROKER1:9092,broker2:9092,broker3:9092 \
-    dajudge/kafkaproxy:0.0.13
+    dajudge/kafkaproxy:latest
 
 ```
 
@@ -51,7 +51,7 @@ You can try running another proxy: [https://github.com/grepplabs/kafka-proxy](ht
   * Map all your brokers
 
 ```text
-docker run --rm --net host grepplabs/kafka-proxy:v0.2.9 \
+docker run --rm --net host grepplabs/kafka-proxy:latest \
           server \
         --bootstrap-server-mapping "b-1.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32500,127.0.0.1:32500" \
         --bootstrap-server-mapping "b-2.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32501,127.0.0.1:32501" \
