@@ -20,7 +20,7 @@ On the welcome screen, you can export your configuration to a file \(cluster-nam
 
 ### Import Configurations
 
-You can import Cluster Configurations from a file or directly from your clipboard!
+You can import Cluster Configurations from a file, from [Github](github-enterprise.md) or directly from your clipboard!
 If the cluster already exist,we will ask you if you want to override the existing cluster configuration or not \(see below\).
 
 ![](../../.gitbook/assets/config/import-export/2-import.png)
