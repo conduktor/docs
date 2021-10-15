@@ -145,7 +145,7 @@ Refer to [Projecting data](https://docs.conduktor.io/features/consuming-data#pro
 Composed Filter allow to use multiple filter as one.
 Two kind of composition are available
 * `All`, [formally AND]. this composer will check that records match `all` the filtering rules
-* `at least one`, [formally OR]. this composer will check that records match `at least one` filtering rules
+* `At least one`, [formally OR]. this composer will check that records match `at least one` filtering rules
 
 All kind of existing filter can be used in composed filter.
 
