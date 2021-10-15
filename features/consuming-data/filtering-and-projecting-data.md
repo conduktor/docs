@@ -149,6 +149,6 @@ Two kind of composition are available
 
 All kinds of existing filters can be used in composed filter.
 
-to add or remove filter use  `+` & `-` sign
+To add or remove a filter use the  `+` & `-` buttons.
 
 ![](../../.gitbook/assets/produce-and-consume/composable-filter.png)
