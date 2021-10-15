@@ -139,3 +139,16 @@ Here, we want to see only the Avro records where `.state.version` equals to 227:
 
 Refer to [Projecting data](https://docs.conduktor.io/features/consuming-data#projecting-data) to know what's possible, it's the same syntax. 
 
+### Composed Filter
+`introduced in 2.18.2`
+
+Composed Filter allow to use multiple filter as one.
+Two kind of composition are available
+* `All`, [formally AND]. this composer will check that records match `all` the filtering rules
+* `at least one`, [formally OR]. this composer will check that records match `at least one` filtering rules
+
+All kind of existing filter can be used in composed filter.
+
+to add or remove filter use  `+` & `-` sign
+
+![](../../.gitbook/assets/produce-and-consume/composable-filter.png)
