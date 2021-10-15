@@ -147,7 +147,7 @@ Two kind of composition are available
 * `All`, [formally AND]. this composer will check that records match `all` the filtering rules
 * `At least one`, [formally OR]. this composer will check that records match `at least one` filtering rules
 
-All kind of existing filter can be used in composed filter.
+All kinds of existing filters can be used in composed filter.
 
 to add or remove filter use  `+` & `-` sign
 
