@@ -53,6 +53,7 @@
 * [Kafka Connect](features/kafka-connect/README.md)
   * [Features](features/kafka-connect/features.md)
   * [Security](features/kafka-connect/security.md)
+  * [How to start with Confluent Cloud Kafka Connect](features/kafka-connect/how-to-start-with-confluent-cloud-kafka-connect.md)
 * [Kafka Streams](features/kafka-streams.md)
 * [ksqlDB: Streaming with SQL](features/ksqldb/README.md)
   * [Connect Conduktor to ksqlDB clusters](features/ksqldb/connect-conduktor-to-ksqldb-clusters.md)
