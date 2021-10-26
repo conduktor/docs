@@ -23,5 +23,5 @@ Since [Conduktor 2.6.0](https://www.conduktor.io/changelog/#2.6.0), if you have 
 
 If you're running a lower version, it will take more time because each connector needs be queried one by one to get its info \(we limit the number of calls we're doing in parallel to not crash your instance!\). Consider upgrading.
 
-
-
+## How to start with Confluent Cloud Kafka Connect
+{% page-ref page="how-to-start-with-confluent-cloud-kafka-connect.md" %}
