@@ -95,17 +95,27 @@ Please provide the port, user, authentication method \(password or SSH key pair\
 
 The Plugins configuration allows you to load your custom jars into Conduktor.  
 These customs jars are useful to extend the capabilities of our internal Kakfa clients.  
-  
-For example, if OAuth2 is used to authenticate connections to your Apache Kafka cluster, you'll have to configure your cluster with a property:
 
-`sasl.login.callback.handler.class=io.example.client.MyCustomLoginCallbackHandler`
+The plugins have two main usages:
+  1. Authentication of Conduktor requests to your Kafka cluster(s) if you're using an authentication mechanism not natively supported by Kafka.
+  2. Deserializing your topics messages with a custom Kafka deserializer. (MessagePack, etc.)
 
-and then load your jar containing the `io.example.client.MyCustomLoginCallbackHandler` class to then be able to connect Conduktor to your Apache Kafka cluster.
+For example, if you're using OAuth2 to authenticate the connections to your Kafka cluster,
+to allow Conduktor to connect to your cluster, you'll need to:
+
+  1. Configure your cluster with an additional property: `sasl.login.callback.handler.class=io.example.client.MyCustomLoginCallbackHandler`
+  2. Load your jar containing the `io.example.client.MyCustomLoginCallbackHandler` class in Conduktor plugins
+
+With this additional property and this jar configured, Conduktor will be able to configure its internal Kafka client to successfully connect to you Kafka cluster.
+
+To learn more about custom Kafka deserializers and how to use them in Conduktor, please the dedicated documentation: [Custom deserializers](../../features/consuming-data/custom-deserializers.md)
+
+⚠️ When adding a plugin to a cluster configuration, this plugin is only available for this cluster.    
+If you want to use this same plugin with a second cluster configured in Conduktor, you'll need to add this plugin in this second cluster configuration too.
 
 #### Current limitations of the "Plugins" feature
 
 * For now, a plugin can only be composed of one jar \(Coming soon\)
-* For now, custom serialisers/deserialisers are not guaranteed to work \(Coming soon\)
 
 ## Testing the Connection to a Cluster
 

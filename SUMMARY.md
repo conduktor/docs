@@ -39,6 +39,7 @@
   * [Pick your format wisely](features/consuming-data/pick-your-format-wisely.md)
   * [Filtering & Projecting data](features/consuming-data/filtering-and-projecting-data.md)
   * [Advanced Consumer](features/consuming-data/advanced-consumer.md)
+  * [Custom deserializers](features/consuming-data/custom-deserializers.md)
 * [How to Produce data?](features/producing-data/README.md)
   * [Produce random data](features/producing-data/produce-random-data.md)
 * [Brokers Management](features/brokers-management.md)
