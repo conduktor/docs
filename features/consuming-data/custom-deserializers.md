@@ -1,5 +1,6 @@
 ---
-description: >- Consume your data from Conduktor even if Conduktor doesn't support the format you used to serialize it.
+description: >- 
+  Consume your data from Conduktor even if Conduktor doesn't support the format you used to serialize it.
 ---
 
 # Custom deserializers
