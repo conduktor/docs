@@ -100,5 +100,6 @@ ERR: Unknown magic byte!
 
 ![](../../.gitbook/assets/screenshot-2020-06-25-at-16.15.21%20%281%29.png)
 
+## Custom deserializers
 
-
+See the dedicated documentation page: [Custom deserializers](custom-deserializers.md)
