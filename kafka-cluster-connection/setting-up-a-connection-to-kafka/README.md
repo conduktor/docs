@@ -115,11 +115,16 @@ If you want to use this same plugin with a second cluster configured in Condukto
 
 * For now, a plugin can only be composed of one jar (Coming soon)
 
-**Scala support & limitation :**
+**Scala support & limitation**
 
-* &#x20;As Conduktor is powered by scala 2.13, it natively supports Scala plugins compiled with scala 2.13.
-* &#x20;In some cases your Scala version will differ from the one we are using, we encourage you to build your plugin with scala 2.13. However, to use another version of scala to build your plugin, it will require making a `fatjar` that shadows scala code. to avoid classpath conflict scala.\* have to be renamed `yourorganisation.scala.*` during the shadowing process.\
+As Conduktor is powered by Scala 2.13, it natively supports the plugins compiled with Scala 2.13.   
+If your plugin is using a different version of Scala, it may not work in Conduktor.    
+If your plugin is compiled with another version of Scala and doesn't work in Conduktor, you have two solutions:
+  1. Recompile your plugin with Scala 2.13
+  2. Build a `fatjar` out of your plugin code that will contain your Scala version code.    
+     However, for this solution to work, you'll have to shadow your Scala version code by renaming all the `scala.\*` packages to `yourorganisation.scala.*`, for example.
 
+Don't hesitate to contact our support if you meet any issue with your plugins and Conduktor.
 
 ## Testing the Connection to a Cluster
 
