@@ -122,7 +122,7 @@ If your plugin is using a different version of Scala, it may not work in Condukt
 If your plugin is compiled with another version of Scala and doesn't work in Conduktor, you have two solutions:
   1. Recompile your plugin with Scala 2.13
   2. Build a `fatjar` out of your plugin code that will contain your Scala version code.    
-     However, for this solution to work, you'll have to shadow your Scala version code by renaming all the `scala.\*` packages to `yourorganisation.scala.*`, for example.
+     However, for this solution to work, you'll have to shadow your Scala version code by renaming all the `scala.*` packages to `yourorganisation.scala.*`, for example.
 
 Don't hesitate to contact our support if you meet any issue with your plugins and Conduktor.
 
