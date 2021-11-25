@@ -4,7 +4,7 @@
 
 While most of the users will consume the data from a topic and all its partitions, some advanced users could only want to consume for a given set of partitions because they know where the info they're looking for is.
 
-In the Advanced panel, you can set the partitions to a specific number, or a range, or a combinaison of ranges etc \(as the tooltip explains\).
+In the Advanced panel, you can set the partitions to a specific number, or a range, or a combinaison of ranges etc (as the tooltip explains).
 
 Example:
 
@@ -28,9 +28,9 @@ In the Advanced panel, check "Latest by Key" and consume your topic. Nothing wil
 
 By default, Conduktor is configured to work properly in the vast majority of use-case. For less common usage, it's possible to tune some properties used when working with the consumer
 
-In the Advanced panel, click on Open Settings to get directly to the consumer settings: \(it's possible to get there by the main Settings button in Conduktor's main view\)
+In the Advanced panel, click on Open Settings to get directly to the consumer settings: (it's possible to get there by the main Settings button in Conduktor's main view)
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08%20%283%29.png)
+![](<../../.gitbook/assets/screenshot-2020-06-25-at-15.07.08 (3).png>)
 
 For instance, if you have large messages in your topic, consider:
 
@@ -47,5 +47,8 @@ You will still be able to do classic operations like filtering, to look for your
 
 There are different type of key/value in this topic that we won't explain here. If you're interesting reading this topic, I'm sure you know what you're doing!
 
+### Aggregators
 
+Conduktor is able to aggregate your events. For the moment only one aggregator is available which is named "most frequent key". This aggregator is powered by a TopK algorithm, this is a probabilistic structure and the results are can diverge from the real distribution by a few percent. This aggregator is very useful to understand the distribution of your data or to analyze key hot spots.
 
+![](../../.gitbook/assets/2021-11-25\_15-04.png)

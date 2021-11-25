@@ -7,7 +7,7 @@ description: >-
 
 # Consumer Groups Management
 
-{% embed url="https://www.youtube.com/watch?v=RCpjLuZyPq4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=14&ab\_channel=ConduktorConduktor" %}
+{% embed url="https://www.youtube.com/watch?v=RCpjLuZyPq4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=14&ab_channel=ConduktorConduktor" %}
 
 ## Conduktor & Consumer Groups
 
@@ -17,7 +17,7 @@ Conduktor does NOT create any Consumer Group, it does not need too. Therefore, i
 
 _TLDR: you can't._
 
-Conduktor does not create any Consumer Group and there is currently no possibility to create them here, because it makes little sense. The Consumer Group should be created by your applications, to be used by themselves. Why would you create a Consumer Group in Conduktor itself? 
+Conduktor does not create any Consumer Group and there is currently no possibility to create them here, because it makes little sense. The Consumer Group should be created by your applications, to be used by themselves. Why would you create a Consumer Group in Conduktor itself?&#x20;
 
 If you have a valid use-case, feel free to contact us.
 
@@ -39,14 +39,14 @@ If you have a valid use-case, feel free to contact us.
 * Click on "Change offsets" then configure the strategy to how reset the offsets:
   * which topic: a consumer group can subscribe to multiple topics
   * which partition: sometimes you know exactly which message is stuck!
-  * the new offset. It's computed automatically according to a few methods: 
+  * the new offset. It's computed automatically according to a few methods:&#x20;
     * **Earliest**: start from the beginning, reprocess everything!
     * **Latest**: start from the end, ignore all the existing records
     * **Latest minus X**: just reprocess the latest X records
     * **Current offset + X**: to jump over some records
     * **Specific Datetime**: when you know when your app started to crash
     * **Current time minus X seconds**: just the latest records in time
-* When you change the strategy, Conduktor automatically recomputes the **New Offset** \(right column\).
+* When you change the strategy, Conduktor automatically recomputes the **New Offset** (right column).
 * Click on `CHANGE OFFSETS (X)` when you're happy with the proposal
   * X is the number of changes
 * Don't forget to restart your application! 💪
@@ -72,8 +72,8 @@ The global view of the Consumers shows the overall lag of your consumer groups. 
 You can also see the details per partitions in the details. Note that a consumer group can subscribe to multiple topics, like we can see below.
 
 * **"?" means indeterminate**.
-  * The Consumer Group has not committed yet any offset for this partition. This can happen when you don't have any record in this specific partition for instance \(or if you have a bug in your consuming application!\).
-  * Sometimes, it can happen when Conduktor has troubles to simply get the offsets because the Kafka cluster is slow to respond, therefore Conduktor timeouts after a while \(30 seconds by default\).
+  * The Consumer Group has not committed yet any offset for this partition. This can happen when you don't have any record in this specific partition for instance (or if you have a bug in your consuming application!).
+  * Sometimes, it can happen when Conduktor has troubles to simply get the offsets because the Kafka cluster is slow to respond, therefore Conduktor timeouts after a while (30 seconds by default).
   * The Current Offset of first three partitions below are also "?" because no commit were made yet, hence the lag is indeterminate.
 * The lag is the **difference** between the latest offset committed by the consuming applications for the partition, and its current end offset where records are being written to.
 
@@ -81,7 +81,7 @@ You can also see the details per partitions in the details. Note that a consumer
 
 ## How to force a Member to leave a Consumer Group
 
-You can **not** force a consumer to leave a consumer group _permanently_. 
+You can **not** force a consumer to leave a consumer group _permanently_.&#x20;
 
 However, Conduktor allows you to remove members from a group, which will have for effect to trigger a group rebalance. This is helpful if a member is dead, but its partitions are not yet reallocated to another member. Active members will re-join the group automatically during the rebalance and the partitions will be reassigned.
 
@@ -91,10 +91,8 @@ There are two ways to remove members from a consumer group:
 * Remove a selection of members : select the members and use the `ACTIONS` menu. This is only available for member of type static.
 
 {% hint style="success" %}
-Designed to be used with the **static group membership** feature_,_ an Apache Kafka Consumer feature. It delays rebalancing operations when a member is temporary gone \(pod restart, rolling upgrade..\) to prevent useless rebalancing.
+Designed to be used with the **static group membership** feature_,_ an Apache Kafka Consumer feature. It delays rebalancing operations when a member is temporary gone (pod restart, rolling upgrade..) to prevent useless rebalancing.
 
 BUT now, the consumer group coordinator can take time to realize a static member is gone, so forcing a kick here will help trigger rebalancing as soon as possible, to reassign partitions to other members.
 {% endhint %}
-
-
 

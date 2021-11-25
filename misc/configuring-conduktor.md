@@ -2,9 +2,9 @@
 
 ## Read-Only mode
 
-Sometimes, you want to be sure that you won't misclick anywhere or you just want to access Conduktor in read-only mode \(useful for Testers, Product Owners, Data Analysts etc.\).
+Sometimes, you want to be sure that you won't misclick anywhere or you just want to access Conduktor in read-only mode (useful for Testers, Product Owners, Data Analysts etc.).
 
-Conduktor does not have a proper permissions system for now \(contact us if that matters to you, we may do that for enterprises\) and offer instead a quick toggleable read-only mode:
+Conduktor does not have a proper permissions system for now (contact us if that matters to you, we may do that for enterprises) and offer instead a quick toggleable read-only mode:
 
 * Not Read-Only: we can produce data, have access to advanced commands, can delete topic...
 
@@ -16,30 +16,30 @@ Conduktor does not have a proper permissions system for now \(contact us if that
 
 ## Conduktor's Settings
 
-Conduktor comes with many options \(and growing\) to customize its behaviour. This is important when it comes to large clusters: you don't need everything, so better remove some useless overhead.
+Conduktor comes with many options (and growing) to customize its behaviour. This is important when it comes to large clusters: you don't need everything, so better remove some useless overhead.
 
 {% hint style="warning" %}
-Also, _unfortunately_, sometimes the clusters are just too big for Conduktor to handle properly, making it crash after some time ☹ \(improving!\)️
+Also, _unfortunately_, sometimes the clusters are just too big for Conduktor to handle properly, making it crash after some time ☹ (improving!)️
 {% endhint %}
 
 It's also there to configure:
 
-* the Kafka clients used across Conduktor \(administration, consumer, producer...\)
-  * Increase the timeouts if your cluster or connection is slow \(default is 30s\)
+* the Kafka clients used across Conduktor (administration, consumer, producer...)
+  * Increase the timeouts if your cluster or connection is slow (default is 30s)
   * Does that ring a bell? _org.apache.kafka.common.errors.TimeoutException: Failed to update metadata after 30000 ms._
 * a few Kafka Streams options
 
-Go Options &gt; Settings:
+Go Options > Settings:
 
 ![](../.gitbook/assets/screenshot-2020-09-19-at-17.13.15.png)
 
-We can decide which columns to hide or show. When columns are hidden, processing is not done \(like with "Show Last Write" which can be quite expensive if you have many topics, it's a good idea to hide it\).
+We can decide which columns to hide or show. When columns are hidden, processing is not done (like with "Show Last Write" which can be quite expensive if you have many topics, it's a good idea to hide it).
 
 ![](../.gitbook/assets/screenshot-2020-09-19-at-17.11.18.png)
 
-## JVM \(Advanced\)
+## JVM (Advanced)
 
-It's possible to grab some stats about the JVM \(read-only!\):
+It's possible to grab some stats about the JVM (read-only!):
 
 ![](../.gitbook/assets/screenshot-2020-09-19-at-17.20.48.png)
 
@@ -52,12 +52,12 @@ By default, Conduktor is limited to 2GB of memory heap. It's possible to increas
 * Linux: `/opt/conduktor/lib/app/Conduktor.cfg`
 
 {% hint style="danger" %}
-We do **NOT** recommend to alter this file, **all changes will be lost** when upgrading Conduktor
+We do **NOT** recommend to alter this file, **all changes will be lost **when upgrading Conduktor
 {% endhint %}
 
 The default options are:
 
-```text
+```
 [JavaOptions]
 -Xms128m
 -Xmx2048m
@@ -70,17 +70,17 @@ The default options are:
 
 ## Custom environment variables
 
-It's possible to customize the -D\* without losing them when upgrading. 
+It's possible to customize the -D\* without losing them when upgrading.&#x20;
 
-Instead of playing with `Conduktor.cfg`, create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want \(**only -D, no -XX**\), to set them when Conduktor starts \(only on startup, it's not taken into account after\):
+Instead of playing with `Conduktor.cfg`, create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want (**only -D, no -XX**), to set them when Conduktor starts (only on startup, it's not taken into account after):
 
 * MacOS: `/Users/<user>/Library/Application Support/conduktor/conduktor.vmoptions`
 * Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\conduktor.vmoptions`
-* Linux: `/home/<user>/.config/conduktor/conduktor.vmoptions` \(or XDG Config path if set\)
+* Linux: `/home/<user>/.config/conduktor/conduktor.vmoptions` (or XDG Config path if set)
 
 Example:
 
-```text
+```
 -Djava.net.preferIPv4Stack=false
 -Dhttp.proxyHost=1.2.3.4
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
@@ -107,9 +107,8 @@ Starting Conduktor 2.7.0, we log everything into a `conduktor.log` file. This ma
 * Windows: `C:\Users\<User>\AppData\Local\Temp\conduktor.log`
 * Linux: `/tmp/conduktor.log`
 * macOS: `/var/folders/wy/xxx/T/conduktor.log`
-  * the path is random. The best way to find it is to look for the kafka.log path \(above\). conduktor.log sits at the same place
+  * the path is random. The best way to find it is to look for the kafka.log path (above). conduktor.log sits at the same place
 
 {% hint style="success" %}
-On Linux and macOS, you can directly start Conduktor from the console to display the logs on stdout. \(this does not work on Windows, except using alternative unix-ish shells like gitbash\)
+On Linux and macOS, you can directly start Conduktor from the console to display the logs on stdout. (this does not work on Windows, except using alternative unix-ish shells like gitbash)
 {% endhint %}
-

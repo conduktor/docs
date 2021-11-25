@@ -12,36 +12,36 @@ Conduktor use Auth0 to register/login our users, and validate their license if a
 
 When you login from Conduktor Desktop and get this error in the browser, instead of having the classic login screen, this may due to several reasons.
 
-* your browser is blocking cookies: our identity provider, Auth0, needs its cookies 🍪. You may try to open the same link \(it will be something like [https://auth.conduktor.io/u/login?state=xxx](https://auth.conduktor.io/u/login?state=xxx)\) in a private tab \(where behavior can be different and cookies allowed temporary\)
+* your browser is blocking cookies: our identity provider, Auth0, needs its cookies 🍪. You may try to open the same link (it will be something like [https://auth.conduktor.io/u/login?state=xxx](https://auth.conduktor.io/u/login?state=xxx)) in a private tab (where behavior can be different and cookies allowed temporary)
 * ensure you don't have some funny extension in your browser that could alter the url for some reasons
 * you hit the "back button" in your browser and tried to come back. Please relogin properly from Conduktor.
-* if nothing works, try to restart Conduktor Desktop and login \(to start fresh\)
+* if nothing works, try to restart Conduktor Desktop and login (to start fresh)
 * **Connection Refused**: no further information
   * The browser tries to contact our software Conduktor on localhost:8085 to provide the authentication information, and it fails to do so. You probably have a networking tool on your system preventing this connection.
   * If you are running behind a VPN, your VPN client may prevent such connection, please look at its options.
 
 ## Oh no! Authentication has failed...
 
-When you login, you can stumbled upon this error in your browser. That means that something is either preventing Conduktor to contact our authentication server \(`https://auth.conduktor.io`\) or the other way around, something is preventing our authentication server to contact Conduktor Desktop on your computer \(outside of our control\) to finish the identification flow.
+When you login, you can stumbled upon this error in your browser. That means that something is either preventing Conduktor to contact our authentication server (`https://auth.conduktor.io`) or the other way around, something is preventing our authentication server to contact Conduktor Desktop on your computer (outside of our control) to finish the identification flow.
 
 This can happen due to many reasons. Here are a few:
 
 * Are you running Conduktor from your enterprise network?
   * You may need to configure a **proxy**: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
   * You may need to add a **trusted certificate** to Conduktor: see below
-* **Browser plugins** can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server \(http://localhost:5xxx\), so if something in the browser forces a redirect from http to https, the flow will never complete.
-* If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor \(if you VPN adds its own security layer with a self-signed certificate..\)
+* **Browser plugins** can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server (http://localhost:5xxx), so if something in the browser forces a redirect from http to https, the flow will never complete.
+* If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor (if you VPN adds its own security layer with a self-signed certificate..)
   * Using **ZScaler** ? Download the ZScaler certificate and import it into Conduktor
 * Ensure you don't have an **antivirus** or a **firewall** blocking communications. You may have to add `https://auth.conduktor.io` to some allow-list or something.
 * By default, Conduktor uses your system proxy. This can causes some troubles such as: `Unable to tunnel through proxy. Proxy returns` Go to the settings, setup your proxy manually instead of the system proxy and and add an exception for `*.conduktor.io`
 
 {% hint style="info" %}
-The JVM embedded in Conduktor \(Java 13+, if you are using the classic installation process\) trusts **Let's Encrypt**'s CA, which is the one that emits the https certificate of our authentication server `https://auth.conduktor.io` so nothing specific to setup here.
+The JVM embedded in Conduktor (Java 13+, if you are using the classic installation process) trusts **Let's Encrypt**'s CA, which is the one that emits the https certificate of our authentication server `https://auth.conduktor.io` so nothing specific to setup here.
 {% endhint %}
 
 ## Other misc errors
 
-* **Unexpected end of file from server**: something on your network prevents Conduktor to request our identity provider, auth0 \(Conduktor --&gt; `auth.conduktor.io`\)
+* **Unexpected end of file from server**: something on your network prevents Conduktor to request our identity provider, auth0 (Conduktor --> `auth.conduktor.io`)
 
 ## My organization manage its own certificates / PKIX path building failed
 
@@ -54,15 +54,15 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ## I need to configure custom JVM options
 
-Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want \(only -D, no -XX\), to set them when Conduktor starts \(only on startup, it's not taken into account after\):
+Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want (only -D, no -XX), to set them when Conduktor starts (only on startup, it's not taken into account after):
 
-* MacOS: /Users/&lt;user&gt;/Library/Application Support/conduktor/conduktor.vmoptions
-* Windows: C:\Users\&lt;user&gt;\AppData\Local\conduktor\conduktor\conduktor.vmoptions
-* Linux: /home/&lt;user&gt;/.config/conduktor/conduktor.vmoptions \(or XDG Config path if set\)
+* MacOS: /Users/\<user>/Library/Application Support/conduktor/conduktor.vmoptions
+* Windows: C:\Users\\\<user>\AppData\Local\conduktor\conduktor\conduktor.vmoptions
+* Linux: /home/\<user>/.config/conduktor/conduktor.vmoptions (or XDG Config path if set)
 
 Example:
 
-```text
+```
 -Djava.net.preferIPv4Stack=false
 -Dhttp.proxyHost=1.2.3.4
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
@@ -74,11 +74,10 @@ On Windows, it's possible to get this error "Failed to launch JVM" in certain ra
 
 Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
 
-Some softwares add them for their own need, but this is taken into account by all the Java program running on your system. This may be dangerous and causes issues \(like here\).
+Some softwares add them for their own need, but this is taken into account by all the Java program running on your system. This may be dangerous and causes issues (like here).
 
-Example: Micro Focus UFT Unified Functional Testing \(formerly QTP\)
+Example: Micro Focus UFT Unified Functional Testing (formerly QTP)
 
 ## My issue is not addressed here
 
 Please [send us an email](mailto:support@conduktor.io?subject=Login%20Troubleshooting?body=Please%20include%20as%20much%20information%20as%20possible,%20as%20well%20as%20screenshots,%20or%20even%20better,%20videos)
-

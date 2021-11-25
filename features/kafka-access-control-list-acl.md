@@ -4,9 +4,9 @@ description: >-
   define Kafka ACLs.
 ---
 
-# Kafka Security \(ACLs\)
+# Kafka Security (ACLs)
 
-{% embed url="https://www.youtube.com/watch?v=gEyyr\_EKc5o&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=30&ab\_channel=ConduktorConduktor" %}
+{% embed url="https://www.youtube.com/watch?v=gEyyr_EKc5o&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=30&ab_channel=ConduktorConduktor" %}
 
 ## List the ACLs
 
@@ -32,15 +32,15 @@ Documentation about ACLs: [https://docs.confluent.io/current/kafka/authorization
 
 Conduktor helps you by providing a simple wizard.
 
-It asks you which use-case do you want to use, then it adapts the fields you need to setup, and provide useful help and tips all around. When you validate, it will automatically create all the necessary ACLs behind the scene \(that will be visible on the main list\):
+It asks you which use-case do you want to use, then it adapts the fields you need to setup, and provide useful help and tips all around. When you validate, it will automatically create all the necessary ACLs behind the scene (that will be visible on the main list):
 
 ![](../.gitbook/assets/screenshot-2020-08-05-at-18.47.16.png)
 
 ## Import/Export ACLs
 
-From the list screen, it's possible to export the ACLs to a CSV file \(this will export only the filtered ACLs if a filter is present\). This will render the ACLs following the [kafka-security-manager](https://github.com/simplesteph/kafka-security-manager) format:
+From the list screen, it's possible to export the ACLs to a CSV file (this will export only the filtered ACLs if a filter is present). This will render the ACLs following the [kafka-security-manager](https://github.com/simplesteph/kafka-security-manager) format:
 
-```text
+```
 KafkaPrincipal,ResourceType,PatternType,ResourceName,Operation,PermissionType,Host
 User:john,TOPIC,LITERAL,*,WRITE,ALLOW,*
 User:john,TOPIC,LITERAL,*,CREATE,ALLOW,*
@@ -55,7 +55,5 @@ User:project-stream,TOPIC,LITERAL,stocks,WRITE,ALLOW,*
 User:project-stream,TOPIC,LITERAL,alerts,WRITE,ALLOW,*
 ```
 
-You can import the same kind of file \(don't forget to add the **header as the first line**, to identify the columns\).
-
-
+You can import the same kind of file (don't forget to add the **header as the first line**, to identify the columns).
 

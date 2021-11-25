@@ -1,6 +1,6 @@
 # Installing Conduktor
 
-{% embed url="https://www.youtube.com/watch?v=WhMPqUgYYCQ&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=5&ab\_channel=ConduktorConduktor" %}
+{% embed url="https://www.youtube.com/watch?v=WhMPqUgYYCQ&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=5&ab_channel=ConduktorConduktor" %}
 
 ## Download Conduktor
 
@@ -14,9 +14,14 @@ Conduktor is a native Desktop application and we provide easy-to-use installers 
 
 Please follow the relevant guides:
 
-{% page-ref page="mac.md" %}
+{% content-ref url="mac.md" %}
+[mac.md](mac.md)
+{% endcontent-ref %}
 
-{% page-ref page="windows.md" %}
+{% content-ref url="windows.md" %}
+[windows.md](windows.md)
+{% endcontent-ref %}
 
-{% page-ref page="linux.md" %}
-
+{% content-ref url="linux.md" %}
+[linux.md](linux.md)
+{% endcontent-ref %}

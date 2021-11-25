@@ -1,6 +1,6 @@
 # Topics Management
 
-{% embed url="https://www.youtube.com/watch?v=upRjuUs67S4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=8&ab\_channel=ConduktorConduktor" %}
+{% embed url="https://www.youtube.com/watch?v=upRjuUs67S4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=8&ab_channel=ConduktorConduktor" %}
 
 ## Columns Customization / Performances
 
@@ -26,6 +26,4 @@ Conduktor has a feature called [Smart Groups](smart-groups.md) to remove long na
 
 * **CSV/JSON**: export what you see on the screen
 * **Terraform**: export the topics with their configuration into a .tf using the provider [https://github.com/Mongey/terraform-provider-kafka](https://github.com/Mongey/terraform-provider-kafka) format
-
-
 

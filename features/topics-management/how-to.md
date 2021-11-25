@@ -2,7 +2,7 @@
 
 ## How Conduktor helps when Kafka is failing?
 
-{% embed url="https://www.youtube.com/watch?v=ZJTw2-GVr-4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=17&ab\_channel=ConduktorConduktor" %}
+{% embed url="https://www.youtube.com/watch?v=ZJTw2-GVr-4&list=PLYmXYyXCMsfMMhiKPw4k1FF7KWxOEajsA&index=17&ab_channel=ConduktorConduktor" %}
 
 ## How to consume data from a Topic?
 
@@ -18,7 +18,7 @@ Also see [Consuming data ](../consuming-data/)for all the details.
 
 The question is more: _how to reset the offsets for a Consumer Group and a Topic it has subscribed to?_
 
-The offsets of a Topic cannot be "reset". The offsets are ever growing for all partitions of a Topic \(data incoming into a Topic =&gt; offsets increases\). 
+The offsets of a Topic cannot be "reset". The offsets are ever growing for all partitions of a Topic (data incoming into a Topic => offsets increases).&#x20;
 
 Go to the Consumer Group itself, and Reset Offsets from here.
 
@@ -28,7 +28,7 @@ In the Topic Details view, click on the "Advanced" drop-down, then choose "Reass
 
 ![](../../.gitbook/assets/topic-reassign-dropdown.png)
 
-Choose the destination brokers, pick a strategy and Conduktor will generate the Reassignment Plan for you.  
+Choose the destination brokers, pick a strategy and Conduktor will generate the Reassignment Plan for you.\
 You can also choose to import your own in the json format expected by kafka-reassign-partitions.sh.
 
 ![Partition Reassignment dialog](../../.gitbook/assets/reassignment-not-started.png)
@@ -37,7 +37,7 @@ You can decide to automatically elect partition leaders after the reassignment.
 
 The throttle limit is an important option in production : without it, the reassignment may end up using all the available bandwidth, degrading your cluster performance. You can alter this configuration even when a reassignment is in progress, it will take effect immediately.
 
-When a reassignment is in progress, you can monitor it from anywhere using the topbar button : 
+When a reassignment is in progress, you can monitor it from anywhere using the topbar button :&#x20;
 
 ![](../../.gitbook/assets/current-reassignment-topbar.png)
 
@@ -63,12 +63,11 @@ Conduktor can empty a topic, or a specific partition:
 
 You can only delete topic which have the "delete" policy.
 
-If your topic only has the "compact" policy, this may not work: 
+If your topic only has the "compact" policy, this may not work:&#x20;
 
-```text
+```
 Error emptying topics
 
 org.apache.kafka.common.errors.PolicyViolationException:
 Request parameters do not satisfy the configured policy.
 ```
-
