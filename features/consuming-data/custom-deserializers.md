@@ -37,6 +37,10 @@ _You can have more information on this "Plugins" feature in the _[_Plugins docum
 A Kafka deserializer is an implementation of the `org.apache.kafka.common.serialization.Deserializer<T>` Java interface (for more information, see [kafka-clients documentation](https://kafka.apache.org/30/javadoc/org/apache/kafka/common/serialization/Deserializer.html)).\
 You need to have one, or more, jar(s) containing these implementations so you can add these jar files in the "Plugins" section of your cluster configuration in Conduktor.
 
+_You can find some Kafka deserializer implementation examples in this open-source Github repository: _[_my_custom_deserializers_](https://github.com/conduktor/my_custom_deserializers)     
+_In the README of this project, a link to download a `jar` containing these Kafka deserializers is provided so you can test the feature with them._   
+_The behaviour of each Kafka deserializer implementation is explained in the README._
+
 ![](../../.gitbook/assets/custom\_deserializer/add\_custom\_deserializer.gif)
 
 ⚠️ Plugins are part of a cluster configuration. When you add a plugin to one of your cluster configuration, this plugin is only available to this cluster.\
