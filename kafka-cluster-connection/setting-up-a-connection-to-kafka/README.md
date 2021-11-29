@@ -30,6 +30,18 @@ this tab is the most important tab, and you have the following options:
 
 You can use the two buttons to test the Kafka and Zookeeper connectivity to ensure you connection details are accurate.
 
+#### Aiven
+
+If using Aiven, you can use our integration to setup the configuration:
+
+![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.54.17.png>)
+
+Download the 3 necessary files on Aiven's interface (service.key, service.cert, ca.pem). Conduktor will generate files out of them in the folder you chose (don't remove them!).
+
+![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.48.08.png>)
+
+
+
 ### Schema Registry
 
 In case you are using the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/index.html) and usually Avro data, you should use this tab to setup the connection details to your registry. These detail are necessary to activate the "Schema Registry" tab in Conduktor, as well as consume and produce data in Avro format.
@@ -117,12 +129,13 @@ If you want to use this same plugin with a second cluster configured in Condukto
 
 **Scala support & limitation**
 
-As Conduktor is powered by Scala 2.13, it natively supports the plugins compiled with Scala 2.13.   
-If your plugin is using a different version of Scala, it may not work in Conduktor.    
+As Conduktor is powered by Scala 2.13, it natively supports the plugins compiled with Scala 2.13.\
+If your plugin is using a different version of Scala, it may not work in Conduktor.\
 If your plugin is compiled with another version of Scala and doesn't work in Conduktor, you have two solutions:
-  1. Recompile your plugin with Scala 2.13
-  2. Build a `fatjar` out of your plugin code that will contain your Scala version code.    
-     However, for this solution to work, you'll have to shadow your Scala version code by renaming all the `scala.*` packages to `yourorganisation.scala.*`, for example.
+
+1. Recompile your plugin with Scala 2.13
+2. Build a `fatjar` out of your plugin code that will contain your Scala version code.\
+   However, for this solution to work, you'll have to shadow your Scala version code by renaming all the `scala.*` packages to `yourorganisation.scala.*`, for example.
 
 Don't hesitate to contact our support if you meet any issue with your plugins and Conduktor.
 
