@@ -1,19 +1,5 @@
 # Configuring Conduktor
 
-## Read-Only mode
-
-Sometimes, you want to be sure that you won't misclick anywhere or you just want to access Conduktor in read-only mode (useful for Testers, Product Owners, Data Analysts etc.).
-
-Conduktor does not have a proper permissions system for now (contact us if that matters to you, we may do that for enterprises) and offer instead a quick toggleable read-only mode:
-
-* Not Read-Only: we can produce data, have access to advanced commands, can delete topic...
-
-![](../.gitbook/assets/screenshot-2020-09-19-at-22.08.59.png)
-
-* With Read-Only enabled: less features are visible, your resources are safe!
-
-![](../.gitbook/assets/screenshot-2020-09-19-at-22.09.08.png)
-
 ## Conduktor's Settings
 
 Conduktor comes with many options (and growing) to customize its behaviour. This is important when it comes to large clusters: you don't need everything, so better remove some useless overhead.
