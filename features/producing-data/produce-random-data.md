@@ -22,7 +22,7 @@ We allow generating Avro records out of the box, including most complex types. S
 
 ![](../../.gitbook/assets/generation-avro.png)
 
-If you want to customize individual field generation, we support annotation-based configuration inspired by [Confluent's Avro Data Generator library](https://github.com/confluentinc/avro-random-generator), using an `arg.properties`** **field containing properties mirroring the generation options for basic serialization types of our Producer.
+If you want to customize individual field generation, we support annotation-based configuration inspired by [Confluent's Avro Data Generator library](https://github.com/confluentinc/avro-random-generator), using an `arg.properties` **** field containing properties mirroring the generation options for basic serialization types of our Producer.
 
 ![](../../.gitbook/assets/avro-extension-json.png)
 
