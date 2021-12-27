@@ -54,7 +54,7 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ## Login Callback is HTTP_S_ instead of HTTP
 
-In some cases, enterprise network policies force the login callback form http to https. as a workaround you will have to allow insecure localhost  call in google chrome : [chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost)
+In some cases, enterprise network policies force the login callback form http to https. As a workaround it is possible to allow insecure localhost call in google chrome : [chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost)
 
 ## I need to configure custom JVM options
 
