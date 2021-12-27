@@ -52,6 +52,10 @@ If your organization has its own self-signed CA and certificates, you can add tr
 
 ![](../../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
 
+## Login Callback is HTTP_S_ instead of HTTP
+
+In some cases, enterprise network policies force the login callback form http to https. as a workaround you will have to allow insecure localhost  call in google chrome : [chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost)
+
 ## I need to configure custom JVM options
 
 Create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want (only -D, no -XX), to set them when Conduktor starts (only on startup, it's not taken into account after):
