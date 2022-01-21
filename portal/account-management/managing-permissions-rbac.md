@@ -65,17 +65,15 @@ The base role will give its permissions access to every users of the subscriptio
 
 ## Could I define my own role?
 
-No you can't, but we are working on this feature and it would be released soon!
-
 We predefined three roles to help you restrict access :&#x20;
 
 * Viewer : You can only read data on the cluster.
 * Editor : You can write data on the cluster.
 * Owner : You have access to all the features available.
 
-For more details about those roles, please check the **Roles** tab :&#x20;
+But you can define your own role on the **Roles** tab with the **Add a custom role** button :
 
-![](<../../.gitbook/assets/Screenshot 2021-12-17 at 17-17-51 Conduktor Customer Portal.png>)
+![](<../../.gitbook/assets/image (51).png>)
 
 ## How does this affect Conduktor Desktop?
 
