@@ -6,7 +6,7 @@ We are in the process of acquiring a signing device for Windows applications. In
 
 ## General Steps
 
-We have prepared an `.msi` file for Mac OS X, example: `Conduktor-2.0.13.msi`&#x20;
+We have prepared an `.msi` file for Windows, example: `Conduktor-2.0.13.msi`&#x20;
 
 ![](<../../.gitbook/assets/image (20).png>)
 
