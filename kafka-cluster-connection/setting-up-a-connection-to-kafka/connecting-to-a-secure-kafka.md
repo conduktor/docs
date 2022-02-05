@@ -165,7 +165,28 @@ sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required useKeyTab
   * _**Solution 4:** Make the Kerberos realm name all uppercase. Note: It is recommended to have all uppercase realm names. See_ [_Naming Conventions for Realm Names and Hostnames_](https://docs.oracle.com/en/java/javase/11/security/kerberos-requirements.html#GUID-E73CCEA1-E94F-4E8D-9C42-403AF825658A)_._\
 
 
-## Windows and paths
+## FAQ
+
+### How to avoid SSL handshake errors?
+
+When you setup a kafka cluster with a self-signed CA certificate (not official) because it's just for development, you might get an error from Conduktor:
+
+* org.apache.kafka.common.errors.SslAuthenticationException: SSL handshake failed
+* javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target.
+
+You need to ask (or [extract](https://dalelane.co.uk/blog/?p=4399)) the certificate of your broker and reference it from your properties:
+
+```
+security.protocol=SSL
+ssl.truststore.location=/full/path/to/kafka.client.truststore.jks
+ssl.truststore.password=test1234
+```
+
+See above SSL Configuration for more complete options.
+
+
+
+### Windows and paths
 
 If you're using Windows, you may have to use slash '/' instead of backslash '\\' to make the connection work. Here is an example when configuring a kerberos connection:
 
@@ -194,6 +215,8 @@ Failed to load SSL keystore keystore.jks‪ of type JKS
 Caused by: java.nio.file.NoSuchFileException: c:/myfolder/keystore.jks‪
 ```
 
-## Can you help us with security troubleshooting?
+###
+
+### Can you help us with more security troubleshooting?
 
 Unfortunately, we cannot provide support to help you connect to your secure cluster besides what's included in the documentation. **Your Kafka administrator will have the answer to your problem**, please send them the link to this documentation page. Thank you!
