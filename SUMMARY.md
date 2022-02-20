@@ -3,7 +3,7 @@
 * [Conduktor Documentation](README.md)
 * [Learn Apache Kafka with Conduktor](learn-apache-kafka-with-conduktor.md)
 
-## Conduktor First Steps <a id="sign-in-section"></a>
+## Conduktor First Steps <a href="#sign-in-section" id="sign-in-section"></a>
 
 * [Installing Conduktor](sign-in-section/install/README.md)
   * [Mac OS X](sign-in-section/install/mac.md)
@@ -16,7 +16,7 @@
 * [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting/README.md)
   * [Using an internet proxy](sign-in-section/login-troubleshooting/internet-proxy.md)
 
-## Account Management <a id="portal"></a>
+## Account Management <a href="#portal" id="portal"></a>
 
 * [Account Management](portal/account-management/README.md)
   * [Managing Permissions / RBAC](portal/account-management/managing-permissions-rbac.md)
@@ -31,7 +31,7 @@
   * [Connecting to Kafka running on Windows WSL 2](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-on-windows-wsl-2.md)
   * [Apache Kafka-wire compatible solutions](kafka-cluster-connection/setting-up-a-connection-to-kafka/apache-kafka-wire-compatible-solutions.md)
 * [Import/Export configurations](kafka-cluster-connection/import-export-configurations/README.md)
-  * [GitHub \(enterprise\)](kafka-cluster-connection/import-export-configurations/github-enterprise.md)
+  * [GitHub (enterprise)](kafka-cluster-connection/import-export-configurations/github-enterprise.md)
 
 ## Features
 
@@ -62,12 +62,12 @@
   * [What to do with ksqlDB?](features/ksqldb/what-to-do-with-ksqldb.md)
   * [How to query with ksqlDB?](features/ksqldb/how-to-query-with-ksqldb.md)
   * [ksqlDB FAQ](features/ksqldb/ksqldb-faq.md)
-* [Kafka Security \(ACLs\)](features/kafka-access-control-list-acl.md)
+* [Kafka Security (ACLs)](features/kafka-access-control-list-acl/README.md)
+  * [ACLs Advanced Insights](features/kafka-access-control-list-acl/acls-advanced-insights.md)
 * [Monitoring](features/monitoring.md)
 
-## Miscellaneous <a id="misc"></a>
+## Miscellaneous <a href="#misc" id="misc"></a>
 
 * [Configuring Conduktor](misc/configuring-conduktor.md)
 * [Data Security](misc/data-security.md)
 * [Frequently Asked Questions](misc/faq.md)
-
