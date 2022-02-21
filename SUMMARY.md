@@ -30,6 +30,7 @@
   * [Understanding Connectivity Issues](kafka-cluster-connection/setting-up-a-connection-to-kafka/impossible-connection-setups.md)
   * [Connecting to Kafka running on Windows WSL 2](kafka-cluster-connection/setting-up-a-connection-to-kafka/connecting-to-kafka-running-on-windows-wsl-2.md)
   * [Apache Kafka-wire compatible solutions](kafka-cluster-connection/setting-up-a-connection-to-kafka/apache-kafka-wire-compatible-solutions.md)
+* [Starting a Kafka cluster with one click](kafka-cluster-connection/starting-a-kafka-cluster-with-one-click.md)
 * [Import/Export configurations](kafka-cluster-connection/import-export-configurations/README.md)
   * [GitHub (enterprise)](kafka-cluster-connection/import-export-configurations/github-enterprise.md)
 
