@@ -18,17 +18,16 @@ Conduktor helps you visualize and manage your low-level ACLs, but also helps you
 
 Conduktor Enterprise offers a set of alternative views to inspect more easily with clear insights your ACLs:
 
-* who can read/write/delete a topic
-* which ACLs are useless (topics are gone for instance)
+* what a specific user can do regarding read/write/delete topics
+* which ACLs on a User are useless (topics are gone for instance)
 * expand the prefixed ACLs to the real topics of your clusters, this way you know exactly what is the impact of the ACL / on which resource
 
 ![](<../../.gitbook/assets/Screenshot 2022-02-20 at 20.51.50.png>)
 
-Conduktor also provide another view with all the users who have access to a specific topic/pattern:
+Conduktor also provide an inverted view with all the topics and their associated users:
 
-* who many users can read/write/delete the topics
-* which ACLs are useless (topics are gone for instance)
-* expand the prefixed ACLs to the real topics of your clusters, this way you know exactly all the users who have access to each topic
+* how many users/who can read/write/delete each topic individually
+* expand the prefixed ACLs to the real topics of your clusters, this way you know exactly all the users who have access to each particular topic
 
 ## Unsecured topics
 
