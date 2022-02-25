@@ -167,6 +167,30 @@ sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required useKeyTab
 
 ## FAQ
 
+### Ensure you are using the Java-style configuration
+
+If you are sure you have configured your connection properly in Conduktor and it works in other tools, make sure you're using the official configuration Java-style, and not the C-style (librdkafka). It may happen when you work with Python or nodejs (both are using librdkafka behind the scene).&#x20;
+
+[Here are all the properties of librdkafka](https://docs.confluent.io/5.3.2/clients/librdkafka/md\_CONFIGURATION.html), some of them are different from the [official Java configuration](https://docs.confluent.io/platform/current/installation/configuration/admin-configs.html) (that Conduktor supports).
+
+For instance, the following (common) properties are NOT compatible with Conduktor:
+
+```
+sasl.username
+sasl.password
+enable.ssl.certificate.verification
+```
+
+You need to use the Java-style syntax shown above, here with SASL\_PLAINTEXT:
+
+```
+security.protocol=SASL_PLAINTEXT
+sasl.mechanism=GSSAPI
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="my-user" password="secret";
+```
+
+
+
 ### How to avoid SSL handshake errors?
 
 When you setup a kafka cluster with a self-signed CA certificate (not official) because it's just for development, you might get an error from Conduktor:
