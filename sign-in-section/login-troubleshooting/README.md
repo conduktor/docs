@@ -78,7 +78,7 @@ On Windows, it's possible to get this error "Failed to launch JVM" in certain ra
 
 Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
 
-Some softwares add them for their own need, but this is taken into account by all the Java program running on your system. This may be dangerous and causes issues (like here).
+Some software adds them for their own need, but this is taken into account by all the Java programs running on your system. This may be dangerous and causes issues (like here).
 
 Example: Micro Focus UFT Unified Functional Testing (formerly QTP)
 
