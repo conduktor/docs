@@ -68,11 +68,13 @@ dpkg: dependency problems prevent configuration of conduktor:
   Package libffi6 is not installed.
 ```
 
-Hopefully, it's possible to install the previous version libffi6: [http://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6\_3.2.1-8\_amd64.deb](http://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6\_3.2.1-8\_amd64.deb)&#x20;
+Hopefully, it's possible to install the previous version libffi6. You can grab the latest version here: [https://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/](https://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/) -> look for libffi6\_3_\*_amd64.deb
+
+eg: [https://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/libffi6\_3.2.1-8\_amd64.deb](https://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/libffi6\_3.2.1-8\_amd64.deb)
 
 ```
-$ curl -LO http://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb
-$ sudo dpkg -i libffi6_3.2.1-9_amd64.deb 
+$ curl -LO https://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb
+$ sudo dpkg -i libffi6_3.2.1-8_amd64.deb 
 $ sudo dpkg -i Conduktor-2.7.0.deb 
 ... OK!
 ```
