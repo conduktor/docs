@@ -4,11 +4,11 @@ description: Soon...
 
 # Starting a local Kafka cluster in one click
 
-Starting a Kafka cluster locally could be really painful. Each operating system have there own particularity. Some technology like Docker provide a good solution for managing processes, but it isn't install by default and doesn't work out of the box on Windows.
+Starting a Kafka cluster locally could be really painful. Each operating system has there own particularities. Some technologies like Docker provide solutions for managing processes, but it isn't installed by default and doesn't work out of the box on Windows.
 
-For this reason, Conduktor offer you an easy way to start a Kafka cluster. This feature is cross platform (Linux, MacOS and Windows) and work out of the box. You don't need to install anything but Conduktor.
+For this reason, Conduktor offers you an easy way to start a Kafka cluster. This feature is cross-platform (Linux, macOS and Windows) and works out of the box. You don't need to install anything but Conduktor.
 
-## How it works?
+## How does it work?
 
 Click on "Start a local Kafka cluster", then you can configure your cluster :
 
