@@ -10,6 +10,8 @@ For this reason, Conduktor offers you an easy way to start a Kafka cluster. This
 
 ## How does it work?
 
+{% embed url="https://youtu.be/CHyl5jPVqV4" %}
+
 Click on "Start a local Kafka cluster", then you can configure your cluster :
 
 ![](../.gitbook/assets/2022-03-09\_17-39.png)
