@@ -1,10 +1,6 @@
----
-description: Soon...
----
+# Starting a local Kafka cluster in seconds
 
-# Starting a local Kafka cluster in one click
-
-Starting a Kafka cluster locally could be really painful. Each operating system has there own particularities. Some technologies like Docker provide solutions for managing processes, but it isn't installed by default and doesn't work out of the box on Windows.
+Starting a Kafka cluster locally could be really painful. Each operating system has their own particularities. Some technologies like Docker provide solutions for managing processes, but it isn't installed by default and doesn't work out of the box on Windows.
 
 For this reason, Conduktor offers you an easy way to start a Kafka cluster. This feature is cross-platform (Linux, macOS and Windows) and works out of the box. You don't need to install anything but Conduktor.
 
@@ -38,7 +34,7 @@ The process failed to start for an unknown reason. You can try again, if the iss
 
 ### 3 - Node exists
 
-Kafka process abort suddenly in previous run, the previous node id is still registered in Zookeeper and so the start failed. This error should not happened, if so, please contact the support team.
+Kafka process abort suddenly in previous run, the previous node id is still registered in Zookeeper and so the start failed. This error should not happen, if so, please contact the support team.
 
 ### 4 - Lock file already held
 
