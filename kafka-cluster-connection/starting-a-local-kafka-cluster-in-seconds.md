@@ -18,9 +18,9 @@ Click on "Start a local Kafka cluster", then you can configure your cluster :
 
 The cluster will be entirely managed by Conduktor. You don't have to configure anything else, just enjoy the experience.
 
-Once you are connected to your managed Cluster, you can copy and paste the addresses of your Kafka cluster and registry to use it outside of Conduktor :
+Once you are connected to your managed Cluster, you can copy and paste the addresses of your Kafka cluster and registry to use it outside of Conduktor :&#x20;
 
-![](../.gitbook/assets/2022-03-10\_11-12.png)
+![](<../.gitbook/assets/image (53).png>)
 
 ## Common error cases
 
