@@ -16,7 +16,7 @@ Some examples of these natively supported formats are:
 * JSON+SchemaRegistry
 * Avro
 * Avro+SchemaRegistry
-* Protobuf _(coming soon)_
+* Protobuf
 * Protobuf+SchemaRegistry
 * etc.
 
