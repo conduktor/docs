@@ -12,7 +12,7 @@ This is the first thing to setup when you're consuming a topic
 
 Conduktor supports many formats when deserializing data and we keep adding some.
 
-We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#schema-without-confluent-schema-registry)).
+We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#without-confluent-schema-registry)).
 
 ## Key and Value
 
@@ -22,22 +22,23 @@ There are 2 formats to pick: the key format and the value format.
 
 ![List of supported key formats](../../.gitbook/assets/key\_formats.png)
 
-* the value is typically JSON or Avro or Protobuf
-  * it can be long, float or other primitives when working with Kafka Streams where you're doing aggregations for instance
-
-{% hint style="info" %}
-Conduktor automatically pick Avro when it detects a matching Confluent Schema Registry subject (if configured)
-{% endhint %}
+* The value is typically JSON or Avro or Protobuf but it can also be long, float or other primitives when working with Kafka Streams where you're doing aggregations for instance
 
 ![List of supported value formats](../../.gitbook/assets/value\_formats.png)
+
+{% hint style="info" %}
+Conduktor automatically pick "Avro (Auto)" when it detects a matching Confluent Schema Registry subject (if configured)
+{% endhint %}
 
 {% hint style="warning" %}
 If you don't see "Avro (Auto)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
 {% endhint %}
 
-## Schema without Confluent Schema Registry ?
+## Without Confluent Schema Registry ?
 
-Most Kafka installations rely on the Confluent Schema Registry, that's the JSON`(Auto)` , `Avro (Auto)` and `Protobuf (Auto)` formats. When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself (well, the id only, but that's enough) if we follow the Confluent's convention.
+Most Kafka installations rely on the Confluent Schema Registry, that's the JSON`(Auto)` , `Avro (Auto)` and `Protobuf (Auto)` formats.&#x20;
+
+When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself (well, the id only, but that's enough) if we follow the Confluent's convention.
 
 But not everyone follows this convention! This means it's possible that the record does not contain the schema to read the data, and you need to help Conduktor.
 
@@ -63,34 +64,45 @@ It can be used to "project" the data: read and display only a subset of fields
 
 ```javascript
 {
-  "type": "record",
-  "name": "myrecord",
-  "namespace": "com.company.events",
-  "fields": [
-    {
-      "name": "id",
-      "type": "string"
-    },
-    {
-      "name": "type",
-      "type": "string",
-      "default": "some default"
-    }
-  ]
+  "type" : "record",
+  "name" : "SearchRequest",
+  "namespace" : "com.mycompany",
+  "fields" : [ {
+    "name" : "query",
+    "type" : "string"
+  }, {
+    "name" : "page_number",
+    "type" : "int"
+  }, {
+    "name" : "result_per_page",
+    "type" : "int"
+  } ]
 }
 ```
 
-![](<../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44 (2).png>)
+![Consume using custom Avro schema](<../../.gitbook/assets/image (52).png>)
 
 ### With Protobuf, provide the schema
 
-Like `Avro (Custom)` format, the`Protobuf (Custom)` allows you to paste a raw protobuf schema to decode messages.
+Like `Avro (Custom)` format, the`Protobuf (Custom)` allows you to paste a raw Protobuf 3 schema to decode messages.
 
 The workflow is the same as Avro :&#x20;
 
 * &#x20;I choose `Protobuf (Custom)` format
-* I paste my custom schema into the textarea
+* I paste my custom proto3 schema into the textarea
 * The data will be read using this schema!
+
+```protobuf
+syntax = "proto3";
+
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}
+```
+
+![Consume using custom Protobuf Schema](<../../.gitbook/assets/image (54).png>)
 
 {% hint style="info" %}
 Conduktor will iterate over all root message types in the provided schema and select the best one for each message (the first type decoding without missing or unknown fields).
