@@ -12,7 +12,7 @@ This is the first thing to setup when you're consuming a topic
 
 Conduktor supports many formats when deserializing data and we keep adding some.
 
-We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#avro-without-confluent)).
+We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#schema-without-confluent-schema-registry)).
 
 ## Key and Value
 
