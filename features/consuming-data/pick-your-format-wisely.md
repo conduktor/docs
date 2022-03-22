@@ -6,54 +6,53 @@ description: >-
 
 # Pick your format wisely
 
-
-
 {% hint style="info" %}
 This is the first thing to setup when you're consuming a topic
 {% endhint %}
 
 Conduktor supports many formats when deserializing data and we keep adding some.
 
-We don't support Protobuf yet, but it's on our roadmap. If you have this need or any other specific needs, don't hesitate to [contact us](https://www.conduktor.io/contact/).
-
-We support the most common formats, but also bytes, JSON, and multiple Avro flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro data **not** written using the Confluent Schema Registry. You can even provide your own Avro schema directly within Conduktor.
+We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#avro-without-confluent)).
 
 ## Key and Value
 
-There are 2 format to pick: the key format and the value format.
+There are 2 formats to pick: the key format and the value format.
 
-* In most cases, the key is a string so nothing to worry about here.
-* the value is typically JSON or Avro
+* In most cases, the key is a String so nothing to worry about here. But Conduktor also support various formats
+
+![List of supported key formats](../../.gitbook/assets/key\_formats.png)
+
+* the value is typically JSON or Avro or Protobuf
   * it can be long, float or other primitives when working with Kafka Streams where you're doing aggregations for instance
 
 {% hint style="info" %}
-Conduktor automatically pick Avro when it detects a matching Confluent Schema Registry subject \(if configured\)
+Conduktor automatically pick Avro when it detects a matching Confluent Schema Registry subject (if configured)
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.06.03.png)
+![List of supported value formats](../../.gitbook/assets/value\_formats.png)
 
 {% hint style="warning" %}
-If you don't see "Avro \(Schema Registry\)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
+If you don't see "Avro (Auto)", it means you didn't configured the url of your schema registry in your cluster configuration: [check the doc](https://docs.conduktor.io/kafka-cluster-connection/setting-up-a-connection-to-kafka#schema-registry).
 {% endhint %}
 
-## Avro without Confluent ?
+## Schema without Confluent Schema Registry ?
 
-Most Kafka installations rely on the Confluent Schema Registry, that's the Avro \(Schema Registry\) format. When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself \(well, the id only, but that's enough\) if we follow the Confluent's convention.
+Most Kafka installations rely on the Confluent Schema Registry, that's the JSON`(Auto)` , `Avro (Auto)` and `Protobuf (Auto)` formats. When data flow in, Conduktor knows the Avro schema to use because it's in the payload itself (well, the id only, but that's enough) if we follow the Confluent's convention.
 
-But not everyone follows this convention! This means it's possible that the record does not contain the schema to read the data, and you need to help Conduktor. 
+But not everyone follows this convention! This means it's possible that the record does not contain the schema to read the data, and you need to help Conduktor.
 
-You can help Conduktor in 3 ways:
+### With Avro, you can help Conduktor in 3 ways:
 
-* Which subject to use \(if using Confluent Schema Registry\)
-* Which schemaId to use \(if using Confluent Schema Registry\)
-* Which schema to use \(no need to the registry\)
+* Which subject to use : `Avro (Subject)` (if using Confluent Schema Registry)
+* Which schemaId to use : `Avro (Schema ID)` (if using Confluent Schema Registry)
+* Which schema to use : `Avro (Custom)` (no need to the registry)
 
-![The special Avro format at the bottom of the list](../../.gitbook/assets/screenshot-2020-06-25-at-16.31.52.png)
+![Avro custom](../../.gitbook/assets/value\_formats\_avro.png)
 
-For instance, I want to provide a custom Avro Schema to read my data:
+For instance, I want to provide a Avro Schema to read my data:
 
-* I choose "Avro \(Custom Schema"\)
-* I paste my custom schema
+* I choose `Avro (Custom)` format
+* I paste my custom schema into the textarea
 * I check "Confluent Encoding" because in my case, data are encoded using Confluent's convention
   * In most cases, this will NOT be checked if we're using this feature
 * The data will be read using this schema!
@@ -79,26 +78,37 @@ It can be used to "project" the data: read and display only a subset of fields
     }
   ]
 }
-
 ```
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44%20%282%29.png)
+![](<../../.gitbook/assets/screenshot-2020-06-25-at-16.34.44 (2).png>)
 
+### With Protobuf, provide the schema
 
+Like `Avro (Custom)` format, the`Protobuf (Custom)` allows you to paste a raw protobuf schema to decode messages.
 
-## Possible errors \(magic byte\)
+The workflow is the same as Avro :&#x20;
 
-If you try to consume Avro data without properly configuring it \(and because it was not auto-detected by Conduktor for some reasons\), you'll end up with garbage data like this:
+* &#x20;I choose `Protobuf (Custom)` format
+* I paste my custom schema into the textarea
+* The data will be read using this schema!
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.13.10%20%281%29.png)
+{% hint style="info" %}
+Conduktor will iterate over all root message types in the provided schema and select the best one for each message (the first type decoding without missing or unknown fields).
+{% endhint %}
 
-On the contrary, if you try to read non-Avro data using the Avro format, you'll end up with a list of errors \(Conduktor doesn't stop, in case it was test records for instance\):
+## Possible errors (magic byte)
+
+If you try to consume Avro data without properly configuring it (and because it was not auto-detected by Conduktor for some reasons), you'll end up with garbage data like this:
+
+![](<../../.gitbook/assets/screenshot-2020-06-25-at-16.13.10 (1).png>)
+
+On the contrary, if you try to read non-Avro data using the Avro format, you'll end up with a list of errors (Conduktor doesn't stop, in case it was test records for instance):
 
 {% hint style="danger" %}
 ERR: Unknown magic byte!
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-2020-06-25-at-16.15.21%20%281%29.png)
+![](<../../.gitbook/assets/screenshot-2020-06-25-at-16.15.21 (1).png>)
 
 ## Custom deserializers
 
