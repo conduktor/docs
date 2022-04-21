@@ -76,7 +76,8 @@ Example:
 
 On Windows, it's possible to get this error "Failed to launch JVM" in certain rare cases.
 
-Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
+- Conduktor can not work if you have special characters in your Windows username like "ö"
+- Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
 
 Some software adds them for their own need, but this is taken into account by all the Java programs running on your system. This may be dangerous and causes issues (like here).
 
