@@ -11,15 +11,15 @@ description: >-
 
 ## Conduktor & Consumer Groups
 
-Conduktor does NOT create any Consumer Group, it does not need too. Therefore, it's totally transparent for your Kafka cluster: Conduktor won't leave any traces and will not create anything here, you're safe.
+Conduktor does NOT change offsets of any Consumer Groups when consuming data, it does not need too. Therefore, it's totally transparent for your Kafka cluster: Conduktor won't leave any traces and will not create anything here, you're safe.
 
 ## How can I create a Consumer Group?
 
-_TLDR: you can't._
+_TLDR: you can, but you don't need to._
 
-Conduktor does not create any Consumer Group and there is currently no possibility to create them here, because it makes little sense. The Consumer Group should be created by your applications, to be used by themselves. Why would you create a Consumer Group in Conduktor itself?&#x20;
+Conduktor can be used to create a new Consumer Group, by selecting either one or multiple topics from the main Topics view and using the action to create a consumer group. It can be customized by setting the initial offsets for the selected topic(s) to either Earliest of Latest. This feature should be used only in corner-cases where you require to configure a pre-existing Consumer Group for your application.
 
-If you have a valid use-case, feel free to contact us.
+For any other functionality, Conduktor does not create any Consumer Groups. Ideally, the Consumer Group should be created by your applications, to be used by themselves.
 
 ## How to delete a Consumer Group?
 
