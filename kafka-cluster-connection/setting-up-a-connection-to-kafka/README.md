@@ -52,11 +52,19 @@ In case you are using the [Confluent Schema Registry](https://docs.confluent.io/
 * **Security:** Choose the security type (None, Basic Auth, Bearer Token)
 * **Additional Properties:** any key value pair needed to make the connection work
 
-After entering the necessary details, you can test the connectivity to your schema registry
+After entering the necessary details, you can test the connectivity to your schema registry.
 
-{% hint style="warning" %}
-In case of issues connecting to an HTTPS Schema Registry, or if you're using a specific security plugin, [please contact us](https://www.conduktor.io/contact). We are interested in making this process easier for you.
-{% endhint %}
+#### How to Connect to a secured Schema Registry?
+
+Add this in the additional properties (notice the `schema.registry.` prefix):
+
+```
+schema.registry.ssl.truststore.location=/kafkassl/kafka.client.truststore.jks
+schema.registry.ssl.trusstore.password=<xxx>
+schema.registry.ssl.keystore.location=/kafkassl/kafka.client.keystore.jks
+schema.registry.ssl.keystore.password=<xxx>
+schema.registry.ssl.key.password=<xxx>
+```
 
 ### Kafka Connect
 
