@@ -86,6 +86,18 @@ A popup will open with the logs and the path to the kafka.log file:
 
 ![](../.gitbook/assets/screenshot-2020-11-09-at-10.35.07.png)
 
+### Managed Kafka logging
+
+Conduktor can manage Kafka clusters by downloading and running Zookeeper, Kafka and optionally Schema-registry locally.
+
+Log files of managed services can be found on files `zookeeper.log`, `kafka.log` and `schema-registry.log` located in directory :
+
+* MacOS : `/Library/Application Support/conduktor/jumpstart/<clusterId>/logs/zookeeper.log`
+* Windows : `Documents\ and\ Settings/<user>/AppData/Local/conduktor/conduktor/jumpstart/<clusterId>/logs/`
+* Linux : 
+  * .deb/.rpm : `/home/<user>/.local/share/conduktor/jumpstart/<clusterId>/logs/` 
+  * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/data/conduktor/jumpstart/<clusterId>/logs/`
+
 ### Conduktor logging
 
 Starting Conduktor 2.7.0, we log everything into a `conduktor.log` file. This may help to troubleshoot odd behaviour, connection issues and so on.
