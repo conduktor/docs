@@ -62,7 +62,9 @@ Instead of playing with `Conduktor.cfg`, create the file `conduktor.vmoptions` i
 
 * MacOS: `/Users/<user>/Library/Application Support/conduktor/conduktor.vmoptions`
 * Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\conduktor.vmoptions`
-* Linux: `/home/<user>/.config/conduktor/conduktor.vmoptions` (or XDG Config path if set)
+* Linux: 
+  * .deb/.rpm : `/home/<user>/.config/conduktor/conduktor.vmoptions` (or XDG Config path if set)
+  * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/config/conduktor/conduktor.vmoptions`
 
 Example:
 
@@ -70,6 +72,7 @@ Example:
 -Djava.net.preferIPv4Stack=false
 -Dhttp.proxyHost=1.2.3.4
 -Djava.security.auth.login.config=/tmp/kafka_jaas.conf
+-Duser.timezone=UTC
 ```
 
 ## Logs
@@ -86,12 +89,26 @@ A popup will open with the logs and the path to the kafka.log file:
 
 ![](../.gitbook/assets/screenshot-2020-11-09-at-10.35.07.png)
 
+### Managed Kafka logging
+
+Conduktor can manage Kafka clusters by downloading and running Zookeeper, Kafka and optionally Schema-registry locally.
+
+Log files of managed services can be found on files `zookeeper.log`, `kafka.log` and `schema-registry.log` located in directory :
+
+* MacOS : `/Library/Application Support/conduktor/jumpstart/<clusterId>/logs/zookeeper.log`
+* Windows : `Documents\ and\ Settings/<user>/AppData/Local/conduktor/conduktor/jumpstart/<clusterId>/logs/`
+* Linux : 
+  * .deb/.rpm : `/home/<user>/.local/share/conduktor/jumpstart/<clusterId>/logs/` 
+  * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/data/conduktor/jumpstart/<clusterId>/logs/`
+
 ### Conduktor logging
 
 Starting Conduktor 2.7.0, we log everything into a `conduktor.log` file. This may help to troubleshoot odd behaviour, connection issues and so on.
 
 * Windows: `C:\Users\<User>\AppData\Local\Temp\conduktor.log`
-* Linux: `/tmp/conduktor.log`
+* Linux: 
+  * .deb/.rpm : `/tmp/conduktor.log`
+  * Flatpak : `/run/user/<UID>/.flatpak/io.conduktor.Conduktor/tmp/conduktor.log`
 * macOS: `/var/folders/wy/xxx/T/conduktor.log`
   * the path is random. The best way to find it is to look for the kafka.log path (above). conduktor.log sits at the same place
 
