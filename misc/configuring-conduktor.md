@@ -95,8 +95,8 @@ Conduktor can manage Kafka clusters by downloading and running Zookeeper, Kafka 
 
 Log files of managed services can be found on files `zookeeper.log`, `kafka.log` and `schema-registry.log` located in directory :
 
-* MacOS : `/Library/Application Support/conduktor/jumpstart/<clusterId>/logs/zookeeper.log`
-* Windows : `Documents\ and\ Settings/<user>/AppData/Local/conduktor/conduktor/jumpstart/<clusterId>/logs/`
+* MacOS : `/Library/Application Support/conduktor/jumpstart/<clusterId>/logs/`
+* Windows : `C:\Users\<User>\AppData\Local\conduktor\conduktor\jumpstart\<clusterId>\logs\`
 * Linux : 
   * .deb/.rpm : `/home/<user>/.local/share/conduktor/jumpstart/<clusterId>/logs/` 
   * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/data/conduktor/jumpstart/<clusterId>/logs/`
