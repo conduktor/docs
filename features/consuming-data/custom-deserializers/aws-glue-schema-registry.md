@@ -13,9 +13,7 @@ cs setup
 cs bootstrap software.amazon.glue:schema-registry-serde:1.1.10 --assembly -M com.amazonaws.services.schemaregistry.deserializers.GlueSchemaRegistryKafkaDeserializer -o glue-schema-registry-serde-1.1.10-with-dependancies.jar
 ```
 
-We have also generated the fat jar for your convenience.
-
-{% file src="../../../.gitbook/assets/glue-schema-registry-serde-1.1.10-with-dependancies.jar" %}
+We have also generated the fat jar for your convenience: [glue-schema-registry-serde-1.1.10-with-dependancies.jar](https://github.com/conduktor/docs/raw/master/.gitbook/assets/glue-schema-registry-serde-1.1.10-with-dependancies.jar)
 
 Now import this jar file in your cluster configuration and use the class `GlueSchemaRegistryKafkaDeserializer` in the Custom Format (Plugin) from the Consume screen.
 
