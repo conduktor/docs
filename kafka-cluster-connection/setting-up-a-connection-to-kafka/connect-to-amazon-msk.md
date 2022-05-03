@@ -2,9 +2,9 @@
 
 ## What is MSK?
 
-Amazon MSK is a self-managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. 
+Amazon MSK is a self-managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data.&#x20;
 
-It lacks several important Apache Kafka features like Kafka Connect, Kafka Streams, ksqlDB, and is not cloud-native \(serverless, like S3 or Kinesis\) but is just a provisioned infrastructure
+It lacks several important Apache Kafka features like Kafka Connect, Kafka Streams, ksqlDB, and is not cloud-native (serverless, like S3 or Kinesis) but is just a provisioned infrastructure
 
 {% hint style="info" %}
 AWS MSK supports also Kafka Connect clusters. [Read more about it](https://aws.amazon.com/blogs/aws/introducing-amazon-msk-connect-stream-data-to-and-from-your-apache-kafka-clusters-using-managed-connectors/).
@@ -18,7 +18,7 @@ To make it work:
 
 * Start a proxy [https://github.com/dajudge/kafkaproxy/](https://github.com/dajudge/kafkaproxy/) on a EC2 instance that has access to the cluster. For instance, using Docker:
 
-```text
+```
 $ sudo docker run --net host \
     -e KAFKAPROXY_HOSTNAME=localhost\
     -e KAFKAPROXY_BASE_PORT=4000 \
@@ -29,7 +29,7 @@ $ sudo docker run --net host \
 
 * On your local machine, do a ssh-tunnel to this EC2 instance:
 
-```text
+```
 $ ssh -i ~/.ssh/ec2-key.pem -N \
      -L 4000:localhost:4000 \
      -L 4001:localhost:4001 \
@@ -39,7 +39,7 @@ $ ssh -i ~/.ssh/ec2-key.pem -N \
 
 * Connect Conduktor using localhost:4000
 
-The networking layer looks like this \(not public\):
+The networking layer looks like this (not public):
 
 ![](../../.gitbook/assets/screenshot-2021-10-06-at-22.37.03.png)
 
@@ -54,7 +54,7 @@ You can try running another proxy: [https://github.com/grepplabs/kafka-proxy](ht
 * Run the proxy on an EC2 machine running in the MSK network:
   * Map all your brokers
 
-```text
+```
 docker run --rm --net host grepplabs/kafka-proxy:latest \
           server \
         --bootstrap-server-mapping "b-1.mymsk.xxx.kafka.us-west-2.amazonaws.com:9092,0.0.0.0:32500,127.0.0.1:32500" \
@@ -69,7 +69,7 @@ docker run --rm --net host grepplabs/kafka-proxy:latest \
 * SSH forward locally to your EC2 machine:
   * Forward all the ports
 
-```text
+```
 ssh -i ~/.ssh/ec2-key.pem -N \
      -L 32500:localhost:32500 \
      -L 32501:localhost:32501 \
@@ -90,17 +90,17 @@ Read our guest blog on AWS for more details: [https://aws.amazon.com/blogs/big-d
 
 ### AWS MSK + IAM Architecture
 
-A small overview of "what's going on" when you use AWS MSK and configure IAM \(read the mentioned blog above for more details\):
+A small overview of "what's going on" when you use AWS MSK and configure IAM (read the mentioned blog above for more details):
 
 
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](<../../.gitbook/assets/image (47).png>)
 
 ### Configuration Example
 
 Here is an example of configuration you can copy/paste. Just update the `awsProfileName` to yours:
 
-```text
+```
 security.protocol=SASL_SSL
 sasl.mechanism=AWS_MSK_IAM
 sasl.jaas.config = software.amazon.msk.auth.iam.IAMLoginModule required awsProfileName="stephane-msk";
@@ -109,9 +109,9 @@ sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbac
 
 ## IAM Example
 
-A basic \(broad\) example of configuring IAM policy to access everything on MSK:
+A basic (broad) example of configuring IAM policy to access everything on MSK:
 
-```text
+```
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -128,8 +128,6 @@ A basic \(broad\) example of configuring IAM policy to access everything on MSK:
     ...
 }
 ```
-
-
 
 
 

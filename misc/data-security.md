@@ -14,7 +14,7 @@ Conduktor Desktop, installed on your computer, stores its configuration on your 
 
 ### Data: not sent anywhere
 
-The data only transits between your Conduktor Desktop, on your machine, and your Apache Kafka clusters and ecosystem \(Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...\). They are not sent anywhere else.
+The data only transits between your Conduktor Desktop, on your machine, and your Apache Kafka clusters and ecosystem (Schema Registry, Kafka Connect, Kafka Streams, ksqlDB, ...). They are not sent anywhere else.
 
 ### Data Flow
 
@@ -36,15 +36,15 @@ Your Conduktor configuration is stored in a fixed place on your computer:
 
 * MacOS: `/Users/<user>/Library/Application Support/conduktor/`
 * Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\`
-* Linux: `/home/<user>/.config/conduktor/` \(or XDG Config path if set\)
+* Linux: `/home/<user>/.config/conduktor/` (or XDG Config path if set)
 
 {% hint style="warning" %}
-The folder contains your configuration **app.properties** and its previous version **app.properties.bak** that can be used to recover your configuration if something happened \(and app.properties is broken\).
+The folder contains your configuration **app.properties** and its previous version **app.properties.bak** that can be used to recover your configuration if something happened (and app.properties is broken).
 {% endhint %}
 
 ## Where are the logs?
 
-As any software, Conduktor generates logs to help debugging or understanding what's going on. URLs, usernames could be found in \(and if present, passwords are always masked\).
+As any software, Conduktor generates logs to help debugging or understanding what's going on. URLs, usernames could be found in (and if present, passwords are always masked).
 
 * Windows: `C:\Users\<User>\AppData\Local\Temp\conduktor.log`
 * Linux: `/tmp/conduktor.log`
@@ -52,11 +52,11 @@ As any software, Conduktor generates logs to help debugging or understanding wha
 
 ## Analytics / Error reporting
 
-![Check the option on our welcome screen to help us :\)](../.gitbook/assets/screenshot-2021-02-15-at-10.59.49.png)
+![Check the option on our welcome screen to help us :)](<../.gitbook/assets/screenshot-2021-02-15-at-10.59.49 (1).png>)
 
 When the option "Analytics/Reports" is checked on our welcome screen, we will send some signals to:
 
-* Google Analytics \(totally anonymized\): about which dialog is opened, which button was clicked etc. This will help us determining some screens are super used or not used at all.
+* Google Analytics (totally anonymized): about which dialog is opened, which button was clicked etc. This will help us determining some screens are super used or not used at all.
 * Sentry: only in case of errors, we send the error to Sentry to provide us visibility, if a feature is broken.
 
 ## Support: Ask us Anything!
@@ -69,17 +69,15 @@ This sends us directly an email to support@conduktor.io where we continue the co
 
 ## Login / Licenses
 
-To use Conduktor, login is mandatory. This allows us to know our users and control if they have a license or not \(to provide access to more features etc.\).
+To use Conduktor, login is mandatory. This allows us to know our users and control if they have a license or not (to provide access to more features etc.).
 
 ### Security
 
-To ensure a maximum security and availability of the login system, we use auth0 to manage our userbase which is fully certified, highly secured, and highly available. \([https://auth0.com/security](https://auth0.com/security)\)
+To ensure a maximum security and availability of the login system, we use auth0 to manage our userbase which is fully certified, highly secured, and highly available. ([https://auth0.com/security](https://auth0.com/security))
 
 ### Identification Flow
 
-Conduktor contacts auth0 when the user logins \(on [https://auth.conduktor.io/](https://auth.conduktor.io/)\). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine.
+Conduktor contacts auth0 when the user logins (on [https://auth.conduktor.io/](https://auth.conduktor.io)). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine.
 
 ![](../.gitbook/assets/screenshot-2021-02-15-at-11.26.03.png)
-
-
 

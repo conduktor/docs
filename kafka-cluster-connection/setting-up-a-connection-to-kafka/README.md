@@ -126,7 +126,7 @@ For example, if you're using OAuth2 to authenticate the connections to your Kafk
 
 With this additional property and this jar configured, Conduktor will be able to configure its internal Kafka client to successfully connect to your Kafka cluster.
 
-To learn more about custom Kafka deserializers and how to use them in Conduktor, please the dedicated documentation: [Custom deserializers](../../features/consuming-data/custom-deserializers.md)
+To learn more about custom Kafka deserializers and how to use them in Conduktor, please the dedicated documentation: [Custom deserializers](../../features/consuming-data/custom-deserializers/)
 
 ⚠️ When adding a plugin to a cluster configuration, this plugin is only available for this cluster.\
 If you want to use this same plugin with a second cluster configured in Conduktor, you'll need to add this plugin in this second cluster configuration too.
@@ -163,7 +163,7 @@ Conduktor has utilities to test the connectivity to your Kafka clusters. In case
 
 Conduktor allows you to manage and save the configuration and connection details to multiple Kafka clusters for easy and quick connections. The clusters you have used last will appear at the top of your cluster list.
 
-![the left-hand side contains the list of your clusters](<../../.gitbook/assets/image (9).png>)
+![the left-hand side contains the list of your clusters](<../../.gitbook/assets/image (2).png>)
 
 To edit the configuration of a cluster, hover your mouse over a cluster, and the "config button" will appear.
 
