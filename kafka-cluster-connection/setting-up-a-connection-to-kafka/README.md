@@ -41,6 +41,16 @@ Download the 3 necessary files on Aiven's interface (service.key, service.cert, 
 ![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.48.08.png>)
 
 
+#### Redhat
+
+If using Redhat, you can click on the Redhat button and follow the guide to create a service account and retrieve your Redhat Kafka cluster 
+information. Then fill the form with the required information:
+
+![](<../../.gitbook/assets/redhat-integration-last-step.png>)
+
+If you are using the SASL/OAUTHBEARER authentication with a custom token endpoint, do not forget to change the token endpoint URL.
+
+Click on create to go back to the cluster configuration page, it will be automatically filled with the provided information.
 
 ### Schema Registry
 
