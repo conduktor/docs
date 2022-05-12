@@ -10,28 +10,37 @@ When you register a Conduktor account, you have access to Conduktor Desktop and 
 
 ### The Roles in the Portal
 
-#### Billing Users
+#### "Owner"
 
-If you purchased a subscription, you are its BILLING USER. You are the **ADMIN** of the subscription, you can do anything.
+If you purchased a subscription, you are the “Owner”. You are the **ADMIN** and have the most administrative privileges available to your subscription. This role is purely administrative and does not count as one of the licenses assigned to your subscription.
 
-* You will have access to the invoices, billing info, you will be able to purchase more licenses in seconds.
-* You will also be able to **assign/unassign licenses** to your users (_please note that reassignment is only available for Enterprise subscriptions)_&#x20;
-* Designate License Managers to manage your licenses on behalf of you
+The role of “_Owner_” means:&#x20;
 
-#### License Managers
+* You do not count towards the overall number of licenses.&#x20;
+* You have access to the invoices and billing information and will be the point of contact in relation to billing for your subscription.&#x20;
+* You can make changes to the Role-Based Access Control (RBAC) within Conduktor.&#x20;
+* You will be able to add “_Team Managers_” as well as “_Members_” to your subscription.&#x20;
+  * “_Team Managers_” are an administrative role and can add or revoke “_Members_” and do not count towards the number of assigned licenses.
+  * “_Members_” are Conduktor users who do count toward the number of assigned licenses.
 
-A Billing User can designate one or more License Managers to manage the license on its behalf.&#x20;
+**“Team Manager”**
 
-* No access to the invoices, billing info etc.
-* You will also be able to **assign/unassign licenses** to your users (_please note that reassignment is only available for Enterprise subscriptions)_&#x20;
+An “Owner” can designate one or more “_Team Managers_” to manage the license on his/her behalf. The role of “_Team Manager_” means:&#x20;
 
-It's useful for _team leaders_ for instance, who are not the ones purchasing the subscription (eg: when going through _resellers_, _procurement_ etc.)
+* You do not count towards the overall number of licenses.&#x20;
+* You have no access to the invoices, billing info, etc.&#x20;
+* You can make changes to the Role-Based Access Control (RBAC) within Conduktor.&#x20;
+* You can add/revoke licenses to your “_Members_” or users on your subscription (please note that reassignment is only available for Enterprise subscriptions).
 
-#### Regular Conduktor Users
+**“Member”**
 
-You did not purchased your license yourself, but your company did?
+The role of “_Member_” or user of Conduktor means:
 
-* You will be able to see your current license.
+* You do count towards the number of licenses available on your subscription.
+* You can be both an “_Owner_” / ”_Team Manager_” and a ”_Member_”.
+* You cannot make changes to the Role-Based Access Control (RBAC) within Conduktor.&#x20;
+* You will be able to see your current license on the account management system.&#x20;
+* If you have any questions regarding your subscription, please ask your account's “_Owner_”.
 
 
 
