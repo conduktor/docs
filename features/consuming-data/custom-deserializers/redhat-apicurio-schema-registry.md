@@ -4,7 +4,7 @@
 This method is temporary as we plan to integrate with the Apicurio Serdes directly in Conduktor soon.
 {% endhint %}
 
-In order to successfully consume messages serialized with RedHat Apicurio Schema Registry, you first need to repackage the Apicurio deserializers into a single jar with all its dependancies. Here we'll use [Coursier](https://get-coursier.io/docs/cli-bootstrap#assemblies) but feel free to use maven plugins if you prefer.&#x20;
+In order to successfully consume messages serialized with RedHat Apicurio Schema Registry, you first need to repackage the Apicurio deserializers into a single jar with all its dependencies. Here we'll use [Coursier](https://get-coursier.io/docs/cli-bootstrap#assemblies) but feel free to use maven plugins if you prefer.&#x20;
 
 ```
 cs bootstrap io.apicurio:apicurio-registry-serdes-avro-serde:2.2.3.Final -M io.apicurio.registry.serde.avro.AvroKafkaDeserializer --assembly -o apicurio-registry-serdes-avro-serde-2.2.3.Final-with-dependancies.jar
@@ -24,5 +24,5 @@ apicurio.auth.password=7d94b05a-xxxx-4f70-xxxx-1e6aba25a8b4
 ```
 
 {% hint style="info" %}
-You can further configure your deserializer as described in the Apicurio documentation : [https://www.apicur.io/registry/docs/apicurio-registry/2.2.x/getting-started/assembly-using-kafka-client-serdes.html#registry-serdes-config-consumer\_registry](https://www.apicur.io/registry/docs/apicurio-registry/2.2.x/getting-started/assembly-using-kafka-client-serdes.html#registry-serdes-config-consumer\_registry)
+You can further configure your deserializer as described in the Apicurio documentation: [https://www.apicur.io/registry/docs/apicurio-registry/2.2.x/getting-started/assembly-using-kafka-client-serdes.html#registry-serdes-config-consumer\_registry](https://www.apicur.io/registry/docs/apicurio-registry/2.2.x/getting-started/assembly-using-kafka-client-serdes.html#registry-serdes-config-consumer\_registry)
 {% endhint %}

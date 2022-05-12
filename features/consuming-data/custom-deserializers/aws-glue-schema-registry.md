@@ -4,7 +4,7 @@
 This method is temporary as we plan to integrate with the AWS Glue Registry Serdes directly in Conduktor soon.
 {% endhint %}
 
-In order to successfully consume messages serialized with AWS Glue Registry, you first need to repackage the Glue deserializers into a single jar with all its dependancies. Here we'll use [Coursier](https://get-coursier.io/docs/cli-bootstrap#assemblies) but feel free to use maven plugins if you prefer.&#x20;
+In order to successfully consume messages serialized with AWS Glue Registry, you first need to repackage the Glue deserializers into a single jar with all its dependencies. Here we'll use [Coursier](https://get-coursier.io/docs/cli-bootstrap#assemblies) but feel free to use maven plugins if you prefer.&#x20;
 
 ```
 cs bootstrap software.amazon.glue:schema-registry-serde:1.1.10 --assembly -M com.amazonaws.services.schemaregistry.deserializers.GlueSchemaRegistryKafkaDeserializer -o glue-schema-registry-serde-1.1.10-with-dependancies.jar
@@ -22,7 +22,7 @@ avroRecordType=GENERIC_RECORD
 ```
 
 {% hint style="success" %}
-You can further configure your deserializer as described in the Glue documentation : &#x20;
+You can further configure your deserializer as described in the Glue documentation: &#x20;
 
 * [https://docs.aws.amazon.com/glue/latest/dg/schema-registry-gs.html#schema-registry-gs-serde](https://docs.aws.amazon.com/glue/latest/dg/schema-registry-gs.html#schema-registry-gs-serde)
 * [https://github.com/awslabs/aws-glue-schema-registry](https://github.com/awslabs/aws-glue-schema-registry)
