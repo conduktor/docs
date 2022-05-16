@@ -12,17 +12,17 @@ description: >-
 
 To add a cluster, please click on the "Add new cluster" button
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/add_new_cluster_button.png>)
 
 This will open up a list of configurations you can set for Conduktor
 
-![](../../.gitbook/assets/screen-shot-2021-08-17-at-5.29.18-pm.png)
+![](../../.gitbook/assets/new_cluster_configuration_main.png)
 
 ### Kafka Cluster
 
 this tab is the most important tab, and you have the following options:
 
-* **integration:** in case you are using Aiven or Confluent Cloud, you have the possibility to quickly integrate with them through a dialog. In case you're not using those, rest assured you can connect to your cluster!
+* **integration:** in case you are using Aiven, Confluent Cloud or Redhat Openshift, you have the possibility to quickly integrate with them through a dialog. In case you're not using those, rest assured you can connect to your cluster!
 * **cluster name:** this will be the name of your cluster when navigating the list of clusters on the right-hand side of the Conduktor splash screen
 * **bootstrap servers:** list of Kafka brokers to connect to, usually providing two or three brokers is enough. In the form of `broker1-url:9092,broker2-url:9092`, or `PLAINTEXT://broker1-url:9092,broker2-url:9092`
 * **zookeeper (optional):** providing a Zookeeper URL will allow you to access more features through Conduktor, for example partition reassignment. Over time, as Kafka migrates away from using Zookeeper, this configuration will become less and less necessary to provide. In the form of `zookeeper1-url:2181,zookeeper2-url:2181`
@@ -41,6 +41,16 @@ Download the 3 necessary files on Aiven's interface (service.key, service.cert, 
 ![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.48.08.png>)
 
 
+#### Redhat
+
+If using Redhat, you can click on the Redhat button and follow the guide to create a service account and retrieve your Redhat Kafka cluster 
+information. Then fill the form with the required information:
+
+![](<../../.gitbook/assets/redhat-integration-last-step.png>)
+
+If you are using the SASL/OAUTHBEARER authentication with a custom token endpoint, do not forget to change the token endpoint URL.
+
+Click on create to go back to the cluster configuration page, it will be automatically filled with the provided information.
 
 ### Schema Registry
 
