@@ -8,7 +8,7 @@ You can find a list of all the licenses on the pricing page at [https://www.cond
 
 When you first register to Conduktor with a new email address, we will automatically start activating a 14-days free tier for you of the full Professional license. This will allow you to try out all features of Conduktor and see if the product is the right now for you and your team
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (29).png>)
 
 ## Free Plan
 
@@ -20,14 +20,14 @@ After the trial period, your account will fallback to the free plan where you ca
 
 When you purchase a license through our [pricing page](https://www.conduktor.io/pricing), you will purchase using your email address.
 
-* If you buy only one license, then your email address will be the one you will have to use with Conduktor when you log in. You will have access to [our portal](https://account.conduktor.io) to manage your subscription and see your license auto-assigned to yourself.
-* If you buy more than one license, then you'll be able to assign your licenses to whoever you want using [our portal](https://account.conduktor.io).
+* If you buy only one license, then your email address will be the one you will have to use with Conduktor when you log in. You will have access to [our portal](https://account.conduktor.io/) to manage your subscription and see your license auto-assigned to yourself.
+* If you buy more than one license, then you'll be able to assign your licenses to whoever you want using [our portal](https://account.conduktor.io/).
 
 ![](<../../.gitbook/assets/image (19).png>)
 
 ## Enterprise Plan
 
-On Enterprise Plan, you will have the possibility to add addons to your subscription (by asking us), and will have access to [our portal](https://account.conduktor.io) to manage your licenses.
+On Enterprise Plan, you will have the possibility to add addons to your subscription (by asking us), and will have access to [our portal](https://account.conduktor.io/) to manage your licenses.
 
 * [Offline access](offline-licenses.md)
 * Licenses Reassignment

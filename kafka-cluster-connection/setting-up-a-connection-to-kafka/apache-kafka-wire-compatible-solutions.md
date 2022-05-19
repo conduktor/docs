@@ -41,4 +41,4 @@ sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule require
 
 ### Redpanda
 
-[Redpanda](https://redpanda.com) is an Apache Kafka compatible event streaming platform. No Zookeeper, no JVM, and no code changes required.
+[Redpanda](https://redpanda.com/) is an Apache Kafka compatible event streaming platform. No Zookeeper, no JVM, and no code changes required.

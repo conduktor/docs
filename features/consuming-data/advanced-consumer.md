@@ -12,7 +12,7 @@ Example:
 * 20-30
 * 20-21,24,26
 
-![Change which partitions to consume](<../../.gitbook/assets/screenshot-2020-06-25-at-15.37.27 (1).png>)
+![Change which partitions to consume](../../.gitbook/assets/screenshot-2020-06-25-at-15.37.27.png)
 
 ## Show only the latest value
 

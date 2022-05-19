@@ -52,7 +52,7 @@ As any software, Conduktor generates logs to help debugging or understanding wha
 
 ## Analytics / Error reporting
 
-![Check the option on our welcome screen to help us :)](<../.gitbook/assets/screenshot-2021-02-15-at-10.59.49 (1).png>)
+![Check the option on our welcome screen to help us :)](../.gitbook/assets/screenshot-2021-02-15-at-10.59.49.png)
 
 When the option "Analytics/Reports" is checked on our welcome screen, we will send some signals to:
 
@@ -77,7 +77,7 @@ To ensure a maximum security and availability of the login system, we use auth0 
 
 ### Identification Flow
 
-Conduktor contacts auth0 when the user logins (on [https://auth.conduktor.io/](https://auth.conduktor.io)). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine.
+Conduktor contacts auth0 when the user logins (on [https://auth.conduktor.io/](https://auth.conduktor.io/)). The user can register or login on auth0 secured pages, which then provide a secured JWT to Conduktor on the machine.
 
 ![](../.gitbook/assets/screenshot-2021-02-15-at-11.26.03.png)
 

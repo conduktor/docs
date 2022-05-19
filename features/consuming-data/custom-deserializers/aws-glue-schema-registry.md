@@ -27,3 +27,9 @@ You can further configure your deserializer as described in the Glue documentati
 * [https://docs.aws.amazon.com/glue/latest/dg/schema-registry-gs.html#schema-registry-gs-serde](https://docs.aws.amazon.com/glue/latest/dg/schema-registry-gs.html#schema-registry-gs-serde)
 * [https://github.com/awslabs/aws-glue-schema-registry](https://github.com/awslabs/aws-glue-schema-registry)
 {% endhint %}
+
+{% hint style="warning" %}
+The Glue library doesn't pick the AWS profile from the Kafka config `sasl.jaas.config`. \
+If you need to use a different profile than the `default`, you must set the following environment variable:\
+`AWS_PROFILE="<your-profile>"`
+{% endhint %}

@@ -94,7 +94,7 @@ A small overview of "what's going on" when you use AWS MSK and configure IAM (re
 
 
 
-![](<../../.gitbook/assets/image (47).png>)
+![](<../../.gitbook/assets/image (46).png>)
 
 ### Configuration Example
 
