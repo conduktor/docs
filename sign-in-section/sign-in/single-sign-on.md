@@ -58,6 +58,12 @@ There are two important fields you need to declare your Application:
 | `Post-back URL` or `ACS URL` | https://auth.conduktor.io/login/callback?connection=`your-company` |
 | `Entity ID`                  | urn:auth0:conduktor:`your-company`                                 |
 
+{% hint style="warning" %}
+Due to some limitation on Auth0, we need that your SAML assertion contains a custom claim`email_verified` with the value `true`.&#x20;
+
+Okta documentation: [Configure SAML attributes](https://support.okta.com/help/s/article/How-to-define-and-configure-a-custom-SAML-attribute-statement?language=en\_US)
+{% endhint %}
+
 Once you're done, you need to collect and provide us with the following information:
 
 | Item                                      | Example                                      |
