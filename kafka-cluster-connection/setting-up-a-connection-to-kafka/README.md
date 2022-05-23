@@ -12,11 +12,11 @@ description: >-
 
 To add a cluster, please click on the "Add new cluster" button
 
-![](<../../.gitbook/assets/add_new_cluster_button.png>)
+![](../../.gitbook/assets/add\_new\_cluster\_button.png)
 
 This will open up a list of configurations you can set for Conduktor
 
-![](../../.gitbook/assets/new_cluster_configuration_main.png)
+![](../../.gitbook/assets/new\_cluster\_configuration\_main.png)
 
 ### Kafka Cluster
 
@@ -38,15 +38,15 @@ If using Aiven, you can use our integration to setup the configuration:
 
 Download the 3 necessary files on Aiven's interface (service.key, service.cert, ca.pem). Conduktor will generate files out of them in the folder you chose (don't remove them!).
 
-![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.48.08.png>)
+Please be careful to check that the files you are downloading from Aiven contain a proper key, and not "\<hidden>", which happens when you don't have the permissions.
 
+![](<../../.gitbook/assets/Screenshot 2021-11-29 at 15.48.08.png>)
 
 #### Redhat
 
-If using Redhat, you can click on the Redhat button and follow the guide to create a service account and retrieve your Redhat Kafka cluster 
-information. Then fill the form with the required information:
+If using Redhat, you can click on the Redhat button and follow the guide to create a service account and retrieve your Redhat Kafka cluster information. Then fill the form with the required information:
 
-![](<../../.gitbook/assets/redhat-integration-last-step.png>)
+![](../../.gitbook/assets/redhat-integration-last-step.png)
 
 If you are using the SASL/OAUTHBEARER authentication with a custom token endpoint, do not forget to change the token endpoint URL.
 

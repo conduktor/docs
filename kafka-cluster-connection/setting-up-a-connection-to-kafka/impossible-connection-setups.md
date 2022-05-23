@@ -46,7 +46,7 @@ You may try by running a special kafka-proxy as mentioned in [Connect to Amazon 
 
 This setup does not work, because your computer will not be able to resolve the private subnet IP/DNS exposed by Apache Kafka:
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 Because even though your Kafka brokers are accessible through a public IP, upon connecting Conduktor (and the Kafka Clients) will be forced to use the private IP of Apache Kafka. This is a limitation of Apache Kafka due to [how the listeners work.](https://rmoff.net/2018/08/02/kafka-listeners-explained/) Please read the section above _Understanding Kafka Listeners_.
 

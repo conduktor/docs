@@ -20,7 +20,7 @@ The cluster will be entirely managed by Conduktor. You don't have to configure a
 
 Once you are connected to your managed Cluster, you can copy and paste the addresses of your Kafka cluster and registry to use it outside of Conduktor :&#x20;
 
-![](<../.gitbook/assets/image (53).png>)
+![](<../.gitbook/assets/image (53) (1).png>)
 
 ## Common error cases
 

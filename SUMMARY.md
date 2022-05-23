@@ -10,7 +10,7 @@
   * [Windows](sign-in-section/install/windows.md)
   * [Linux](sign-in-section/install/linux.md)
   * [Updating Conduktor](sign-in-section/install/update.md)
-* [Sign in to Conduktor](sign-in-section/sign-in/README.md)
+* [Sign in to Conduktor](sign-in-section/sign-in.md)
   * [Single Sign On](sign-in-section/sign-in/single-sign-on.md)
 * [Licenses & Activations](sign-in-section/licenses-and-activations/README.md)
   * [Offline Licenses](sign-in-section/licenses-and-activations/offline-licenses.md)
@@ -66,7 +66,7 @@
   * [What to do with ksqlDB?](features/ksqldb/what-to-do-with-ksqldb.md)
   * [How to query with ksqlDB?](features/ksqldb/how-to-query-with-ksqldb.md)
   * [ksqlDB FAQ](features/ksqldb/ksqldb-faq.md)
-* [Kafka Security (ACLs)](features/kafka-access-control-list-acl/README.md)
+* [Kafka Security (ACLs)](features/kafka-access-control-list-acl.md)
   * [ACLs Advanced Insights](features/kafka-access-control-list-acl/acls-advanced-insights.md)
 * [Monitoring](features/monitoring.md)
 

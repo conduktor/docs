@@ -45,7 +45,15 @@ The opened dialog allows you to check the reassignment status and update the thr
 
 ## How to add partitions to a Topic?
 
+While you will have made calculations on the number of partitions required for a topic at the creation stage, applications evolve and you may need to add more, usually to aid on throughput.
 
+&#x20;You can add partitions on the fly in Conduktor and it's a straightforward procedure. Go to the "Advanced" section of a topic as shown below and click on "Add Partitions", you will then have the option to add more partitions.
+
+However, it is important to understand if messages are produced with keys. When publishing a keyed message, Kafka provides a guarantee that messages with the same key are always routed to the same partition. This guarantee can be important for certain applications since messages within a partition are always delivered in order to the consumer. If the number of partitions changes, such a guarantee may no longer hold.&#x20;
+
+![Adding partitions to a topic](<../../.gitbook/assets/image (54).png>)
+
+![Adding partitions to a topic](<../../.gitbook/assets/image (53).png>)
 
 ## How to remove data from a Topic?
 

@@ -80,7 +80,7 @@ It can be used to "project" the data: read and display only a subset of fields
 }
 ```
 
-![Consume using custom Avro schema](<../../.gitbook/assets/image (52).png>)
+![Consume using custom Avro schema](<../../.gitbook/assets/image (52) (1).png>)
 
 ### With Protobuf, provide the schema
 
@@ -102,7 +102,7 @@ message SearchRequest {
 }
 ```
 
-![Consume using custom Protobuf Schema](<../../.gitbook/assets/image (54).png>)
+![Consume using custom Protobuf Schema](<../../.gitbook/assets/image (54) (1).png>)
 
 {% hint style="info" %}
 Conduktor will iterate over all root message types in the provided schema and select the best one for each message (the first type decoding without missing or unknown fields).
