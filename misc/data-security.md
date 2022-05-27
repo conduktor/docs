@@ -81,3 +81,9 @@ Conduktor contacts auth0 when the user logins (on [https://auth.conduktor.io/](h
 
 ![](../.gitbook/assets/screenshot-2021-02-15-at-11.26.03.png)
 
+## How can I rollback in case of critical bug?
+
+It should _never_ happen, but who knows! Our website only refers to our latest Conduktor Desktop version.
+You can download our previous releases [here](https://github.com/conduktor/builds/releases). 
+
+Note that we prevent old versions to work (you won't be able to login) in order for our users to always enjoy a recent version with less bugs and more features!
