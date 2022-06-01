@@ -12,7 +12,7 @@ This is the first thing to setup when you're consuming a topic
 
 Conduktor supports many formats when deserializing data and we keep adding some.
 
-We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#without-confluent-schema-registry)).
+We support the most common formats, but also bytes, JSON, and multiple Avro and Protobuf flavours. We are compatible with the **Confluent Schema Registry** and the **AWS Glue Registry** but we also support Avro and Protobuf data **not** written using the Confluent Schema Registry. You can even provide your own Avro or Protobuf schema directly within Conduktor (see [Schema without Confluent Schema Registry](pick-your-format-wisely.md#without-confluent-schema-registry)).
 
 ## Key and Value
 
@@ -50,7 +50,7 @@ But not everyone follows this convention! This means it's possible that the reco
 
 ![Avro custom](../../.gitbook/assets/value\_formats\_avro.png)
 
-For instance, I want to provide a Avro Schema to read my data:
+For instance, I want to provide an Avro Schema to read my data:
 
 * I choose `Avro (Custom)` format
 * I paste my custom schema into the textarea
@@ -108,6 +108,16 @@ message SearchRequest {
 Conduktor will iterate over all root message types in the provided schema and select the best one for each message (the first type decoding without missing or unknown fields).
 {% endhint %}
 
+### Using AWS Glue Registry
+With AWS Glue Registry, the registry name and the schema information (including the format) are embedded in the message. 
+All you need to do is provide the AWS region of your registry.
+
+![Consume with AWS Glue Registry](<../../.gitbook/assets/aws-glue-consume-config.png>)
+
+You also need to have your AWS credentials configured in your system 
+(see [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)).
+
+Conduktor will deserialize your messages (Json, Avro, Protobuf format are supported) and display them in a json format.
 ## Possible errors (magic byte)
 
 If you try to consume Avro data without properly configuring it (and because it was not auto-detected by Conduktor for some reasons), you'll end up with garbage data like this:
