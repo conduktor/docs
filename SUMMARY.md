@@ -74,4 +74,5 @@
 
 * [Configuring Conduktor](misc/configuring-conduktor.md)
 * [Data Security](misc/data-security.md)
+* [No Internet Connection](misc/internet-troubleshooting.md)
 * [Frequently Asked Questions](misc/faq.md)
