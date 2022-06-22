@@ -1,7 +1,8 @@
 ---
 description: >-
-  This page will guide you on all certificate-related issues throughout
-  Conduktor. Authentication, Kafka brokers, Kafka Connect, Schema Registry, ...
+  This page will guide you on all certificate-related issues that may occur when
+  using Conduktor such as during Conduktor Login or while connecting to Kafka
+  brokers, Kafka Connect, Schema Registry, ...
 ---
 
 # Certificates FAQ
@@ -26,7 +27,7 @@ you might run into problems at different stages of Conduktor:
 
 Whatever your scenario, don't worry, this page will help you get everything sorted out in no time.
 
-### Identify a certificate-related issue
+### Identify a certificate-related issue (PKIX path building failed)
 
 Certificate errors typically come with the following error message:
 

@@ -27,11 +27,14 @@ When you login, you can stumbled upon this error in your browser. That means tha
 This can happen due to many reasons. Here are a few:
 
 * Are you running Conduktor from your enterprise network?
-  * You may need to configure a **proxy**: [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
-  * You may need to add a **trusted certificate** to Conduktor: see below
+  * You may need to configure a **proxy**:&#x20;
+    * [https://docs.conduktor.io/sign-in-section/internet-proxy](https://docs.conduktor.io/sign-in-section/internet-proxy)
+  * You may need to add a **trusted certificate** to Conduktor:&#x20;
+    * [https://docs.conduktor.io/sign-in-section/login-troubleshooting/certificates-faq](https://docs.conduktor.io/sign-in-section/login-troubleshooting/certificates-faq)
 * **Browser plugins** can redirect http calls to httpS. The last step of our identification flow is a call to a local temporary http server (http://localhost:5xxx), so if something in the browser forces a redirect from http to https, the flow will never complete.
 * If you're using a **VPN**, you may have to configure it to not alter communication to \*.conduktor.io or add a certificate into Conduktor (if you VPN adds its own security layer with a self-signed certificate..)
   * Using **ZScaler** ? Download the ZScaler certificate and import it into Conduktor
+    * [https://docs.conduktor.io/sign-in-section/login-troubleshooting/certificates-faq](https://docs.conduktor.io/sign-in-section/login-troubleshooting/certificates-faq)
 * Ensure you don't have an **antivirus** or a **firewall** blocking communications. You may have to add `https://auth.conduktor.io` to some allow-list or something.
 * By default, Conduktor uses your system proxy. This can causes some troubles such as: `Unable to tunnel through proxy. Proxy returns` Go to the settings, setup your proxy manually instead of the system proxy and and add an exception for `*.conduktor.io`
 
@@ -47,12 +50,13 @@ The JVM embedded in Conduktor (Java 13+, if you are using the classic installati
 
 If your organization has its own self-signed CA and certificates, you can add trusted certificates within Conduktor from the welcome screen.
 
-* Conduktor will create its own internal truststore when starting up
-* You need to restart Conduktor after adding/removing certificates in order for them to be taken into account
+Check our dedicated page:&#x20;
 
-![](../../.gitbook/assets/screenshot-2020-05-12-at-20.26.00.png)
+{% content-ref url="certificates-faq.md" %}
+[certificates-faq.md](certificates-faq.md)
+{% endcontent-ref %}
 
-## Login Callback is HTTP_S_ instead of HTTP
+## Login Callback is HTTP\_S\_ instead of HTTP
 
 In some cases, enterprise network policies force the login callback form http to https. As a workaround it is possible to allow insecure localhost call in google chrome : [chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost)
 
@@ -76,8 +80,8 @@ Example:
 
 On Windows, it's possible to get this error "Failed to launch JVM" in certain rare cases.
 
-- Conduktor can not work if you have special characters in your Windows username like "ö"
-- Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
+* Conduktor can not work if you have special characters in your Windows username like "ö"
+* Check if you have some environment variables configured: `_JAVA_OPTIONS` or `JAVA_TOOL_OPTIONS` if that's the case, then unset them.
 
 Some software adds them for their own need, but this is taken into account by all the Java programs running on your system. This may be dangerous and causes issues (like here).
 
