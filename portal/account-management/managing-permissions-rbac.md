@@ -47,7 +47,7 @@ Once you've added a cluster, you will be able to allow or deny access to specifi
 
 By default, there is any restriction on what your users can do on your clusters. The access control is disabled :&#x20;
 
-![](<../../.gitbook/assets/Screenshot 2021-12-17 at 16-58-09 Conduktor Customer Portal (1) (1).png>)
+![](<../../.gitbook/assets/Screenshot 2021-12-17 at 16-58-09 Conduktor Customer Portal (1) (1) (1).png>)
 
 {% hint style="success" %}
 You can enable access control and choose the base role _Viewer_ to set predefined permissions to prevent any modifications to your cluster by your users (eg: disallowing producing to topics, broker config modifications, topic creation/deletion, altering schemas in schema registry, ...)​

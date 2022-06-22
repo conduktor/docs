@@ -15,6 +15,7 @@
 * [Licenses & Activations](sign-in-section/licenses-and-activations/README.md)
   * [Offline Licenses](sign-in-section/licenses-and-activations/offline-licenses.md)
 * [Login Troubleshooting & FAQ](sign-in-section/login-troubleshooting/README.md)
+  * [Certificates FAQ](sign-in-section/login-troubleshooting/certificates-faq.md)
   * [Using an internet proxy](sign-in-section/login-troubleshooting/internet-proxy.md)
 
 ## Account Management <a href="#portal" id="portal"></a>
