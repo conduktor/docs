@@ -76,13 +76,17 @@ If you don't have them, get in touch with your Administrator to help you.
 
 We are pleased to present to you our new Certificate model, intended to simplify your life as much as possible when your architecture involves **non-trusted issuers.**
 
-![The SSL Context is shared across all connections](<../../.gitbook/assets/Simple Sketch.png>)
+![The SSL Context is shared across all connections except ksqlDB](../../.gitbook/assets/ssl-context.png)
 
 With this new model, you just need to import the certificates once in the Network tab and they will be picked up by all the components.&#x20;
 
 If you are using Windows and Mac, and your organization has pushed certificates into your machine using GPO, we will even load them!&#x20;
 
-This means that you don't need to define the trust store for each individual component anymore.
+This means that you don't need to define the trust store for each individual component anymore.&#x20;
+
+{% hint style="danger" %}
+Unfortunately, we were not able to integrate **ksqlDB** in our new certificate model yet.
+{% endhint %}
 
 We remain fully compatible with the previous methods so if you have configured your Kafka clusters with .jks files, or if you still want to use this mechanism, everything will work as usual.
 
