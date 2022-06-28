@@ -19,9 +19,11 @@ Go Options > Settings:
 
 ![](../.gitbook/assets/screenshot-2020-09-19-at-17.13.15.png)
 
-We can decide which columns to hide or show. When columns are hidden, processing is not done (like with "Show Last Write" which can be quite expensive if you have many topics, it's a good idea to hide it).
+We can choose to display dates as UTC instead of using the local timezone.
 
-![](../.gitbook/assets/screenshot-2020-09-19-at-17.11.18.png)
+We can also decide which columns to hide or show. When columns are hidden, processing is not done (like with "Show Last Write" which can be quite expensive if you have many topics, it's a good idea to hide it).
+
+![](../.gitbook/assets/settings-view.png)
 
 ## JVM (Advanced)
 
