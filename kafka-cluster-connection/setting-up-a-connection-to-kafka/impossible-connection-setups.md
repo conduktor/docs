@@ -32,7 +32,7 @@ Part of understanding why your CLI (and therefore Conduktor) can't connect to yo
 
 > Another longer blog can be found at: [https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 
-![internal + external listeners configured](<../../.gitbook/assets/image (49).png>)
+![internal + external listeners configured](<../../.gitbook/assets/image (48).png>)
 
 ## Connecting to Kafka behind a bastion / SSH hops
 

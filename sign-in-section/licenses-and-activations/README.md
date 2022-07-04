@@ -8,7 +8,7 @@ You can find a list of all the licenses on the pricing page at [https://www.cond
 
 When you first register to Conduktor with a new email address, we will automatically start activating a 14-days free tier for you of the full Professional license. This will allow you to try out all features of Conduktor and see if the product is the right now for you and your team
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (29).png>)
 
 ## Free Plan
 

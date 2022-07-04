@@ -19,7 +19,7 @@ Conduktor handles the whole set of format providing by the Schema Registry:
 
 In the Schema Registry, we distinguish them by using their respective icon:
 
-![](<../../.gitbook/assets/screenshot-2021-02-01-at-16.46.24 (1).png>)
+![](../../.gitbook/assets/screenshot-2021-02-01-at-16.46.24.png)
 
 We parse them and display their content (their fields, structures, etc.) in a similar flatten way. This way, it's easier to take a quick look at them and see the depth of the fields. Example:
 

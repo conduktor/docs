@@ -52,7 +52,7 @@ As any software, Conduktor generates logs to help debugging or understanding wha
 
 ## Analytics / Error reporting
 
-![Check the option on our welcome screen to help us :)](../.gitbook/assets/screenshot-2021-02-15-at-10.59.49.png)
+![Check the option on our welcome screen to help us :)](<../.gitbook/assets/screenshot-2021-02-15-at-10.59.49 (1).png>)
 
 When the option "Analytics/Reports" is checked on our welcome screen, we will send some signals to:
 
@@ -63,7 +63,7 @@ When the option "Analytics/Reports" is checked on our welcome screen, we will se
 
 ![We are here to help us!](../.gitbook/assets/screenshot-2021-02-15-at-11.30.03.png)
 
-Listening to our users is super important. We provide many spots in our interface, for the users  to contact us in case of questions/issues/feature requests.
+Listening to our users is super important. We provide many spots in our interface, for the users to contact us in case of questions/issues/feature requests.
 
 This sends us directly an email to support@conduktor.io where we continue the conversation in a classical manner. Details are kept purely private in the email conversation, and not sent anywhere.
 
@@ -83,7 +83,6 @@ Conduktor contacts auth0 when the user logins (on [https://auth.conduktor.io/](h
 
 ## How can I rollback in case of critical bug?
 
-It should _never_ happen, but who knows! Our website only refers to our latest Conduktor Desktop version.
-You can download our previous releases [here](https://github.com/conduktor/builds/releases). 
+It should _never_ happen, but who knows! Our website only refers to our latest Conduktor Desktop version. You can download our previous releases [here](https://github.com/conduktor/builds/releases).
 
 Note that we prevent old versions to work (you won't be able to login) in order for our users to always enjoy a recent version with less bugs and more features!

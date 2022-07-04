@@ -173,7 +173,7 @@ Conduktor has utilities to test the connectivity to your Kafka clusters. In case
 
 Conduktor allows you to manage and save the configuration and connection details to multiple Kafka clusters for easy and quick connections. The clusters you have used last will appear at the top of your cluster list.
 
-![the left-hand side contains the list of your clusters](<../../.gitbook/assets/image (9).png>)
+![the left-hand side contains the list of your clusters](<../../.gitbook/assets/image (2).png>)
 
 To edit the configuration of a cluster, hover your mouse over a cluster, and the "config button" will appear.
 
