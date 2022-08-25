@@ -58,11 +58,18 @@ There are two important fields you need to declare your Application:
 | `Post-back URL` or `ACS URL` | https://auth.conduktor.io/login/callback?connection=`your-company` |
 | `Entity ID`                  | urn:auth0:conduktor:`your-company`                                 |
 
-{% hint style="warning" %}
-Due to some limitation on Auth0, we need that your SAML assertion contains a custom claim`email_verified` with the value `true`.&#x20;
+#### Required claims
+
+{% hint style="danger" %}
+Due to some limitation on Auth0, we need that your SAML assertion contains custom claims. Check your IdP documentation to on how to do this.
 
 Okta documentation: [Configure SAML attributes](https://support.okta.com/help/s/article/How-to-define-and-configure-a-custom-SAML-attribute-statement?language=en\_US)
 {% endhint %}
+
+* `email_verified` with the value `true`.&#x20;
+* `email` must be present and **lowercase**
+
+
 
 Once you're done, you need to collect and provide us with the following information:
 
@@ -79,6 +86,17 @@ You first need to declare a new OIDC Application in your IdP.&#x20;
 If you are asked about the Application Type, pick `Server-side` or `Web Application` type.
 
 Leave most default as-is except for the "Sign-in redirect URL": `https://auth.conduktor.io/login/callback`
+
+#### Required claims
+
+{% hint style="danger" %}
+Due to some limitation on Auth0, we need that your OIDC token contains custom claims. Check your IdP documentation to on how to do this.
+
+Okta documentation: [Configure OIDC attributes](https://developer.okta.com/docs/guides/customize-tokens-returned-from-okta/main/)
+{% endhint %}
+
+* `email_verified` with the value `true`.&#x20;
+* `email` must be present and **lowercase**
 
 Once you're done, you will provide us with your information:
 
