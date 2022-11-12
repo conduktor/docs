@@ -1,5 +1,47 @@
 # Advanced Consumer
 
+## Show Avro Raw Types
+
+When you consume Avro data, Conduktor processes the data to make it as readable and JSONish as possible, hiding Avro peculiarities. It's possible to bypass this behavior if you're really interested in the low-level types your data are using by displaying the "Raw types".
+
+* If you pick any Avro format, as shown below:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2022-11-12 at 13.34.58.png" alt=""><figcaption></figcaption></figure>
+
+* You will have access in the "Advanced" tab to the option "Show Avro raw types":
+
+<figure><img src="../../.gitbook/assets/Screenshot 2022-11-12 at 13.38.24.png" alt=""><figcaption></figcaption></figure>
+
+When consuming, instead of getting this readable JSON:
+
+{% code overflow="wrap" %}
+```json
+{ "id" : "107808e2-65ed-4b6b-9546-d8e545ce17bc",
+  "state" : {
+    "code" : "fcac2883-6edc-4f80-9394-1f63d9647767",
+    ...
+  }
+}
+
+```
+{% endcode %}
+
+You'll get this less-readable JSON, but you might get what you're looking for:
+
+{% code overflow="wrap" %}
+```json
+{ "id" : { "string" : "107808e2-65ed-4b6b-9546-d8e545ce17bc" },
+  "state" : { "com.company.team.MyAvroClass" : {
+    "code" : { "string" : "fcac2883-6edc-4f80-9394-1f63d9647767" },
+    ...
+  }
+}
+
+```
+{% endcode %}
+
+
+
 ## Consume only specific partitions
 
 While most of the users will consume the data from a topic and all its partitions, some advanced users could only want to consume for a given set of partitions because they know where the info they're looking for is.
