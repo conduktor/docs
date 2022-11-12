@@ -40,7 +40,7 @@ By default, Conduktor is limited to 2GB of memory heap. It's possible to increas
 * Linux: `/opt/conduktor/lib/app/Conduktor.cfg`
 
 {% hint style="danger" %}
-We do **NOT** recommend to alter this file, **all changes will be lost **when upgrading Conduktor
+We do **NOT** recommend to alter this file, \*\*all changes will be lost \*\*when upgrading Conduktor
 {% endhint %}
 
 The default options are:
@@ -58,13 +58,13 @@ The default options are:
 
 ## Custom environment variables
 
-It's possible to customize the -D\* without losing them when upgrading.&#x20;
+It's possible to customize the -D\* without losing them when upgrading.
 
 Instead of playing with `Conduktor.cfg`, create the file `conduktor.vmoptions` in your Conduktor personal folder and add as many "-D" as you want (**only -D, no -XX**), to set them when Conduktor starts (only on startup, it's not taken into account after):
 
 * MacOS: `/Users/<user>/Library/Application Support/conduktor/conduktor.vmoptions`
 * Windows: `C:\Users\<user>\AppData\Local\conduktor\conduktor\conduktor.vmoptions`
-* Linux: 
+* Linux:
   * .deb/.rpm : `/home/<user>/.config/conduktor/conduktor.vmoptions` (or XDG Config path if set)
   * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/config/conduktor/conduktor.vmoptions`
 
@@ -78,6 +78,27 @@ Example:
 ```
 
 ## Logs
+
+### DEBUG logging
+
+Since Conduktor 2.23.4, it's possible to enable the DEBUG mode on-the-fly to troubleshoot connectivity or odd issues. This can help you find out what is going on or help our customer support.
+
+Two ways to enable it:
+
+* **Welcome screen > Settings**: to troubleshoot Kafka connectivity issues
+* **Settings in-app**: to troubleshoot any kind of transient issues post-connection
+
+<div>
+
+<figure><img src="../.gitbook/assets/Screenshot 2022-11-12 at 13.47.28.png" alt=""><figcaption><p>Settings in-app</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Screenshot 2022-11-12 at 13.48.03.png" alt=""><figcaption><p>From the Welcome Screen</p></figcaption></figure>
+
+</div>
+
+
 
 ### Kafka logging
 
@@ -99,8 +120,8 @@ Log files of managed services can be found on files `zookeeper.log`, `kafka.log`
 
 * MacOS : `/Library/Application Support/conduktor/jumpstart/<clusterId>/logs/`
 * Windows : `C:\Users\<User>\AppData\Local\conduktor\conduktor\jumpstart\<clusterId>\logs\`
-* Linux : 
-  * .deb/.rpm : `/home/<user>/.local/share/conduktor/jumpstart/<clusterId>/logs/` 
+* Linux :
+  * .deb/.rpm : `/home/<user>/.local/share/conduktor/jumpstart/<clusterId>/logs/`
   * Flatpak : `/home/<user>/.var/app/io.conduktor.Conduktor/data/conduktor/jumpstart/<clusterId>/logs/`
 
 ### Conduktor logging
@@ -108,7 +129,7 @@ Log files of managed services can be found on files `zookeeper.log`, `kafka.log`
 Starting Conduktor 2.7.0, we log everything into a `conduktor.log` file. This may help to troubleshoot odd behaviour, connection issues and so on.
 
 * Windows: `C:\Users\<User>\AppData\Local\Temp\conduktor.log`
-* Linux: 
+* Linux:
   * .deb/.rpm : `/tmp/conduktor.log`
   * Flatpak : `/run/user/<UID>/.flatpak/io.conduktor.Conduktor/tmp/conduktor.log`
 * macOS: `/var/folders/wy/xxx/T/conduktor.log`
